@@ -1,5 +1,5 @@
 # 30 Days of Swift
-![Alt text](https://pbs.twimg.com/media/CbGZWRPVAAE0ARE.jpg:large)
+![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/github%20cover.png)
 
 ## Hi Community, ##
 
