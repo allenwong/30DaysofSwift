@@ -1,4 +1,4 @@
-# 30-Days-of-Swift
+# 30 Days of Swift
 ![Alt text](https://pbs.twimg.com/media/CbGZWRPVAAE0ARE.jpg:large)
 
 ## Hi Community, ##
