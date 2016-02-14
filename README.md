@@ -1,5 +1,5 @@
 # 30 Days of Swift
-![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/github%20cover.png)
+![Alt text](https://raw.githubusercontent.com/allenwong/30DaysofSwift/master/github%20cover.png)
 
 ## Hi Community, ##
 
