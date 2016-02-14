@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EmojiMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hyperspace" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-ai-q9x">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-sx-lOy">
+                                <rect key="frame" x="27" y="458" width="320" height="45"/>
+                                <color key="backgroundColor" red="0.71489375829696655" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RSV-Ut-8Oj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="GO"/>
+                                <connections>
+                                    <action selector="goButtoDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTJ-F3-cjb"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lo2-8k-W21">
+                                <rect key="frame" x="-3" y="201" width="383" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bingo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syA-dH-uTw">
+                                <rect key="frame" x="0.0" y="586" width="375" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="DCr-IU-aZ2"/>
+                                    <constraint firstAttribute="height" constant="28" id="Pjt-eM-HYf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.99990576505661011" green="1" blue="0.99987310171127319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DCr-IU-aZ2"/>
+                                        <exclude reference="Pjt-eM-HYf"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ylo-ai-q9x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="37g-fZ-kDr"/>
+                            <constraint firstItem="syA-dH-uTw" firstAttribute="top" secondItem="wkW-sx-lOy" secondAttribute="bottom" constant="83" id="A6X-dN-E9U"/>
+                            <constraint firstAttribute="trailing" secondItem="Ylo-ai-q9x" secondAttribute="trailing" id="Cjn-Li-Pn9"/>
+                            <constraint firstItem="wkW-sx-lOy" firstAttribute="top" secondItem="Lo2-8k-W21" secondAttribute="bottom" constant="41" id="DNp-w4-NDV"/>
+                            <constraint firstItem="syA-dH-uTw" firstAttribute="top" secondItem="wkW-sx-lOy" secondAttribute="bottom" constant="82" id="Hsd-x8-YUW"/>
+                            <constraint firstAttribute="bottom" secondItem="Ylo-ai-q9x" secondAttribute="bottom" id="L2e-lr-vhB"/>
+                            <constraint firstItem="syA-dH-uTw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PcG-kP-xOy"/>
+                            <constraint firstItem="syA-dH-uTw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q16-zJ-OCy"/>
+                            <constraint firstItem="syA-dH-uTw" firstAttribute="centerX" secondItem="Lo2-8k-W21" secondAttribute="centerX" constant="-1" id="RhR-rd-aeI"/>
+                            <constraint firstItem="Lo2-8k-W21" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-19" id="Seu-lF-alb"/>
+                            <constraint firstItem="Ylo-ai-q9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Stv-CT-Qmp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lo2-8k-W21" secondAttribute="trailing" constant="-17" id="TVl-dv-CoD"/>
+                            <constraint firstAttribute="trailing" secondItem="syA-dH-uTw" secondAttribute="trailing" id="VuY-6S-Xca"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lo2-8k-W21" secondAttribute="trailing" constant="-21" id="XwU-Hw-XfQ"/>
+                            <constraint firstAttribute="bottom" secondItem="wkW-sx-lOy" secondAttribute="bottom" constant="197" id="cJc-fc-LP7"/>
+                            <constraint firstItem="Lo2-8k-W21" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="181" id="dE2-iJ-88E"/>
+                            <constraint firstItem="wkW-sx-lOy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="fcy-J9-IRH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="syA-dH-uTw" secondAttribute="bottom" constant="54" id="pLL-BC-c33"/>
+                            <constraint firstItem="Ylo-ai-q9x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sdq-Oz-8zI"/>
+                            <constraint firstItem="Lo2-8k-W21" firstAttribute="centerX" secondItem="syA-dH-uTw" secondAttribute="centerX" id="tBk-sY-waH"/>
+                            <constraint firstItem="Lo2-8k-W21" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-15" id="ufB-c0-kHg"/>
+                            <constraint firstItem="wkW-sx-lOy" firstAttribute="centerX" secondItem="Ylo-ai-q9x" secondAttribute="centerX" id="z32-ij-1o1"/>
+                            <constraint firstItem="Ylo-ai-q9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zyk-Iw-Guh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TVl-dv-CoD"/>
+                                <exclude reference="tBk-sY-waH"/>
+                                <exclude reference="ufB-c0-kHg"/>
+                                <exclude reference="cJc-fc-LP7"/>
+                                <exclude reference="Hsd-x8-YUW"/>
+                                <exclude reference="Q16-zJ-OCy"/>
+                                <exclude reference="pLL-BC-c33"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emojiPickerView" destination="Lo2-8k-W21" id="FZt-4i-2zb"/>
+                        <outlet property="goButton" destination="wkW-sx-lOy" id="QYN-43-nL6"/>
+                        <outlet property="resultLabel" destination="syA-dH-uTw" id="Vbn-Ao-sfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.5" y="339.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hyperspace" width="621" height="1104"/>
+    </resources>
+</document>

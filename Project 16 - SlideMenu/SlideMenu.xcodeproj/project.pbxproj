@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F2598041C51EA6F007B64C4 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2598031C51EA6F007B64C4 /* MenuTransitionManager.swift */; };
+		9F2598061C521FFE007B64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */; };
+		F456196C1A8871DA00836A98 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456196B1A8871DA00836A98 /* MenuTableViewController.swift */; };
+		F456196E1A8872A800836A98 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456196D1A8872A800836A98 /* MenuTableViewCell.swift */; };
+		F4C1CF081A84F64E00728CAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CF071A84F64E00728CAD /* AppDelegate.swift */; };
+		F4C1CF0D1A84F64E00728CAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C1CF0B1A84F64E00728CAD /* Main.storyboard */; };
+		F4C1CF0F1A84F64E00728CAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1CF0E1A84F64E00728CAD /* Images.xcassets */; };
+		F4C1CF1E1A84F64E00728CAD /* SlideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CF1D1A84F64E00728CAD /* SlideMenuTests.swift */; };
+		F4C1CF281A85B3C600728CAD /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CF271A85B3C600728CAD /* NewsTableViewController.swift */; };
+		F4C1CF2A1A85B99500728CAD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1CF291A85B99500728CAD /* NewsTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4C1CF181A84F64E00728CAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4C1CEFA1A84F64E00728CAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4C1CF011A84F64E00728CAD;
+			remoteInfo = SlideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F2598031C51EA6F007B64C4 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
+		9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F456196B1A8871DA00836A98 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		F456196D1A8872A800836A98 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		F4C1CF021A84F64E00728CAD /* SlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C1CF061A84F64E00728CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C1CF071A84F64E00728CAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4C1CF0C1A84F64E00728CAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4C1CF0E1A84F64E00728CAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4C1CF171A84F64E00728CAD /* SlideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C1CF1C1A84F64E00728CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4C1CF1D1A84F64E00728CAD /* SlideMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuTests.swift; sourceTree = "<group>"; };
+		F4C1CF271A85B3C600728CAD /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		F4C1CF291A85B99500728CAD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4C1CEFF1A84F64E00728CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C1CF141A84F64E00728CAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4C1CEF91A84F64E00728CAD = {
+			isa = PBXGroup;
+			children = (
+				F4C1CF041A84F64E00728CAD /* SlideMenu */,
+				F4C1CF1A1A84F64E00728CAD /* SlideMenuTests */,
+				F4C1CF031A84F64E00728CAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4C1CF031A84F64E00728CAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4C1CF021A84F64E00728CAD /* SlideMenu.app */,
+				F4C1CF171A84F64E00728CAD /* SlideMenuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4C1CF041A84F64E00728CAD /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F4C1CF071A84F64E00728CAD /* AppDelegate.swift */,
+				F4C1CF271A85B3C600728CAD /* NewsTableViewController.swift */,
+				9F2598031C51EA6F007B64C4 /* MenuTransitionManager.swift */,
+				F4C1CF291A85B99500728CAD /* NewsTableViewCell.swift */,
+				F456196B1A8871DA00836A98 /* MenuTableViewController.swift */,
+				F456196D1A8872A800836A98 /* MenuTableViewCell.swift */,
+				F4C1CF0B1A84F64E00728CAD /* Main.storyboard */,
+				F4C1CF0E1A84F64E00728CAD /* Images.xcassets */,
+				9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */,
+				F4C1CF061A84F64E00728CAD /* Info.plist */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
+		F4C1CF1A1A84F64E00728CAD /* SlideMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4C1CF1D1A84F64E00728CAD /* SlideMenuTests.swift */,
+				F4C1CF1B1A84F64E00728CAD /* Supporting Files */,
+			);
+			path = SlideMenuTests;
+			sourceTree = "<group>";
+		};
+		F4C1CF1B1A84F64E00728CAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4C1CF1C1A84F64E00728CAD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4C1CF011A84F64E00728CAD /* SlideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C1CF211A84F64E00728CAD /* Build configuration list for PBXNativeTarget "SlideMenu" */;
+			buildPhases = (
+				F4C1CEFE1A84F64E00728CAD /* Sources */,
+				F4C1CEFF1A84F64E00728CAD /* Frameworks */,
+				F4C1CF001A84F64E00728CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideMenu;
+			productName = SlideMenu;
+			productReference = F4C1CF021A84F64E00728CAD /* SlideMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4C1CF161A84F64E00728CAD /* SlideMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4C1CF241A84F64E00728CAD /* Build configuration list for PBXNativeTarget "SlideMenuTests" */;
+			buildPhases = (
+				F4C1CF131A84F64E00728CAD /* Sources */,
+				F4C1CF141A84F64E00728CAD /* Frameworks */,
+				F4C1CF151A84F64E00728CAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4C1CF191A84F64E00728CAD /* PBXTargetDependency */,
+			);
+			name = SlideMenuTests;
+			productName = SlideMenuTests;
+			productReference = F4C1CF171A84F64E00728CAD /* SlideMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4C1CEFA1A84F64E00728CAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = AppCoda;
+				TargetAttributes = {
+					F4C1CF011A84F64E00728CAD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F4C1CF161A84F64E00728CAD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F4C1CF011A84F64E00728CAD;
+					};
+				};
+			};
+			buildConfigurationList = F4C1CEFD1A84F64E00728CAD /* Build configuration list for PBXProject "SlideMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4C1CEF91A84F64E00728CAD;
+			productRefGroup = F4C1CF031A84F64E00728CAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4C1CF011A84F64E00728CAD /* SlideMenu */,
+				F4C1CF161A84F64E00728CAD /* SlideMenuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4C1CF001A84F64E00728CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C1CF0D1A84F64E00728CAD /* Main.storyboard in Resources */,
+				9F2598061C521FFE007B64C4 /* LaunchScreen.storyboard in Resources */,
+				F4C1CF0F1A84F64E00728CAD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C1CF151A84F64E00728CAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4C1CEFE1A84F64E00728CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C1CF281A85B3C600728CAD /* NewsTableViewController.swift in Sources */,
+				9F2598041C51EA6F007B64C4 /* MenuTransitionManager.swift in Sources */,
+				F456196E1A8872A800836A98 /* MenuTableViewCell.swift in Sources */,
+				F456196C1A8871DA00836A98 /* MenuTableViewController.swift in Sources */,
+				F4C1CF081A84F64E00728CAD /* AppDelegate.swift in Sources */,
+				F4C1CF2A1A85B99500728CAD /* NewsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C1CF131A84F64E00728CAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4C1CF1E1A84F64E00728CAD /* SlideMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4C1CF191A84F64E00728CAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4C1CF011A84F64E00728CAD /* SlideMenu */;
+			targetProxy = F4C1CF181A84F64E00728CAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4C1CF0B1A84F64E00728CAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4C1CF0C1A84F64E00728CAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4C1CF1F1A84F64E00728CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4C1CF201A84F64E00728CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4C1CF221A84F64E00728CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SlideMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F4C1CF231A84F64E00728CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SlideMenu/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F4C1CF251A84F64E00728CAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlideMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideMenu.app/SlideMenu";
+			};
+			name = Debug;
+		};
+		F4C1CF261A84F64E00728CAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SlideMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideMenu.app/SlideMenu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4C1CEFD1A84F64E00728CAD /* Build configuration list for PBXProject "SlideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C1CF1F1A84F64E00728CAD /* Debug */,
+				F4C1CF201A84F64E00728CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C1CF211A84F64E00728CAD /* Build configuration list for PBXNativeTarget "SlideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C1CF221A84F64E00728CAD /* Debug */,
+				F4C1CF231A84F64E00728CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4C1CF241A84F64E00728CAD /* Build configuration list for PBXNativeTarget "SlideMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4C1CF251A84F64E00728CAD /* Debug */,
+				F4C1CF261A84F64E00728CAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4C1CEFA1A84F64E00728CAD /* Project object */;
+}

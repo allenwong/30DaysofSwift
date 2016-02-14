@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vsV-bj-Y2v">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2pr-Sh-C0n">
+            <objects>
+                <navigationController id="vsV-bj-Y2v" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mtp-OD-WiS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3iY-xE-V7U" kind="relationship" relationship="rootViewController" id="5eB-fH-oz0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3a-MM-gjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-611" y="264"/>
+        </scene>
+        <!--Swipeable Cell-->
+        <scene sceneID="Kw0-W9-RMA">
+            <objects>
+                <tableViewController id="3iY-xE-V7U" customClass="ViewController" customModule="SwipeableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="da2-3b-qxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatternCell" rowHeight="60" id="aIg-gj-lHT" customClass="PatternCell" customModule="SwipeableCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aIg-gj-lHT" id="DEU-ps-lMU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FIF-bM-Rpt">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="laM-IH-KeJ"/>
+                                                <constraint firstAttribute="width" constant="150" id="w2y-gT-tkz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neon Autumn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxh-7U-ZhQ">
+                                            <rect key="frame" x="160" y="17" width="207" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="aBv-Mq-dmy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="FIF-bM-Rpt" secondAttribute="bottom" id="9g3-FS-wbW"/>
+                                        <constraint firstAttribute="trailing" secondItem="lxh-7U-ZhQ" secondAttribute="trailing" constant="8" id="RSt-iP-bS3"/>
+                                        <constraint firstItem="lxh-7U-ZhQ" firstAttribute="centerY" secondItem="FIF-bM-Rpt" secondAttribute="centerY" id="RaL-aP-Ecd"/>
+                                        <constraint firstItem="FIF-bM-Rpt" firstAttribute="top" secondItem="DEU-ps-lMU" secondAttribute="top" id="pjy-4K-U5g"/>
+                                        <constraint firstItem="FIF-bM-Rpt" firstAttribute="leading" secondItem="DEU-ps-lMU" secondAttribute="leading" id="qyX-o3-iIx"/>
+                                        <constraint firstItem="lxh-7U-ZhQ" firstAttribute="leading" secondItem="FIF-bM-Rpt" secondAttribute="trailing" constant="10" id="uVE-dc-QEA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="patternImageView" destination="FIF-bM-Rpt" id="Vvx-6F-ftc"/>
+                                    <outlet property="patternNameLabel" destination="lxh-7U-ZhQ" id="RrS-mm-GAv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3iY-xE-V7U" id="8sm-ou-UTC"/>
+                            <outlet property="delegate" destination="3iY-xE-V7U" id="hE1-jW-hYt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Swipeable Cell" id="rdn-Ak-G7M"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIr-fN-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.5" y="263.5"/>
+        </scene>
+    </scenes>
+</document>

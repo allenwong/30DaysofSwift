@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Spectre</string>
+		<key>Category</key>
+		<string>Action, Adventure, Thriller</string>
+		<key>Rating</key>
+		<string>7.4</string>
+		<key>Description</key>
+		<string>A cryptic message from Bond&apos;s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.</string>
+		<key>Director</key>
+		<string>Sam Mendes</string>
+		<key>Stars</key>
+		<string>Daniel Craig, Christoph Waltz, Léa Seydoux</string>
+		<key>Image</key>
+		<string>spectre.jpg</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>The Martian</string>
+		<key>Category</key>
+		<string>Adventure, Comedy, Drama</string>
+		<key>Rating</key>
+		<string>8.2</string>
+		<key>Description</key>
+		<string>During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.</string>
+		<key>Director</key>
+		<string>Ridley Scott</string>
+		<key>Stars</key>
+		<string>Matt Damon, Jessica Chastain, Kristen Wiig</string>
+		<key>Image</key>
+		<string>themartian.jpg</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Jurassic World</string>
+		<key>Category</key>
+		<string>Action, Adventure, Sci-Fi</string>
+		<key>Rating</key>
+		<string>7.2</string>
+		<key>Description</key>
+		<string>A new theme park is built on the original site of Jurassic Park. Everything is going well until the park&apos;s newest attraction--a genetically modified giant stealth killing machine--escapes containment and goes on a killing spree.</string>
+		<key>Director</key>
+		<string>Colin Trevorrow</string>
+		<key>Stars</key>
+		<string>Chris Pratt, Bryce Dallas Howard, Ty Simpkins</string>
+		<key>Image</key>
+		<string>jurassicworld.jpg</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Terminator Genisys</string>
+		<key>Category</key>
+		<string>Action, Adventure, Sci-Fi</string>
+		<key>Rating</key>
+		<string>6.7</string>
+		<key>Description</key>
+		<string>When John Connor, leader of the human resistance, sends Sgt. Kyle Reese back to 1984 to protect Sarah Connor and safeguard the future, an unexpected turn of events creates a fractured timeline.</string>
+		<key>Director</key>
+		<string>Alan Taylor</string>
+		<key>Stars</key>
+		<string>Arnold Schwarzenegger, Jason Clarke, Emilia Clarke</string>
+		<key>Image</key>
+		<string>terminatorgenisys.jpg</string>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Pixels</string>
+		<key>Category</key>
+		<string>Action, Comedy, Sci-Fi</string>
+		<key>Rating</key>
+		<string>5.7</string>
+		<key>Description</key>
+		<string>When aliens misinterpret video feeds of classic arcade games as a declaration of war, they attack the Earth in the form of the video games.</string>
+		<key>Director</key>
+		<string>Chris Columbus</string>
+		<key>Stars</key>
+		<string>Adam Sandler, Kevin James, Michelle Monaghan</string>
+		<key>Image</key>
+		<string>pixels.jpg</string>
+	</dict>
+</array>
+</plist>

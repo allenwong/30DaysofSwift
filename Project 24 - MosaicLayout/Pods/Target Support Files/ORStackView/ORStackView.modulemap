@@ -1,0 +1,8 @@
+framework module ORStackView {
+  umbrella header "ORStackView-umbrella.h"
+
+  export *
+  module * { export * }
+
+  private header "ORStackView+Private.h"
+}

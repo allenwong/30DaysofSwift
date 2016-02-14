@@ -1,0 +1,53 @@
+//
+//  ThirdViewController.swift
+//  TabbarApp
+//
+//  Created by Allen on 16/2/5.
+//  Copyright © 2016年 Allen. All rights reserved.
+//
+
+import UIKit
+
+class ThirdViewController: UIViewController {
+
+    @IBOutlet weak var profileImageView: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationController?.navigationBarHidden = true
+        self.profileImageView.alpha = 0
+        self.profileImageView.transform = CGAffineTransformMakeScale(0.5, 0.5)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animateWithDuration(0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseIn, animations: { () -> Void in
+            
+            self.profileImageView.transform = CGAffineTransformMakeScale(1, 1)
+            self.profileImageView.alpha = 1
+            
+            }, completion: nil )
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

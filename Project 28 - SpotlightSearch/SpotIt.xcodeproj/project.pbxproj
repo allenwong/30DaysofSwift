@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C08500981BF3AA9500DD9194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500971BF3AA9500DD9194 /* AppDelegate.swift */; };
+		C085009A1BF3AA9500DD9194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500991BF3AA9500DD9194 /* ViewController.swift */; };
+		C085009D1BF3AA9500DD9194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C085009B1BF3AA9500DD9194 /* Main.storyboard */; };
+		C085009F1BF3AA9500DD9194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C085009E1BF3AA9500DD9194 /* Assets.xcassets */; };
+		C08500A21BF3AA9500DD9194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08500A01BF3AA9500DD9194 /* LaunchScreen.storyboard */; };
+		C08500AB1BF3AAC300DD9194 /* MoviesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C08500AA1BF3AAC300DD9194 /* MoviesData.plist */; settings = {ASSET_TAGS = (); }; };
+		C08500B11BF3AAD500DD9194 /* jurassicworld.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AC1BF3AAD500DD9194 /* jurassicworld.jpg */; settings = {ASSET_TAGS = (); }; };
+		C08500B21BF3AAD500DD9194 /* pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AD1BF3AAD500DD9194 /* pixels.jpg */; settings = {ASSET_TAGS = (); }; };
+		C08500B31BF3AAD500DD9194 /* spectre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AE1BF3AAD500DD9194 /* spectre.jpg */; settings = {ASSET_TAGS = (); }; };
+		C08500B41BF3AAD500DD9194 /* terminatorgenisys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AF1BF3AAD500DD9194 /* terminatorgenisys.jpg */; settings = {ASSET_TAGS = (); }; };
+		C08500B51BF3AAD500DD9194 /* themartian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500B01BF3AAD500DD9194 /* themartian.jpg */; settings = {ASSET_TAGS = (); }; };
+		C08500B71BF3AB2A00DD9194 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500B61BF3AB2A00DD9194 /* MovieDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C08500B91BF3AD3900DD9194 /* MovieSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08500B81BF3AD3900DD9194 /* MovieSummaryCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C08500BB1BF3AD7500DD9194 /* MovieSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500BA1BF3AD7500DD9194 /* MovieSummaryCell.swift */; settings = {ASSET_TAGS = (); }; };
+		C08500BD1BF3B2F500DD9194 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08500BC1BF3B2F500DD9194 /* MobileCoreServices.framework */; };
+		C08500BF1BF3B2FC00DD9194 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08500BE1BF3B2FC00DD9194 /* CoreSpotlight.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C08500941BF3AA9500DD9194 /* SpotIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08500971BF3AA9500DD9194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C08500991BF3AA9500DD9194 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C085009C1BF3AA9500DD9194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C085009E1BF3AA9500DD9194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C08500A11BF3AA9500DD9194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C08500A31BF3AA9500DD9194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C08500AA1BF3AAC300DD9194 /* MoviesData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MoviesData.plist; sourceTree = "<group>"; };
+		C08500AC1BF3AAD500DD9194 /* jurassicworld.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jurassicworld.jpg; sourceTree = "<group>"; };
+		C08500AD1BF3AAD500DD9194 /* pixels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pixels.jpg; sourceTree = "<group>"; };
+		C08500AE1BF3AAD500DD9194 /* spectre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spectre.jpg; sourceTree = "<group>"; };
+		C08500AF1BF3AAD500DD9194 /* terminatorgenisys.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = terminatorgenisys.jpg; sourceTree = "<group>"; };
+		C08500B01BF3AAD500DD9194 /* themartian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = themartian.jpg; sourceTree = "<group>"; };
+		C08500B61BF3AB2A00DD9194 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		C08500B81BF3AD3900DD9194 /* MovieSummaryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieSummaryCell.xib; sourceTree = "<group>"; };
+		C08500BA1BF3AD7500DD9194 /* MovieSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSummaryCell.swift; sourceTree = "<group>"; };
+		C08500BC1BF3B2F500DD9194 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C08500BE1BF3B2FC00DD9194 /* CoreSpotlight.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreSpotlight.framework; path = System/Library/Frameworks/CoreSpotlight.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C08500911BF3AA9500DD9194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08500BF1BF3B2FC00DD9194 /* CoreSpotlight.framework in Frameworks */,
+				C08500BD1BF3B2F500DD9194 /* MobileCoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C085008B1BF3AA9500DD9194 = {
+			isa = PBXGroup;
+			children = (
+				C08500BE1BF3B2FC00DD9194 /* CoreSpotlight.framework */,
+				C08500BC1BF3B2F500DD9194 /* MobileCoreServices.framework */,
+				C08500961BF3AA9500DD9194 /* SpotIt */,
+				C08500951BF3AA9500DD9194 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C08500951BF3AA9500DD9194 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C08500941BF3AA9500DD9194 /* SpotIt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C08500961BF3AA9500DD9194 /* SpotIt */ = {
+			isa = PBXGroup;
+			children = (
+				C08500971BF3AA9500DD9194 /* AppDelegate.swift */,
+				C08500991BF3AA9500DD9194 /* ViewController.swift */,
+				C08500B61BF3AB2A00DD9194 /* MovieDetailsViewController.swift */,
+				C08500BA1BF3AD7500DD9194 /* MovieSummaryCell.swift */,
+				C08500A91BF3AAA400DD9194 /* Sample Data */,
+				C085009B1BF3AA9500DD9194 /* Main.storyboard */,
+				C08500B81BF3AD3900DD9194 /* MovieSummaryCell.xib */,
+				C085009E1BF3AA9500DD9194 /* Assets.xcassets */,
+				C08500A01BF3AA9500DD9194 /* LaunchScreen.storyboard */,
+				C08500A31BF3AA9500DD9194 /* Info.plist */,
+			);
+			path = SpotIt;
+			sourceTree = "<group>";
+		};
+		C08500A91BF3AAA400DD9194 /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				C08500AA1BF3AAC300DD9194 /* MoviesData.plist */,
+				C08500AC1BF3AAD500DD9194 /* jurassicworld.jpg */,
+				C08500AD1BF3AAD500DD9194 /* pixels.jpg */,
+				C08500AE1BF3AAD500DD9194 /* spectre.jpg */,
+				C08500AF1BF3AAD500DD9194 /* terminatorgenisys.jpg */,
+				C08500B01BF3AAD500DD9194 /* themartian.jpg */,
+			);
+			name = "Sample Data";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C08500931BF3AA9500DD9194 /* SpotIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C08500A61BF3AA9500DD9194 /* Build configuration list for PBXNativeTarget "SpotIt" */;
+			buildPhases = (
+				C08500901BF3AA9500DD9194 /* Sources */,
+				C08500911BF3AA9500DD9194 /* Frameworks */,
+				C08500921BF3AA9500DD9194 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotIt;
+			productName = SpotIt;
+			productReference = C08500941BF3AA9500DD9194 /* SpotIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C085008C1BF3AA9500DD9194 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Appcoda;
+				TargetAttributes = {
+					C08500931BF3AA9500DD9194 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = C085008F1BF3AA9500DD9194 /* Build configuration list for PBXProject "SpotIt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C085008B1BF3AA9500DD9194;
+			productRefGroup = C08500951BF3AA9500DD9194 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C08500931BF3AA9500DD9194 /* SpotIt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C08500921BF3AA9500DD9194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08500B31BF3AAD500DD9194 /* spectre.jpg in Resources */,
+				C08500B21BF3AAD500DD9194 /* pixels.jpg in Resources */,
+				C08500B11BF3AAD500DD9194 /* jurassicworld.jpg in Resources */,
+				C08500B41BF3AAD500DD9194 /* terminatorgenisys.jpg in Resources */,
+				C08500A21BF3AA9500DD9194 /* LaunchScreen.storyboard in Resources */,
+				C085009F1BF3AA9500DD9194 /* Assets.xcassets in Resources */,
+				C08500B51BF3AAD500DD9194 /* themartian.jpg in Resources */,
+				C085009D1BF3AA9500DD9194 /* Main.storyboard in Resources */,
+				C08500AB1BF3AAC300DD9194 /* MoviesData.plist in Resources */,
+				C08500B91BF3AD3900DD9194 /* MovieSummaryCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C08500901BF3AA9500DD9194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C085009A1BF3AA9500DD9194 /* ViewController.swift in Sources */,
+				C08500981BF3AA9500DD9194 /* AppDelegate.swift in Sources */,
+				C08500B71BF3AB2A00DD9194 /* MovieDetailsViewController.swift in Sources */,
+				C08500BB1BF3AD7500DD9194 /* MovieSummaryCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C085009B1BF3AA9500DD9194 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C085009C1BF3AA9500DD9194 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C08500A01BF3AA9500DD9194 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C08500A11BF3AA9500DD9194 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C08500A41BF3AA9500DD9194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C08500A51BF3AA9500DD9194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C08500A71BF3AA9500DD9194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpotIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.SpotIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C08500A81BF3AA9500DD9194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SpotIt/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.SpotIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C085008F1BF3AA9500DD9194 /* Build configuration list for PBXProject "SpotIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08500A41BF3AA9500DD9194 /* Debug */,
+				C08500A51BF3AA9500DD9194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C08500A61BF3AA9500DD9194 /* Build configuration list for PBXNativeTarget "SpotIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C08500A71BF3AA9500DD9194 /* Debug */,
+				C08500A81BF3AA9500DD9194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C085008C1BF3AA9500DD9194 /* Project object */;
+}
