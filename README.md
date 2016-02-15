@@ -148,8 +148,6 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 
 [Youtube - Jared Davidson](https://www.youtube.com/user/Archetapp)
 
-[Youtube - Jared Davidson](https://www.youtube.com/user/Archetapp)
-
 [Youtube - Geeky Lemon](https://www.youtube.com/user/GeekyLemon)
 
 [Youtube - Brian Advent](https://www.youtube.com/channel/UCysEngjfeIYapEER9K8aikw)
