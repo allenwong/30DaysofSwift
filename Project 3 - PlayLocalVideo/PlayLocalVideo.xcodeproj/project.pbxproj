@@ -16,7 +16,7 @@
 		9F98C0811C416398000B0D2A /* PlayLocalVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F98C0801C416398000B0D2A /* PlayLocalVideoTests.swift */; };
 		9F98C08C1C416398000B0D2A /* PlayLocalVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F98C08B1C416398000B0D2A /* PlayLocalVideoUITests.swift */; };
 		9F98C09B1C416615000B0D2A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F98C09A1C416615000B0D2A /* VideoCell.swift */; };
-		9FA0D8BC1C422BF600B5DD9D /* Emoji Among Us.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9FEA25751C419EEC005C08B8 /* Emoji Among Us.mp4 */; };
+		9FBD36831C71BE9B00291252 /* emoji zone.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36821C71BE7C00291252 /* emoji zone.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		9F98C08B1C416398000B0D2A /* PlayLocalVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayLocalVideoUITests.swift; sourceTree = "<group>"; };
 		9F98C08D1C416398000B0D2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F98C09A1C416615000B0D2A /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
-		9FEA25751C419EEC005C08B8 /* Emoji Among Us.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Emoji Among Us.mp4"; path = "../../../../../Movies/Emoji Among Us.mp4"; sourceTree = "<group>"; };
+		9FBD36821C71BE7C00291252 /* emoji zone.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "emoji zone.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		9FEA25711C419D17005C08B8 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
-				9FEA25751C419EEC005C08B8 /* Emoji Among Us.mp4 */,
+				9FBD36821C71BE7C00291252 /* emoji zone.mp4 */,
 			);
 			name = Movie;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA0D8BC1C422BF600B5DD9D /* Emoji Among Us.mp4 in Resources */,
+				9FBD36831C71BE9B00291252 /* emoji zone.mp4 in Resources */,
 				9F98C0761C416397000B0D2A /* LaunchScreen.storyboard in Resources */,
 				9F98C0731C416397000B0D2A /* Assets.xcassets in Resources */,
 				9F98C06E1C416397000B0D2A /* Main.storyboard in Resources */,

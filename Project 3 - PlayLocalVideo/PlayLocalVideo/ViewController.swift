@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func playVideoButtonDidTouch(sender: AnyObject) {
         
-        let path = NSBundle.mainBundle().pathForResource("Emoji Among Us", ofType: "mp4")
+        let path = NSBundle.mainBundle().pathForResource("emoji zone", ofType: "mp4")
         
         playerView = AVPlayer(URL: NSURL(fileURLWithPath: path!))
         
