@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F1243891C3F68E00013F8DA /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F1243861C3F687F0013F8DA /* MFJinHei_Noncommercial-Regular.ttf */; };
-		9F12438A1C3F68E00013F8DA /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F1243871C3F687F0013F8DA /* MFTongXin_Noncommercial-Regular.ttf */; };
-		9F12438B1C3F68E00013F8DA /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F1243841C3F68730013F8DA /* MFZhiHei_Noncommercial-Regular.ttf */; };
 		9F5C11FC1C3E58C60047AC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C11FB1C3E58C60047AC8A /* AppDelegate.swift */; };
 		9F5C11FE1C3E58C60047AC8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C11FD1C3E58C60047AC8A /* ViewController.swift */; };
 		9F5C12011C3E58C60047AC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C11FF1C3E58C60047AC8A /* Main.storyboard */; };
@@ -18,6 +15,10 @@
 		9F5C12091C3E58C60047AC8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C12071C3E58C60047AC8A /* LaunchScreen.storyboard */; };
 		9F5C12141C3E58C60047AC8A /* CustomFontTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C12131C3E58C60047AC8A /* CustomFontTests.swift */; };
 		9F5C121F1C3E58C60047AC8A /* CustomFontUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C121E1C3E58C60047AC8A /* CustomFontUITests.swift */; };
+		9FBD36791C71AA2800291252 /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36751C71A98900291252 /* Gaspar Regular.otf */; };
+		9FBD367A1C71AA2800291252 /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36761C71A98900291252 /* MFJinHei_Noncommercial-Regular.ttf */; };
+		9FBD367B1C71AA2800291252 /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36771C71A98900291252 /* MFTongXin_Noncommercial-Regular.ttf */; };
+		9FBD367C1C71AA2800291252 /* MFZhiHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36781C71A98900291252 /* MFZhiHei_Noncommercial-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F1243841C3F68730013F8DA /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MFZhiHei_Noncommercial-Regular.ttf"; path = "../../MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
-		9F1243861C3F687F0013F8DA /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MFJinHei_Noncommercial-Regular.ttf"; path = "../../MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
-		9F1243871C3F687F0013F8DA /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MFTongXin_Noncommercial-Regular.ttf"; path = "../../MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 		9F5C11F81C3E58C50047AC8A /* CustomFont.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomFont.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5C11FB1C3E58C60047AC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5C11FD1C3E58C60047AC8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +53,10 @@
 		9F5C121A1C3E58C60047AC8A /* CustomFontUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomFontUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5C121E1C3E58C60047AC8A /* CustomFontUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontUITests.swift; sourceTree = "<group>"; };
 		9F5C12201C3E58C60047AC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FBD36751C71A98900291252 /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
+		9FBD36761C71A98900291252 /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		9FBD36771C71A98900291252 /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
+		9FBD36781C71A98900291252 /* MFZhiHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFZhiHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +87,10 @@
 		9F549C4D1C3EBD4500EF8134 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				9F1243861C3F687F0013F8DA /* MFJinHei_Noncommercial-Regular.ttf */,
-				9F1243871C3F687F0013F8DA /* MFTongXin_Noncommercial-Regular.ttf */,
-				9F1243841C3F68730013F8DA /* MFZhiHei_Noncommercial-Regular.ttf */,
+				9FBD36751C71A98900291252 /* Gaspar Regular.otf */,
+				9FBD36761C71A98900291252 /* MFJinHei_Noncommercial-Regular.ttf */,
+				9FBD36771C71A98900291252 /* MFTongXin_Noncommercial-Regular.ttf */,
+				9FBD36781C71A98900291252 /* MFZhiHei_Noncommercial-Regular.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -249,9 +252,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F1243891C3F68E00013F8DA /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
-				9F12438A1C3F68E00013F8DA /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
-				9F12438B1C3F68E00013F8DA /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
+				9FBD36791C71AA2800291252 /* Gaspar Regular.otf in Resources */,
+				9FBD367A1C71AA2800291252 /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
+				9FBD367B1C71AA2800291252 /* MFTongXin_Noncommercial-Regular.ttf in Resources */,
+				9FBD367C1C71AA2800291252 /* MFZhiHei_Noncommercial-Regular.ttf in Resources */,
 				9F5C12091C3E58C60047AC8A /* LaunchScreen.storyboard in Resources */,
 				9F5C12061C3E58C60047AC8A /* Assets.xcassets in Resources */,
 				9F5C12011C3E58C60047AC8A /* Main.storyboard in Resources */,
