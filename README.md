@@ -158,6 +158,10 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 
 Build a camera app.
 
+## License ##
+
+[30 Days of Swift](https://github.com/allenwong/30DaysofSwift) is under the MIT license.
+
 ## Reach me ##
 
 Twitter: [@creativewang](https://twitter.com/creativewang)
