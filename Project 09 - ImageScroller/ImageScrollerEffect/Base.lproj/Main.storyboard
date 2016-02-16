@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="ImageScrollerEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="steve" translatesAutoresizingMaskIntoConstraints="NO" id="EL2-UU-uPn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c18-Os-iNI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Vmz-ti-C5a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c18-Os-iNI" firstAttribute="bottom" secondItem="EL2-UU-uPn" secondAttribute="bottom" id="8hM-65-D60"/>
+                            <constraint firstItem="EL2-UU-uPn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Foe-2h-NwC"/>
+                            <constraint firstItem="EL2-UU-uPn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wnc-k5-HcL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EL2-UU-uPn" secondAttribute="bottom" id="bsH-KH-Rn0"/>
+                            <constraint firstItem="EL2-UU-uPn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e1u-V5-cK0"/>
+                            <constraint firstAttribute="trailing" secondItem="EL2-UU-uPn" secondAttribute="trailing" id="gpg-Qx-KZk"/>
+                            <constraint firstItem="c18-Os-iNI" firstAttribute="leading" secondItem="EL2-UU-uPn" secondAttribute="leading" id="ivS-1i-PkD"/>
+                            <constraint firstItem="c18-Os-iNI" firstAttribute="trailing" secondItem="EL2-UU-uPn" secondAttribute="trailing" id="kAZ-f6-Obm"/>
+                            <constraint firstItem="EL2-UU-uPn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="puv-Qq-6Gu"/>
+                            <constraint firstItem="c18-Os-iNI" firstAttribute="top" secondItem="EL2-UU-uPn" secondAttribute="top" id="tRJ-1i-gQe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317" y="386"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="steve" width="320" height="320"/>
+    </resources>
+</document>
