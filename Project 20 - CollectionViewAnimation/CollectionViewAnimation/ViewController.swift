@@ -65,6 +65,7 @@ class ViewController: UICollectionViewController {
     }
     
     private func handleAnimationCellSelected(collectionView: UICollectionView, cell: AnimationCollectionViewCell) {
+        
         cell.handleCellSelected()
         cell.backButtonTapped = self.backButtonDidTouch
         
