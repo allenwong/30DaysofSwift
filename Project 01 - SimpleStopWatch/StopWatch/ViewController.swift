@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var Counter:Double  = 0
-    var Timer: NSTimer  = NSTimer()
-    var IsPlaying: Bool = false
+    var Counter = 0.0
+    var Timer = NSTimer()
+    var IsPlaying = false
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
