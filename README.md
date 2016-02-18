@@ -6,7 +6,7 @@
 
 I am Allen Wang, a [product designer](https://dribbble.com/openallen) and currently learning Swift.
 
-This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100 Days of Swift](http://samvlu.com/index.html) project, after read his [Medium post](https://medium.com/@samvlu/100-days-of-swift-736d45a19b63#.ayz5vx6mc) I made a decision to put my every single day to write swift, this's the final code of 30 tiny swfit projects.
+This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100 Days of Swift](http://samvlu.com/index.html) project, after read his [Medium post](https://medium.com/@samvlu/100-days-of-swift-736d45a19b63#.ayz5vx6mc) I made a decision to put my every single day to write swift, this's the final code of 30 tiny Swfit projects.
 
 ## Project Index & GIF Showcase ##
 
