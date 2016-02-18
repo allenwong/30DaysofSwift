@@ -10,39 +10,39 @@ This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100
 
 ## Project Index & GIF Showcase ##
 
-Project 01 - [SimpleStopWatch](https://github.com/allenwong/30DaysofSwift/tree/master/Project%201%20-%20SimpleStopWatch)
+Project 01 - [SimpleStopWatch](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2001%20-%20SimpleStopWatch)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2001%20-%20SimpleStopWatch/Simple%20Stop%20Watch.gif?raw=true)
 
-Project 02 - [CustomFont](https://github.com/allenwong/30DaysofSwift/tree/master/Project%202%20-%20CustomFont)
+Project 02 - [CustomFont](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2002%20-%20CustomFont)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2002%20-%20CustomFont/Customfont.gif?raw=true)
 
-Project 03 - [PlayLocalVideo](https://github.com/allenwong/30DaysofSwift/tree/master/Project%203%20-%20PlayLocalVideo)
+Project 03 - [PlayLocalVideo](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2003%20-%20PlayLocalVideo)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2003%20-%20PlayLocalVideo/playvideo.gif?raw=true)
 
-Project 04 - [SnapChatMenu](https://github.com/allenwong/30DaysofSwift/tree/master/Project%204%20-%20SnapChatMenu)
+Project 04 - [SnapChatMenu](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2004%20-%20SnapChatMenu)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2004%20-%20SnapChatMenu/snapchatmenu.gif?raw=true)
 
-Project 05 - [CarouselEffect](https://github.com/allenwong/30DaysofSwift/tree/master/Project%205%20-%20CarouselEffect)
+Project 05 - [CarouselEffect](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2005%20-%20CarouselEffect)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2005%20-%20CarouselEffect/Carousel.gif?raw=true)
 
-Project 06 - [FindMyLocation](https://github.com/allenwong/30DaysofSwift/tree/master/Project%206%20-%20FindMyLocation)
+Project 06 - [FindMyLocation](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2006%20-%20FindMyLocation)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2006%20-%20FindMyLocation/mylocation.gif?raw=true)
 
-Project 07 - [PullToRefresh](https://github.com/allenwong/30DaysofSwift/tree/master/Project%207%20-%20PullToRefresh)
+Project 07 - [PullToRefresh](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2007%20-%20PullToRefresh)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2007%20-%20PullToRefresh/pulltorefresh.gif?raw=true)
 
-Project 08 - [RandomGradientColorMusic](https://github.com/allenwong/30DaysofSwift/tree/master/Project%208%20-%20RandomGradientColorMusic)
+Project 08 - [RandomGradientColorMusic](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2008%20-%20RandomGradientColorMusic)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2008%20-%20RandomGradientColorMusic/randomMusicColor.gif?raw=true)
 
-Project 09 - [ImageScroller](https://github.com/allenwong/30DaysofSwift/tree/master/Project%209%20-ImageScroller)
+Project 09 - [ImageScroller](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2009%20-ImageScroller)
 
 ![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2009%20-ImageScroller/image%20Scroller%20Effect.gif?raw=true)
 
