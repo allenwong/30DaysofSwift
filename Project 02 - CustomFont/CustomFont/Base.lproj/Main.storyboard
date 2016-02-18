@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PZT-s3-fYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PZT-s3-fYf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -66,14 +67,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Font:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCT-lg-PTV">
+                                <rect key="frame" x="32" y="456" width="312" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.036567181348800659" green="0.033229749649763107" blue="0.084496133029460907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KGv-Km-M05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B1y-rp-a3p"/>
+                            <constraint firstItem="rCT-lg-PTV" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="8" symbolic="YES" id="PfF-zV-Wvy"/>
                             <constraint firstItem="KGv-Km-M05" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bye-Vp-gej"/>
                             <constraint firstItem="YKJ-vx-y91" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="71" id="dDu-RS-rLZ"/>
                             <constraint firstItem="YKJ-vx-y91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dGG-Oq-Tkf"/>
+                            <constraint firstItem="YKJ-vx-y91" firstAttribute="top" secondItem="rCT-lg-PTV" secondAttribute="bottom" constant="8" symbolic="YES" id="dGL-VH-Cfm"/>
+                            <constraint firstItem="rCT-lg-PTV" firstAttribute="centerX" secondItem="KGv-Km-M05" secondAttribute="centerX" id="dS8-jC-G7Z"/>
                             <constraint firstItem="YKJ-vx-y91" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="71" id="egM-fL-Hhh"/>
+                            <constraint firstItem="rCT-lg-PTV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="fx6-Gn-i50"/>
                             <constraint firstAttribute="trailing" secondItem="KGv-Km-M05" secondAttribute="trailing" id="hkI-LV-s02"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YKJ-vx-y91" secondAttribute="bottom" constant="38" id="mXQ-LM-oCr"/>
                         </constraints>
@@ -87,6 +98,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="changeFontButton" destination="YKJ-vx-y91" id="34w-Yo-v5v"/>
+                        <outlet property="currentFontLabel" destination="rCT-lg-PTV" id="tBl-8e-s0j"/>
                         <outlet property="fontTableView" destination="KGv-Km-M05" id="bcU-xW-mfg"/>
                     </connections>
                 </viewController>
