@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F09ADC91C7A04D00030E611 /* Ecstasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F09ADC71C7A04BE0030E611 /* Ecstasy.mp3 */; };
 		9F65F2621C478760002A93AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2611C478760002A93AA /* AppDelegate.swift */; };
 		9F65F2641C478760002A93AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2631C478760002A93AA /* ViewController.swift */; };
 		9F65F2671C478760002A93AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F2651C478760002A93AA /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		9F65F26C1C478760002A93AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F26A1C478760002A93AA /* LaunchScreen.storyboard */; };
 		9F65F2771C478760002A93AA /* RandomColorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2761C478760002A93AA /* RandomColorizationTests.swift */; };
 		9F65F2821C478760002A93AA /* RandomColorizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2811C478760002A93AA /* RandomColorizationUITests.swift */; };
-		9F65F2921C47A20A002A93AA /* Ecstasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F2911C47A20A002A93AA /* Ecstasy.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F09ADC71C7A04BE0030E611 /* Ecstasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ecstasy.mp3; sourceTree = SOURCE_ROOT; };
 		9F65F25E1C478760002A93AA /* RandomColorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColorization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F65F2611C478760002A93AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F65F2631C478760002A93AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		9F65F27D1C478760002A93AA /* RandomColorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomColorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F65F2811C478760002A93AA /* RandomColorizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorizationUITests.swift; sourceTree = "<group>"; };
 		9F65F2831C478760002A93AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F65F2911C47A20A002A93AA /* Ecstasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ecstasy.mp3; path = ../../../../../Music/Ecstasy.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				9F65F2611C478760002A93AA /* AppDelegate.swift */,
 				9F65F2631C478760002A93AA /* ViewController.swift */,
-				9F65F2911C47A20A002A93AA /* Ecstasy.mp3 */,
+				9F09ADC71C7A04BE0030E611 /* Ecstasy.mp3 */,
 				9F65F2651C478760002A93AA /* Main.storyboard */,
 				9F65F2681C478760002A93AA /* Assets.xcassets */,
 				9F65F26A1C478760002A93AA /* LaunchScreen.storyboard */,
@@ -232,9 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F09ADC91C7A04D00030E611 /* Ecstasy.mp3 in Resources */,
 				9F65F26C1C478760002A93AA /* LaunchScreen.storyboard in Resources */,
 				9F65F2691C478760002A93AA /* Assets.xcassets in Resources */,
-				9F65F2921C47A20A002A93AA /* Ecstasy.mp3 in Resources */,
 				9F65F2671C478760002A93AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
