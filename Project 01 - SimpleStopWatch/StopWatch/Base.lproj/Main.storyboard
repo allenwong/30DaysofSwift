@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -18,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-Cn-wOv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-Cn-wOv">
                                 <rect key="frame" x="187" y="267" width="188" height="400"/>
                                 <color key="backgroundColor" red="0.46102523803710938" green="0.77571004629135132" blue="0.010614466853439808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="pause">
@@ -28,6 +27,10 @@
                                     <action selector="pauseButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9TK-bn-VDe"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="pause" translatesAutoresizingMaskIntoConstraints="NO" id="k6f-lv-9EB" userLabel="whilePaused">
+                                <rect key="frame" x="187" y="267" width="188" height="405"/>
+                                <color key="backgroundColor" red="0.461025238" green="0.77571004629999996" blue="0.01061446685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLk-wD-lav">
                                 <rect key="frame" x="0.0" y="267" width="188" height="400"/>
                                 <color key="backgroundColor" red="0.40219897031784058" green="0.47076684236526489" blue="0.99048787355422974" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,6 +41,10 @@
                                     <action selector="playButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzs-sg-wBb"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="rgw-rn-cDd" userLabel="whilePlaying ">
+                                <rect key="frame" x="0.0" y="267" width="188" height="400"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.32156862749999998" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-kS-GRc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <subviews>
@@ -77,12 +84,20 @@
                         <constraints>
                             <constraint firstItem="qLk-wD-lav" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:2" id="2Ph-uH-FQB"/>
                             <constraint firstItem="qLk-wD-lav" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6VF-JM-IX2"/>
+                            <constraint firstItem="k6f-lv-9EB" firstAttribute="width" secondItem="LKO-Cn-wOv" secondAttribute="width" id="7iT-fz-chL"/>
+                            <constraint firstItem="rgw-rn-cDd" firstAttribute="centerY" secondItem="qLk-wD-lav" secondAttribute="centerY" id="DZj-GX-lcr"/>
                             <constraint firstAttribute="trailing" secondItem="LKO-Cn-wOv" secondAttribute="trailing" id="EUM-uR-Apw"/>
+                            <constraint firstItem="rgw-rn-cDd" firstAttribute="centerX" secondItem="qLk-wD-lav" secondAttribute="centerX" id="EaN-4I-o6A"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qLk-wD-lav" secondAttribute="bottom" id="FDg-RE-dX1"/>
                             <constraint firstItem="NrM-kS-GRc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fac-QL-7pa"/>
                             <constraint firstItem="qLk-wD-lav" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="400:667" id="KCW-Ik-qX8"/>
                             <constraint firstItem="qLk-wD-lav" firstAttribute="width" secondItem="LKO-Cn-wOv" secondAttribute="width" id="OfO-dZ-a9v"/>
+                            <constraint firstItem="rgw-rn-cDd" firstAttribute="height" secondItem="qLk-wD-lav" secondAttribute="height" id="TvL-t1-7Zk"/>
+                            <constraint firstItem="rgw-rn-cDd" firstAttribute="width" secondItem="qLk-wD-lav" secondAttribute="width" id="UzJ-72-F1l"/>
+                            <constraint firstItem="k6f-lv-9EB" firstAttribute="height" secondItem="LKO-Cn-wOv" secondAttribute="height" id="Zud-V4-m5x"/>
+                            <constraint firstItem="k6f-lv-9EB" firstAttribute="centerY" secondItem="LKO-Cn-wOv" secondAttribute="centerY" id="gRi-yn-VHA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LKO-Cn-wOv" secondAttribute="bottom" id="lvD-AW-qjh"/>
+                            <constraint firstItem="k6f-lv-9EB" firstAttribute="centerX" secondItem="LKO-Cn-wOv" secondAttribute="centerX" id="mg5-kl-Ewy"/>
                             <constraint firstAttribute="trailing" secondItem="NrM-kS-GRc" secondAttribute="trailing" id="uQX-oK-LNp"/>
                             <constraint firstItem="NrM-kS-GRc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="267:667" id="uUP-Au-62o"/>
                             <constraint firstItem="NrM-kS-GRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vbl-V8-bac"/>
@@ -91,6 +106,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="pauseBtn" destination="LKO-Cn-wOv" id="9lw-rM-jQh"/>
+                        <outlet property="playBtn" destination="qLk-wD-lav" id="vBt-UC-NQp"/>
                         <outlet property="timeLabel" destination="mHC-bT-4Ze" id="yWs-Nc-IIZ"/>
                     </connections>
                 </viewController>
