@@ -196,7 +196,6 @@
 				TargetAttributes = {
 					9FEF1CF51C3A23BC00B2C64E = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = EKFMY2Y3YC;
 					};
 					9FEF1D0C1C3A23BC00B2C64E = {
 						CreatedOnToolsVersion = 7.2;
@@ -405,9 +404,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StopWatch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchtemp;
+				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -420,9 +419,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StopWatch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchtemp;
+				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
