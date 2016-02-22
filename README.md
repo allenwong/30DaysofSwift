@@ -83,7 +83,7 @@ Project 17 - [TumblrMenu](https://github.com/allenwong/30DaysofSwift/tree/master
 
 Project 18 - [LimitCharacters](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2018%20-%20LimitCharacters)
 
-![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%208%20-%20RandomGradientColorMusic/randomMusicColor.gif?raw=true)
+![Alt text](https://github.com/allenwong/30DaysofSwift/blob/master/Project%2018%20-%20LimitCharacters/Limit.gif?raw=true)
 
 Project 19 - [CustomPullToRefresh](https://github.com/allenwong/30DaysofSwift/tree/master/Project%2019%20-%20CustomPullToRefresh)
 
