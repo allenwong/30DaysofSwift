@@ -18,9 +18,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
+    @IBOutlet weak var currentFontLabel: UILabel!
     @IBAction func changeFontDidTouch(sender: AnyObject) {
         
-        fontRowIndex = (fontRowIndex + 1) % 3
+        fontRowIndex = (fontRowIndex + 1) % fontNames.count
+        currentFontLabel.text = "Current Font: \(fontNames[fontRowIndex]); (\(fontRowIndex)/\(fontNames.count))"
         fontTableView.reloadData()
         
     }
@@ -38,11 +40,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         for family in UIFont.familyNames() {
             for font in UIFont.fontNamesForFamilyName(family){
                 print(font)
+                fontNames.append(font)
             }
         }
-        
         changeFontButton.layer.cornerRadius = 55
-        
+        currentFontLabel.text = "Current Font: \(fontNames[0]); (0/\(fontNames.count))"
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
