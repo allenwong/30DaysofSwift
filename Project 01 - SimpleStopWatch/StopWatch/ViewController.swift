@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var pauseBtn: UIButton!
+    
     var Counter = 0.0
     var Timer = NSTimer()
     var IsPlaying = false
@@ -29,19 +32,27 @@ class ViewController: UIViewController {
         IsPlaying = false
         Counter = 0
         timeLabel.text = String(Counter)
+        playBtn.hidden = false
+        pauseBtn.hidden = true
     }
     
     @IBAction func playButtonDidTouch(sender: AnyObject) {
         if(IsPlaying) {
             return
         }
+        playBtn.hidden = true
+        pauseBtn.hidden = false
         Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("UpdateTimer"), userInfo: nil, repeats: true)
         IsPlaying = true
     }
     
     @IBAction func pauseButtonDidTouch(sender: AnyObject) {
+        
+        playBtn.hidden = false
+        pauseBtn.hidden = true
         Timer.invalidate()
         IsPlaying = false
+        
     }
     
     func UpdateTimer() {
