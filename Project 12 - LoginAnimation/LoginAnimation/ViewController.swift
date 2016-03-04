@@ -9,10 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBAction func backButtonDidTouch(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBOutlet weak var uesernameTextField: UITextField!
