@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftView" customModule="Snapchat_Menu" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-8P-3mw">
+                    <rect key="frame" x="0.0" y="0.0" width="605" height="600"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.94674736261367798" green="0.97933894395828247" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0IW-8P-3mw" secondAttribute="bottom" id="NPD-ZW-Q3A"/>
+                <constraint firstItem="0IW-8P-3mw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pnd-cI-LKB"/>
+                <constraint firstAttribute="trailing" secondItem="0IW-8P-3mw" secondAttribute="trailing" constant="-5" id="rK8-Tl-pG7"/>
+                <constraint firstItem="0IW-8P-3mw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zJC-c6-Z4d"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="left" width="320" height="568"/>
+    </resources>
+</document>

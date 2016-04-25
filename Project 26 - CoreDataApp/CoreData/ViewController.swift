@@ -34,7 +34,7 @@ class ViewController: UITableViewController {
             
             let results = try managedContex.executeFetchRequest(fetchRequest)
             listItems = results as! [NSManagedObject]
-            
+            self.tableView.reloadData()
             
         } catch {
             
@@ -139,10 +139,13 @@ class ViewController: UITableViewController {
             
             tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Right)
             managedContex.deleteObject(self.listItems[indexPath.row])
-            self.listItems.removeAtIndex(indexPath.row)
-            
-            self.tableView.reloadData()
-            
+            do {
+                try managedContex.save()
+                self.listItems.removeAtIndex(indexPath.row)
+                self.tableView.reloadData()
+            } catch {
+                print("error: delete ")
+            }
         }
         
         delete.backgroundColor = UIColor.redColor()

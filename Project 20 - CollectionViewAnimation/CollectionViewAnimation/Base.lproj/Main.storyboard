@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,95 +19,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TestCell" id="mEX-PX-SoT">
-                                <rect key="frame" x="17.5" y="20" width="340" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="340" height="210"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="skX-Kj-KTY">
-                                            <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="140" id="0SV-1l-Zdf"/>
-                                                <constraint firstAttribute="width" constant="340" id="hWr-r5-0G6"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="hWr-r5-0G6"/>
-                                                </mask>
-                                            </variation>
-                                        </imageView>
-                                        <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apx-eA-xxW">
-                                            <rect key="frame" x="24" y="30" width="14" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="46" id="Zyd-VO-d7m"/>
-                                            </constraints>
-                                            <state key="normal" image="Back-icon"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="Zyd-VO-d7m"/>
-                                                </mask>
-                                            </variation>
-                                        </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsp-5y-1A6">
-                                            <rect key="frame" x="0.0" y="140" width="340" height="70"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="SZh-RR-9kl"/>
-                                                <constraint firstAttribute="width" constant="340" id="e0U-D0-xqH"/>
-                                            </constraints>
-                                            <inset key="scrollIndicatorInsets" minX="30" minY="10" maxX="30" maxY="10"/>
-                                            <string key="text">Hedge fund billionaire Bill Ackman was humbled in 2015. His Pershing Square Capital Management had a terrible year, posting a -19.3% gross return.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="SZh-RR-9kl"/>
-                                                    <exclude reference="e0U-D0-xqH"/>
-                                                </mask>
-                                            </variation>
-                                        </textView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="Xsp-5y-1A6" secondAttribute="bottom" constant="-8" id="3vb-KG-Vmg"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="top" secondItem="skX-Kj-KTY" secondAttribute="bottom" id="6US-Dg-QSj"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xsp-5y-1A6" secondAttribute="trailing" id="6gp-wT-2SP"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="leading" secondItem="Xsp-5y-1A6" secondAttribute="leading" id="6oQ-7G-z6E"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="leading" secondItem="mEX-PX-SoT" secondAttribute="leading" id="BRk-x7-6Ik"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="centerY" secondItem="mEX-PX-SoT" secondAttribute="centerY" id="JlT-mI-0d7"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="leading" secondItem="mEX-PX-SoT" secondAttribute="leading" id="QMv-HZ-EcV"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="trailing" secondItem="Xsp-5y-1A6" secondAttribute="trailing" id="Qed-LX-vGu"/>
-                                    <constraint firstAttribute="trailing" secondItem="skX-Kj-KTY" secondAttribute="trailing" id="Y6p-ad-MoM"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="centerY" secondItem="mEX-PX-SoT" secondAttribute="centerY" id="bgG-iC-fiP"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="top" secondItem="apx-eA-xxW" secondAttribute="bottom" constant="94" id="fk5-1n-b4m"/>
-                                    <constraint firstItem="apx-eA-xxW" firstAttribute="leading" secondItem="mEX-PX-SoT" secondAttribute="leadingMargin" constant="16" id="gMe-op-Ji4"/>
-                                    <constraint firstAttribute="bottom" secondItem="Xsp-5y-1A6" secondAttribute="bottom" id="hFv-hg-CUK"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="top" secondItem="mEX-PX-SoT" secondAttribute="topMargin" constant="-8" id="qR9-m5-v6H"/>
-                                    <constraint firstItem="apx-eA-xxW" firstAttribute="top" secondItem="mEX-PX-SoT" secondAttribute="top" constant="30" id="rHG-kK-ByY"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="top" secondItem="skX-Kj-KTY" secondAttribute="bottom" id="tyQ-sb-QVJ"/>
-                                    <constraint firstItem="Xsp-5y-1A6" firstAttribute="top" secondItem="skX-Kj-KTY" secondAttribute="bottom" id="wjL-q1-jvq"/>
-                                    <constraint firstItem="skX-Kj-KTY" firstAttribute="top" secondItem="mEX-PX-SoT" secondAttribute="top" id="zPc-tT-t7x"/>
-                                </constraints>
-                                <size key="customSize" width="340" height="210"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6oQ-7G-z6E"/>
-                                        <exclude reference="JlT-mI-0d7"/>
-                                        <exclude reference="Qed-LX-vGu"/>
-                                        <exclude reference="qR9-m5-v6H"/>
-                                        <exclude reference="3vb-KG-Vmg"/>
-                                        <exclude reference="bgG-iC-fiP"/>
-                                        <exclude reference="fk5-1n-b4m"/>
-                                        <exclude reference="tyQ-sb-QVJ"/>
-                                        <exclude reference="wjL-q1-jvq"/>
-                                    </mask>
-                                </variation>
-                            </collectionViewCell>
-                        </cells>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="Z4Z-4N-eh2" id="fZf-Na-NBL"/>
                             <outlet property="delegate" destination="Z4Z-4N-eh2" id="Hos-Jx-cQe"/>
@@ -121,10 +32,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHd-yA-XZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="355.5"/>
+            <point key="canvasLocation" x="259.5" y="333.5"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Back-icon" width="14" height="24"/>
-    </resources>
 </document>

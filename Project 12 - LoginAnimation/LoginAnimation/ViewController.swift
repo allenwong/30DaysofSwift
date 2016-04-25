@@ -9,10 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
     @IBAction func backButtonDidTouch(sender: AnyObject) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBOutlet weak var uesernameTextField: UITextField!
@@ -84,8 +83,8 @@ class ViewController: UIViewController {
             self.loginButton.bounds = CGRect(x: bounds.origin.x - 20, y: bounds.origin.y, width: bounds.size.width + 60, height: bounds.size.height)
             self.loginButton.enabled = false
             
-            }, completion: nil)
-        
+			}, completion: { finished in self.loginButton.enabled = true })
+		
     }
 
 }

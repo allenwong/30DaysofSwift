@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationCollectionViewCell" customModule="CollectionViewAnimation" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnimationCollectionViewCell" id="gTV-IL-0wX" userLabel="AnimationCollectionViewCell" customClass="AnimationCollectionViewCell" customModule="CollectionViewAnimation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="207"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-Wy-HUe">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="340" id="0o7-xn-JEG"/>
+                            <constraint firstAttribute="height" constant="140" id="dfu-rY-VrS"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="hhv-qB-bGC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0o7-xn-JEG"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JK7-j7-btw">
+                        <rect key="frame" x="10" y="12" width="20" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="f3o-rc-KcD"/>
+                            <constraint firstAttribute="width" constant="46" id="nVe-wb-S03"/>
+                            <constraint firstAttribute="width" constant="20" id="stp-S5-7yk"/>
+                        </constraints>
+                        <state key="normal" image="Back-icon"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nVe-wb-S03"/>
+                            </mask>
+                        </variation>
+                    </button>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjp-jb-ahy">
+                        <rect key="frame" x="0.0" y="140" width="340" height="67"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="340" id="4IF-Uf-KnE"/>
+                            <constraint firstAttribute="height" constant="100" id="HSF-ir-0ez"/>
+                        </constraints>
+                        <inset key="scrollIndicatorInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                        <string key="text">Hedge fund billionaire Bill Ackman was humbled in 2015. His Pershing Square Capital Management had a terrible year, posting a -19.3% gross return.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4IF-Uf-KnE"/>
+                                <exclude reference="HSF-ir-0ez"/>
+                            </mask>
+                        </variation>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="Kjp-jb-ahy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="94J-LE-LjR"/>
+                <constraint firstAttribute="trailing" secondItem="Kjp-jb-ahy" secondAttribute="trailing" id="Cya-NR-FeI"/>
+                <constraint firstAttribute="trailing" secondItem="6cE-Wy-HUe" secondAttribute="trailing" id="EQV-V6-7t0"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Kjp-jb-ahy" secondAttribute="bottom" id="KxF-vT-SEy"/>
+                <constraint firstItem="6cE-Wy-HUe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OCx-F6-YoT"/>
+                <constraint firstItem="6cE-Wy-HUe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YFK-PO-W28"/>
+                <constraint firstItem="Kjp-jb-ahy" firstAttribute="top" secondItem="6cE-Wy-HUe" secondAttribute="bottom" id="em2-Vb-mq7"/>
+                <constraint firstItem="JK7-j7-btw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="oqF-xc-YXu"/>
+                <constraint firstItem="JK7-j7-btw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xA9-Q1-axf"/>
+            </constraints>
+            <size key="customSize" width="334" height="172"/>
+            <connections>
+                <outlet property="animationImageView" destination="6cE-Wy-HUe" id="yaD-Jf-B2r"/>
+                <outlet property="animationTextView" destination="Kjp-jb-ahy" id="0Ud-PK-JDc"/>
+                <outlet property="backButton" destination="JK7-j7-btw" id="sTa-ie-jdU"/>
+            </connections>
+            <point key="canvasLocation" x="422" y="952.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Back-icon" width="14" height="24"/>
+    </resources>
+</document>
