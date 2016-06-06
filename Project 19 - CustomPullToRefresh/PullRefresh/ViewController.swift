@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         customView = refreshContents[0] as! UIView
         customView.frame = refreshController.bounds
         
-        for var i=0; i < customView.subviews.count; ++i {
+        for i in 0..<customView.subviews.count {
             
             labelsArray.append(customView.viewWithTag(i + 1) as! UILabel)
             
@@ -92,7 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.labelsArray[self.currentLabelIndex].textColor = UIColor.blackColor()
                     
                     }, completion: { (finished) -> Void in
-                        ++self.currentLabelIndex
+                        self.currentLabelIndex += 1
                         
                         if self.currentLabelIndex < self.labelsArray.count {
                             self.animateRefreshStep1()
@@ -145,7 +145,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         else {
                             self.isAnimating = false
                             self.currentLabelIndex = 0
-                            for var i=0; i<self.labelsArray.count; ++i {
+                            for i in 0 ..< self.labelsArray.count {
                                 self.labelsArray[i].textColor = UIColor.blackColor()
                                 self.labelsArray[i].transform = CGAffineTransformIdentity
                             }
@@ -162,7 +162,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         let returnColor = colorsArray[currentColorIndex]
-        ++currentColorIndex
+        currentColorIndex += 1
         
         return returnColor
     }
@@ -180,7 +180,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func doSomething() {
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "endedOfWork", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ViewController.endedOfWork), userInfo: nil, repeats: true)
     }
     
     func endedOfWork() {
