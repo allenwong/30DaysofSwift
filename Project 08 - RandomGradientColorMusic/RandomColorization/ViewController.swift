@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
 
+    var timer : NSTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,8 +42,9 @@ class ViewController: UIViewController {
             print(audioError)
         }
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomColor", userInfo: nil, repeats: true)
-        
+        if (timer == nil) {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomC", userInfo: nil, repeats: true)
+        }
         
         let redValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())
