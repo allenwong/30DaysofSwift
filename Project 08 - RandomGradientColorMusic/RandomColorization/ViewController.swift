@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
         
         if (timer == nil) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomC", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomColor", userInfo: nil, repeats: true)
         }
         
         let redValue = CGFloat(drand48())
