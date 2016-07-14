@@ -87,15 +87,10 @@ public class VideoSplashViewController: UIViewController {
     let videoCutter = VideoCutter()
     videoCutter.cropVideoWithUrl(videoUrl: url, startTime: startTime, duration: duration) { (videoPath, error) -> Void in
       if let path = videoPath as NSURL? {
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-          dispatch_async(dispatch_get_main_queue()) {
             self.moviePlayer.player = AVPlayer(URL: path)
             self.moviePlayer.player?.play()
             self.moviePlayer.player?.volume = self.moviePlayerSoundLevel
           }
-        }
-      }
     }
   }
 
