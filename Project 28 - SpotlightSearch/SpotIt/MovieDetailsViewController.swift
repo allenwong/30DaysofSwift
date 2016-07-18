@@ -25,7 +25,7 @@ class MovieDetailsViewController: UIViewController {
     }
 
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         lblRating.layer.cornerRadius = lblRating.frame.size.width/2
