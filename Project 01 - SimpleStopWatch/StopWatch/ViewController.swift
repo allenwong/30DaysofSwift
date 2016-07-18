@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         }
         playBtn.enabled = false
         pauseBtn.enabled = true
-        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("UpdateTimer"), userInfo: nil, repeats: true)
+        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.UpdateTimer), userInfo: nil, repeats: true)
         IsPlaying = true
     }
     
