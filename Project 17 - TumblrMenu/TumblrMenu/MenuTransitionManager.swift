@@ -65,8 +65,9 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
     
     func offStageMenuController(menuViewController: MenuViewController) {
         
-        menuViewController.view.alpha = 0
-        
+        if !presenting{
+            menuViewController.view.alpha = 0
+        }
         let topRowOffset  : CGFloat = 300
         let middleRowOffset : CGFloat = 150
         let bottomRowOffset  : CGFloat = 50
