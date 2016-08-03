@@ -19,7 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
     }
     
-    var preferredStatusBarStyle: UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
             return UIStatusBarStyle.lightContent
         }
@@ -74,7 +74,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
             
-            self.locationLabel.text = locality! +  postalCode! +  administrativeArea! +  country!
+            self.locationLabel.text = locality?.appending(postalCode!).appending(administrativeArea!).appending(country!)
         }
         
     }
