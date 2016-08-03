@@ -38,10 +38,10 @@ class MenuViewController: UIViewController {
         self.transitioningDelegate = self.transitionManager
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        
-        return UIStatusBarStyle.LightContent
-        
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
 
     override func didReceiveMemoryWarning() {
