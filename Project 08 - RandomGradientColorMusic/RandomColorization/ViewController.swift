@@ -15,24 +15,24 @@ class ViewController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
 
-    var timer : NSTimer?
+    var timer : Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.sharedApplication().statusBarHidden =  true
+        UIApplication.shared.isStatusBarHidden =  true
     
     }
     
-    @IBAction func playMusicButtonDidTouch(sender: AnyObject) {
+    @IBAction func playMusicButtonDidTouch(_ sender: AnyObject) {
         
         //play bg music
-        let bgMusic = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Ecstasy", ofType: "mp3")!)
+        let bgMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy", ofType: "mp3")!)
         
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
-            try audioPlayer = AVAudioPlayer(contentsOfURL: bgMusic)
+            try audioPlayer = AVAudioPlayer(contentsOf: bgMusic)
             
             audioPlayer.prepareToPlay()
             audioPlayer.play()
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
         
         if (timer == nil) {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "randomColor", userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(ViewController.randomColor), userInfo: nil, repeats: true)
         }
         
         let redValue = CGFloat(drand48())
@@ -54,16 +54,16 @@ class ViewController: UIViewController {
         
         //graditent color
         gradientLayer.frame = view.bounds
-        let color1 = UIColor(white: 0.5, alpha: 0.2).CGColor as CGColorRef
-        let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).CGColor as CGColorRef
-        let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).CGColor as CGColorRef
-        let color4 = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3).CGColor as CGColorRef
-        let color5 = UIColor(white: 0.4, alpha: 0.2).CGColor as CGColorRef
+        let color1 = UIColor(white: 0.5, alpha: 0.2).cgColor as CGColor
+        let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).cgColor as CGColor
+        let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).cgColor as CGColor
+        let color4 = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3).cgColor as CGColor
+        let color5 = UIColor(white: 0.4, alpha: 0.2).cgColor as CGColor
         
         gradientLayer.colors = [color1, color2, color3, color4, color5]
         gradientLayer.locations = [0.10, 0.30, 0.50, 0.70, 0.90]
-        gradientLayer.startPoint = CGPointMake(0, 0)
-        gradientLayer.endPoint = CGPointMake(1, 1)
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
         self.view.layer.addSublayer(gradientLayer)
         
     }
