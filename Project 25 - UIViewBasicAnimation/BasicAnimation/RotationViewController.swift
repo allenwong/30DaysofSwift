@@ -31,17 +31,17 @@ class RotationViewController: UIViewController {
     
     func spin() {
         
-        UIView.animateWithDuration(0.8, delay: 0, options: .CurveLinear, animations: {
+        UIView.animate(withDuration: 0.8, delay: 0, options: .curveLinear, animations: {
         
-            self.rotationImageView.transform = CGAffineTransformRotate(self.rotationImageView.transform, CGFloat(M_PI))
-            self.trump2.transform = CGAffineTransformRotate(self.trump2.transform, CGFloat(M_PI))
-            self.trump3.transform = CGAffineTransformRotate(self.trump3.transform, CGFloat(M_PI))
-            self.trump4.transform = CGAffineTransformRotate(self.trump4.transform, CGFloat(M_PI))
-            self.trump5.transform = CGAffineTransformRotate(self.trump5.transform, CGFloat(M_PI))
-            self.trump6.transform = CGAffineTransformRotate(self.trump6.transform, CGFloat(M_PI))
-            self.trump7.transform = CGAffineTransformRotate(self.trump7.transform, CGFloat(M_PI))
-            self.trump8.transform = CGAffineTransformRotate(self.trump8.transform, CGFloat(M_PI))
-            self.emojiLabel.transform = CGAffineTransformRotate(self.emojiLabel.transform, CGFloat(M_PI))
+            self.rotationImageView.transform = self.rotationImageView.transform.rotated(by: CGFloat(M_PI))
+            self.trump2.transform = self.trump2.transform.rotated(by: CGFloat(M_PI))
+            self.trump3.transform = self.trump3.transform.rotated(by: CGFloat(M_PI))
+            self.trump4.transform = self.trump4.transform.rotated(by: CGFloat(M_PI))
+            self.trump5.transform = self.trump5.transform.rotated(by: CGFloat(M_PI))
+            self.trump6.transform = self.trump6.transform.rotated(by: CGFloat(M_PI))
+            self.trump7.transform = self.trump7.transform.rotated(by: CGFloat(M_PI))
+            self.trump8.transform = self.trump8.transform.rotated(by: CGFloat(M_PI))
+            self.emojiLabel.transform = self.emojiLabel.transform.rotated(by: CGFloat(M_PI))
         
             }) { (finished) -> Void in
                 self.spin()
@@ -49,7 +49,7 @@ class RotationViewController: UIViewController {
     
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.spin()
         

@@ -208,13 +208,16 @@
 				TargetAttributes = {
 					9F999F371C5F66C400FB365E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					9F999F4B1C5F66C400FB365E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9F999F371C5F66C400FB365E;
 					};
 					9F999F561C5F66C400FB365E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9F999F371C5F66C400FB365E;
 					};
 				};
@@ -421,6 +424,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -432,6 +436,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -443,6 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BasicAnimation.app/BasicAnimation";
 			};
 			name = Debug;
@@ -455,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BasicAnimation.app/BasicAnimation";
 			};
 			name = Release;
@@ -466,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BasicAnimation;
 				USES_XCTRUNNER = YES;
 			};
@@ -478,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.BasicAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BasicAnimation;
 				USES_XCTRUNNER = YES;
 			};
@@ -502,6 +511,7 @@
 				9F999F621C5F66C400FB365E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F999F631C5F66C400FB365E /* Build configuration list for PBXNativeTarget "BasicAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +520,7 @@
 				9F999F651C5F66C400FB365E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F999F661C5F66C400FB365E /* Build configuration list for PBXNativeTarget "BasicAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +529,7 @@
 				9F999F681C5F66C400FB365E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
