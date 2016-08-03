@@ -196,13 +196,16 @@
 				TargetAttributes = {
 					9FEF1CF51C3A23BC00B2C64E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					9FEF1D0C1C3A23BC00B2C64E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9FEF1CF51C3A23BC00B2C64E;
 					};
 					9FEF1D171C3A23BC00B2C64E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9FEF1CF51C3A23BC00B2C64E;
 					};
 				};
@@ -406,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -418,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -429,6 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopWatch.app/StopWatch";
 			};
 			name = Debug;
@@ -441,6 +447,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopWatch.app/StopWatch";
 			};
 			name = Release;
@@ -452,6 +459,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = StopWatch;
 				USES_XCTRUNNER = YES;
 			};
@@ -464,6 +472,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.StopWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = StopWatch;
 				USES_XCTRUNNER = YES;
 			};
