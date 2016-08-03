@@ -23,8 +23,10 @@ class ViewController: UICollectionViewController, FMMosaicLayoutDelegate {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
 
     override func didReceiveMemoryWarning() {

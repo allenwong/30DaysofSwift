@@ -19,11 +19,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
     
-    @IBAction func myLocationButtonDidTouch(sender: AnyObject) {
+    @IBAction func myLocationButtonDidTouch(_ sender: AnyObject) {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -39,13 +41,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: NSError) {
         
       self.locationLabel.text = "Error while updating location " + error.localizedDescription
         
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
             
             if (error != nil) {
@@ -62,7 +64,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
-    func displayLocationInfo(placemark: CLPlacemark?) {
+    func displayLocationInfo(_ placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
             //stop updating location to save battery life
             locationManager.stopUpdatingLocation()

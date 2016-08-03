@@ -31,8 +31,10 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
 
     override func didReceiveMemoryWarning() {

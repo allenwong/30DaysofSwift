@@ -12,8 +12,10 @@ class MenuTableViewController: UITableViewController {
     var menuItems = ["Everyday Moments", "Popular", "Editors", "Upcoming", "Fresh", "Stock-photos", "Trending"]
     var currentItem = "Everyday Moments"
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
     
     override func viewDidLoad() {

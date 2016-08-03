@@ -83,8 +83,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.refreshControl.endRefreshing()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
 
 

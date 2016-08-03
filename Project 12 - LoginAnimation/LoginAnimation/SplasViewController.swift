@@ -21,8 +21,10 @@ class SplasViewController: UIViewController {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
     
 }

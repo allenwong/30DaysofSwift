@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: VideoSplashViewController {
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override func preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
     
     @IBOutlet weak var loginButton: UIButton!

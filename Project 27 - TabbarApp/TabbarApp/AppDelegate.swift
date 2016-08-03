@@ -28,8 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

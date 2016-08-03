@@ -27,8 +27,10 @@ class SignupProfileViewController: UIViewController
         userProfileImageView.layer.masksToBounds = true
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.LightContent
+        }
     }
     
     @IBAction func pickProfileImage(tap: UITapGestureRecognizer)
