@@ -11,25 +11,25 @@ import MediaPlayer
 import AVKit
 
 public enum ScalingMode {
-  case Resize
-  case ResizeAspect
-  case ResizeAspectFill
+  case resize
+  case resizeAspect
+  case resizeAspectFill
 }
 
 public class VideoSplashViewController: UIViewController {
 
   private let moviePlayer = AVPlayerViewController()
   private var moviePlayerSoundLevel: Float = 1.0
-  public var contentURL: NSURL = NSURL() {
+  public var contentURL: URL? {
     didSet {
-      setMoviePlayer(contentURL)
+      setMoviePlayer(contentURL!)
     }
   }
 
   public var videoFrame: CGRect = CGRect()
   public var startTime: CGFloat = 0.0
   public var duration: CGFloat = 0.0
-  public var backgroundColor: UIColor = UIColor.blackColor() {
+  public var backgroundColor: UIColor = UIColor.black {
     didSet {
       view.backgroundColor = backgroundColor
     }
@@ -51,43 +51,43 @@ public class VideoSplashViewController: UIViewController {
   public var alwaysRepeat: Bool = true {
     didSet {
       if alwaysRepeat {
-        NSNotificationCenter.defaultCenter().addObserver(self,
-          selector: "playerItemDidReachEnd",
-          name: AVPlayerItemDidPlayToEndTimeNotification,
+        NotificationCenter.default.addObserver(self,
+          selector: #selector(VideoSplashViewController.playerItemDidReachEnd),
+          name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
           object: moviePlayer.player?.currentItem)
       }
     }
   }
-  public var fillMode: ScalingMode = .ResizeAspectFill {
+  public var fillMode: ScalingMode = .resizeAspectFill {
     didSet {
       switch fillMode {
-      case .Resize:
+      case .resize:
         moviePlayer.videoGravity = AVLayerVideoGravityResize
-      case .ResizeAspect:
+      case .resizeAspect:
         moviePlayer.videoGravity = AVLayerVideoGravityResizeAspect
-      case .ResizeAspectFill:
+      case .resizeAspectFill:
         moviePlayer.videoGravity = AVLayerVideoGravityResizeAspectFill
       }
     }
   }
 
-  override public func viewDidAppear(animated: Bool) {
+  override public func viewDidAppear(_ animated: Bool) {
     moviePlayer.view.frame = videoFrame
     moviePlayer.showsPlaybackControls = false
     view.addSubview(moviePlayer.view)
-    view.sendSubviewToBack(moviePlayer.view)
+    view.sendSubview(toBack: moviePlayer.view)
   }
   
-  override public func viewWillDisappear(animated: Bool) {
+  override public func viewWillDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    NSNotificationCenter.defaultCenter().removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
   }
 
-  private func setMoviePlayer(url: NSURL){
+  private func setMoviePlayer(_ url: URL){
     let videoCutter = VideoCutter()
     videoCutter.cropVideoWithUrl(videoUrl: url, startTime: startTime, duration: duration) { (videoPath, error) -> Void in
-      if let path = videoPath as NSURL? {
-            self.moviePlayer.player = AVPlayer(URL: path)
+      if let path = videoPath as URL? {
+            self.moviePlayer.player = AVPlayer(url: path)
             self.moviePlayer.player?.play()
             self.moviePlayer.player?.volume = self.moviePlayerSoundLevel
           }
@@ -103,7 +103,7 @@ public class VideoSplashViewController: UIViewController {
   }
   
   func playerItemDidReachEnd() {
-    moviePlayer.player?.seekToTime(kCMTimeZero)
+    moviePlayer.player?.seek(to: kCMTimeZero)
     moviePlayer.player?.play()
   }
 }

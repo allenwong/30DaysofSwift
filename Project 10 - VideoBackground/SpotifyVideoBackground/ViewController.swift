@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: VideoSplashViewController {
     
-    override func preferredStatusBarStyle: UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         get {
-            return UIStatusBarStyle.LightContent
+            return UIStatusBarStyle.lightContent
         }
     }
     
@@ -31,17 +31,17 @@ class ViewController: VideoSplashViewController {
     
     func setupVideoBackground() {
         
-        let url = NSURL.fileURLWithPath(NSBundle.mainBundle().pathForResource("moments", ofType: "mp4")!)
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "moments", ofType: "mp4")!)
         
         videoFrame = view.frame
-        fillMode = .ResizeAspectFill
+        fillMode = .resizeAspectFill
         alwaysRepeat = true
         sound = true
         startTime = 2.0
         alpha = 0.8
         
-        contentURL = url
-        view.userInteractionEnabled = false
+        contentURL! = url
+        view.isUserInteractionEnabled = false
         
     }
 

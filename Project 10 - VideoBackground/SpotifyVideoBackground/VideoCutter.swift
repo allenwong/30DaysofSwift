@@ -23,38 +23,38 @@ public class VideoCutter: NSObject {
   @param duration Total time, video length
 
   */
-  public func cropVideoWithUrl(videoUrl url: NSURL, startTime: CGFloat, duration: CGFloat, completion: ((videoPath: NSURL?, error: NSError?) -> Void)?) {
-    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-    dispatch_async(dispatch_get_global_queue(priority, 0)) {
-      let asset = AVURLAsset(URL: url, options: nil)
+  public func cropVideoWithUrl(videoUrl url: URL, startTime: CGFloat, duration: CGFloat, completion: ((videoPath: URL?, error: NSError?) -> Void)?) {
+    let priority = DispatchQueue.GlobalQueuePriority.default
+    DispatchQueue.global(priority: priority).async {
+      let asset = AVURLAsset(url: url, options: nil)
       let exportSession = AVAssetExportSession(asset: asset, presetName: "AVAssetExportPresetHighestQuality")
-      let paths: NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-      var outputURL = paths.objectAtIndex(0) as! String
-      let manager = NSFileManager.defaultManager()
+      let paths: NSArray = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+      var outputURL = paths.object(at: 0) as! String
+      let manager = FileManager.default
       do {
-        try manager.createDirectoryAtPath(outputURL, withIntermediateDirectories: true, attributes: nil)
+        try manager.createDirectory(atPath: outputURL, withIntermediateDirectories: true, attributes: nil)
       } catch _ {
       }
-      outputURL = outputURL.convert.stringByAppendingPathComponent("output.mp4")
+      outputURL = outputURL.convert.appendingPathComponent("output.mp4")
       do {
-        try manager.removeItemAtPath(outputURL)
+        try manager.removeItem(atPath: outputURL)
       } catch _ {
       }
       if let exportSession = exportSession as AVAssetExportSession? {
-        exportSession.outputURL = NSURL(fileURLWithPath: outputURL)
+        exportSession.outputURL = URL(fileURLWithPath: outputURL)
         exportSession.shouldOptimizeForNetworkUse = true
         exportSession.outputFileType = AVFileTypeMPEG4
         let start = CMTimeMakeWithSeconds(Float64(startTime), 600)
         let duration = CMTimeMakeWithSeconds(Float64(duration), 600)
         let range = CMTimeRangeMake(start, duration)
         exportSession.timeRange = range
-        exportSession.exportAsynchronouslyWithCompletionHandler { () -> Void in
+        exportSession.exportAsynchronously { () -> Void in
           switch exportSession.status {
-          case AVAssetExportSessionStatus.Completed:
+          case AVAssetExportSessionStatus.completed:
             completion?(videoPath: exportSession.outputURL, error: nil)
-          case AVAssetExportSessionStatus.Failed:
+          case AVAssetExportSessionStatus.failed:
             print("Failed: \(exportSession.error)")
-          case AVAssetExportSessionStatus.Cancelled:
+          case AVAssetExportSessionStatus.cancelled:
             print("Failed: \(exportSession.error)")
           default:
             print("default case")
