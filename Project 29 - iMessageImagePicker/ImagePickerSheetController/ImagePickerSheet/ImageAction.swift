@@ -9,11 +9,11 @@
 import Foundation
 
 public enum ImageActionStyle {
-    case Default
-    case Cancel
+    case `default`
+    case cancel
 }
 
-public typealias Title = Int -> String
+public typealias Title = (Int) -> String
 
 public class ImageAction {
     
@@ -28,11 +28,12 @@ public class ImageAction {
     let handler: Handler?
     let secondaryHandler: SecondaryHandler?
     
-    public convenience init(title: String, secondaryTitle: String? = nil, style: ImageActionStyle = .Default, handler: Handler? = nil, secondaryHandler: SecondaryHandler? = nil) {
+    public convenience init(title: String, secondaryTitle: String? = nil, style: ImageActionStyle = .default, handler: Handler? = nil, secondaryHandler: SecondaryHandler? = nil) {
         self.init(title: title, secondaryTitle: secondaryTitle.map { string in { _ in string }}, style: style, handler: handler, secondaryHandler: secondaryHandler)
     }
     
-    public init(title: String, secondaryTitle: Title?, style: ImageActionStyle = .Default, handler: Handler? = nil, var secondaryHandler: SecondaryHandler? = nil) {
+    public init(title: String, secondaryTitle: Title?, style: ImageActionStyle = .default, handler: Handler? = nil, secondaryHandler: SecondaryHandler? = nil) {
+        var secondaryHandler = secondaryHandler
         if let handler = handler where secondaryTitle == nil && secondaryHandler == nil {
             secondaryHandler = { action, _ in
                 handler(action)
@@ -46,7 +47,7 @@ public class ImageAction {
         self.secondaryHandler = secondaryHandler
     }
     
-    func handle(numberOfPhotos: Int = 0) {
+    func handle(_ numberOfPhotos: Int = 0) {
         if numberOfPhotos > 0 {
             secondaryHandler?(self, numberOfPhotos)
         }
