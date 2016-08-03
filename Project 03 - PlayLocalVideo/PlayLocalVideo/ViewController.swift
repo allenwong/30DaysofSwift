@@ -41,36 +41,36 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func playVideoButtonDidTouch(sender: AnyObject) {
+    @IBAction func playVideoButtonDidTouch(_ sender: AnyObject) {
         
-        let path = NSBundle.mainBundle().pathForResource("emoji zone", ofType: "mp4")
+        let path = Bundle.main.path(forResource: "emoji zone", ofType: "mp4")
         
-        playerView = AVPlayer(URL: NSURL(fileURLWithPath: path!))
+        playerView = AVPlayer(url: URL(fileURLWithPath: path!))
         
         playViewController.player = playerView
         
-        self.presentViewController(playViewController, animated: true) {
+        self.present(playViewController, animated: true) {
             self.playViewController.player?.play()
         }
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = videoTableView.dequeueReusableCellWithIdentifier("VideoCell", forIndexPath: indexPath) as! VideoCell
-        let video = data[indexPath.row]
+        let cell = videoTableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath) as! VideoCell
+        let video = data[(indexPath as NSIndexPath).row]
         
         cell.videoScreenshot.image = UIImage(named: video.image)
         cell.videoTitleLabel.text = video.title
