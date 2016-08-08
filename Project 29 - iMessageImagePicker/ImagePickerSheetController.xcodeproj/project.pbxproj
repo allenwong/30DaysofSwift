@@ -11,17 +11,17 @@
 		F519342D1B9E1A4000C5708B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F519342B1B9E1A4000C5708B /* Main.storyboard */; };
 		F519342F1B9E1A4000C5708B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F519342E1B9E1A4000C5708B /* Assets.xcassets */; };
 		F51934321B9E1A4000C5708B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51934301B9E1A4000C5708B /* LaunchScreen.storyboard */; };
-		F519343A1B9E1A7D00C5708B /* SignupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934391B9E1A7D00C5708B /* SignupProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934471B9E1A9800C5708B /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343C1B9E1A9800C5708B /* AnimationController.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934481B9E1A9800C5708B /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343D1B9E1A9800C5708B /* ImageAction.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934491B9E1A9800C5708B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343E1B9E1A9800C5708B /* ImageCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344A1B9E1A9800C5708B /* ImagePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343F1B9E1A9800C5708B /* ImagePickerCollectionView.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344B1B9E1A9800C5708B /* ImagePickerSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934411B9E1A9800C5708B /* ImagePickerSheetController.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344C1B9E1A9800C5708B /* ImagePreviewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344D1B9E1A9800C5708B /* ImagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344E1B9E1A9800C5708B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51934441B9E1A9800C5708B /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		F519344F1B9E1A9800C5708B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F51934451B9E1A9800C5708B /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		F51934501B9E1A9800C5708B /* PreviewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */; settings = {ASSET_TAGS = (); }; };
+		F519343A1B9E1A7D00C5708B /* SignupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934391B9E1A7D00C5708B /* SignupProfileViewController.swift */; };
+		F51934471B9E1A9800C5708B /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343C1B9E1A9800C5708B /* AnimationController.swift */; };
+		F51934481B9E1A9800C5708B /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343D1B9E1A9800C5708B /* ImageAction.swift */; };
+		F51934491B9E1A9800C5708B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343E1B9E1A9800C5708B /* ImageCollectionViewCell.swift */; };
+		F519344A1B9E1A9800C5708B /* ImagePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343F1B9E1A9800C5708B /* ImagePickerCollectionView.swift */; };
+		F519344B1B9E1A9800C5708B /* ImagePickerSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934411B9E1A9800C5708B /* ImagePickerSheetController.swift */; };
+		F519344C1B9E1A9800C5708B /* ImagePreviewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */; };
+		F519344D1B9E1A9800C5708B /* ImagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */; };
+		F519344E1B9E1A9800C5708B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51934441B9E1A9800C5708B /* Images.xcassets */; };
+		F519344F1B9E1A9800C5708B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F51934451B9E1A9800C5708B /* Info.plist */; };
+		F51934501B9E1A9800C5708B /* PreviewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +135,7 @@
 				TargetAttributes = {
 					F51934231B9E1A4000C5708B = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -302,6 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.ImagePickerSheetController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -313,6 +315,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.ImagePickerSheetController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -335,6 +338,7 @@
 				F51934381B9E1A4000C5708B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

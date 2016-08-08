@@ -23,26 +23,28 @@ class ViewController: UICollectionViewController, FMMosaicLayoutDelegate {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent.lightContent
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     
-    func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, numberOfColumnsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, numberOfColumnsInSection section: Int) -> Int {
         return 1
     }
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 10
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
         let randomBlue = CGFloat(drand48())
         let randomRed = CGFloat(drand48())
@@ -52,14 +54,14 @@ class ViewController: UICollectionViewController, FMMosaicLayoutDelegate {
         cell.alpha = 0
         
         let imageView = cell.viewWithTag(2) as! UIImageView
-        imageView.image = UIImage(named: imageArray[indexPath.row])
+        imageView.image = UIImage(named: imageArray[(indexPath as NSIndexPath).row])
         
         
         let cellDelay = UInt64((arc4random() % 600 ) / 1000 )
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(cellDelay * NSEC_PER_SEC )), dispatch_get_main_queue(), ({ () -> Void in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + Double(Int64(cellDelay * NSEC_PER_SEC )) / Double(NSEC_PER_SEC), execute: ({ () -> Void in
             
-            UIView.animateWithDuration(0.8, animations: ({
+            UIView.animate(withDuration: 0.8, animations: ({
                 
                 cell.alpha = 1.0
                 
@@ -71,21 +73,21 @@ class ViewController: UICollectionViewController, FMMosaicLayoutDelegate {
         
     }
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
     }
     
-    func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
     }
     
-    func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, interitemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, interitemSpacingForSectionAt section: Int) -> CGFloat {
         return 1.0
     }
     
-    func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, mosaicCellSizeForItemAtIndexPath indexPath: NSIndexPath! ) -> FMMosaicCellSize {
-        return indexPath.item % 7 == 0 ? FMMosaicCellSize.Big : FMMosaicCellSize.Small
+    func collectionView(_ collectionView: UICollectionView!, layout collectionViewLayout: FMMosaicLayout!, mosaicCellSizeForItemAtIndexPath indexPath: NSIndexPath! ) -> FMMosaicCellSize {
+        return indexPath.item % 7 == 0 ? FMMosaicCellSize.big : FMMosaicCellSize.Small
     }
     
     

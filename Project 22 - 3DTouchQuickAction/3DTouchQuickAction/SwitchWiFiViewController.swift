@@ -12,7 +12,7 @@ class SwitchWiFiViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarHidden =  true
+        UIApplication.shared.isStatusBarHidden =  true
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,11 +15,13 @@ class SecondTabViewController: UIViewController {
         super.viewDidLoad()
         
         self.exploreImageView.alpha = 0
-        self.exploreImageView.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        self.exploreImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,12 +29,12 @@ class SecondTabViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: { () -> Void in
             
-            self.exploreImageView.transform = CGAffineTransformMakeScale(1, 1)
+            self.exploreImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.exploreImageView.alpha = 1
             
             }, completion: nil )

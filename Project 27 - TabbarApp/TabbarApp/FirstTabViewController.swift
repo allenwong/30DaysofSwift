@@ -26,13 +26,15 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
         
         articleTableView.dataSource = self
         articleTableView.delegate = self
-        articleTableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        articleTableView.tableFooterView = UIView(frame: CGRectZero)
+        articleTableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        articleTableView.tableFooterView = UIView(frame: CGRect.zero)
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +42,7 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         animateTable()
         
@@ -55,15 +57,15 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
         
         for i in cells {
             let cell: UITableViewCell = i as UITableViewCell
-            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+            cell.transform = CGAffineTransform(translationX: 0, y: tableHeight)
         }
         
         var index = 0
         
         for a in cells {
             let cell: UITableViewCell = a as UITableViewCell
-            UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
-                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+            UIView.animate(withDuration: 1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0);
                 }, completion: nil)
             
             index += 1
@@ -71,23 +73,23 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 10
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 165
     }
     
-   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = articleTableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ArticleTableViewCell
+        let cell = articleTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ArticleTableViewCell
         
-        let article = data[indexPath.row]
+        let article = data[(indexPath as NSIndexPath).row]
         
         cell.avatarImage.image = UIImage(named: article.avatarImage)
         cell.articleCoverImage.image = UIImage(named: article.articleCoverImage)
@@ -97,7 +99,7 @@ class FirstTabViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.articleSouceLabel.text = article.articleSouce
         cell.articelCreatedAtLabel.text = article.articleTime
         
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         return cell
         

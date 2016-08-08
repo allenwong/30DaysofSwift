@@ -171,6 +171,7 @@
 				TargetAttributes = {
 					9F69BC821C61EB8B00FE5C1A = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					9F69BC991C61EB8B00FE5C1A = {
 						CreatedOnToolsVersion = 7.2;
@@ -378,6 +379,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.CoreDataDemo;
 				PRODUCT_NAME = CoreDataDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -389,6 +391,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.CoreDataDemo;
 				PRODUCT_NAME = CoreDataDemo;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

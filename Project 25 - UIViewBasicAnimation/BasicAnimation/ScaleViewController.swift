@@ -21,13 +21,13 @@ class ScaleViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         
-        UIView.animateWithDuration(0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: { () -> Void in
             
-            self.scaleImageView.transform = CGAffineTransformMakeScale(2, 2)
+            self.scaleImageView.transform = CGAffineTransform(scaleX: 2, y: 2)
             self.scaleImageView.alpha = 1
             
             }, completion: nil )
