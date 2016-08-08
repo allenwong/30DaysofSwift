@@ -16,7 +16,7 @@ class FirstTableCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
@@ -25,14 +25,14 @@ class FirstTableCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         gradientLayer.frame = self.bounds
-        let color1 = UIColor(white: 1.0, alpha: 0.2).CGColor as CGColorRef
-        let color2 = UIColor(white: 1.0, alpha: 0.1).CGColor as CGColorRef
-        let color3 = UIColor.clearColor().CGColor as CGColorRef
-        let color4 = UIColor(white: 0.0, alpha: 0.05).CGColor as CGColorRef
+        let color1 = UIColor(white: 1.0, alpha: 0.2).cgColor as CGColor
+        let color2 = UIColor(white: 1.0, alpha: 0.1).cgColor as CGColor
+        let color3 = UIColor.clear.cgColor as CGColor
+        let color4 = UIColor(white: 0.0, alpha: 0.05).cgColor as CGColor
         
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.04, 0.95, 1.0]
-        layer.insertSublayer(gradientLayer, atIndex: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
         
     }
     

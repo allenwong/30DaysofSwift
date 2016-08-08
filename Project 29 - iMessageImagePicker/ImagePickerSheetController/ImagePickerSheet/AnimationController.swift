@@ -22,11 +22,11 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - UIViewControllerAnimatedTransitioning
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         if presenting {
             animatePresentation(transitionContext)
         }
@@ -37,15 +37,15 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
     
     // MARK: - Animation
     
-    private func animatePresentation(context: UIViewControllerContextTransitioning) {
-        let containerView = context.containerView()!
+    private func animatePresentation(_ context: UIViewControllerContextTransitioning) {
+        let containerView = context.containerView
         containerView.addSubview(imagePickerSheetController.view)
         
         let tableViewOriginY = imagePickerSheetController.tableView.frame.origin.y
         imagePickerSheetController.tableView.frame.origin.y = containerView.bounds.maxY
         imagePickerSheetController.backgroundView.alpha = 0
         
-        UIView.animateWithDuration(transitionDuration(context), animations: {
+        UIView.animate(withDuration: transitionDuration(using: context), animations: {
             self.imagePickerSheetController.tableView.frame.origin.y = tableViewOriginY
             self.imagePickerSheetController.backgroundView.alpha = 1
         }, completion: { _ in
@@ -53,10 +53,10 @@ class AnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         })
     }
     
-    private func animateDismissal(context: UIViewControllerContextTransitioning) {
-        let containerView = context.containerView()!
+    private func animateDismissal(_ context: UIViewControllerContextTransitioning) {
+        let containerView = context.containerView
         
-        UIView.animateWithDuration(transitionDuration(context), animations: {
+        UIView.animate(withDuration: transitionDuration(using: context), animations: {
             self.imagePickerSheetController.tableView.frame.origin.y = containerView.bounds.maxY
             self.imagePickerSheetController.backgroundView.alpha = 0
         }, completion: { _ in

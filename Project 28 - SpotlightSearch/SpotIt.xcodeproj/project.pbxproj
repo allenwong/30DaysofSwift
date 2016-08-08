@@ -12,15 +12,15 @@
 		C085009D1BF3AA9500DD9194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C085009B1BF3AA9500DD9194 /* Main.storyboard */; };
 		C085009F1BF3AA9500DD9194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C085009E1BF3AA9500DD9194 /* Assets.xcassets */; };
 		C08500A21BF3AA9500DD9194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08500A01BF3AA9500DD9194 /* LaunchScreen.storyboard */; };
-		C08500AB1BF3AAC300DD9194 /* MoviesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C08500AA1BF3AAC300DD9194 /* MoviesData.plist */; settings = {ASSET_TAGS = (); }; };
-		C08500B11BF3AAD500DD9194 /* jurassicworld.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AC1BF3AAD500DD9194 /* jurassicworld.jpg */; settings = {ASSET_TAGS = (); }; };
-		C08500B21BF3AAD500DD9194 /* pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AD1BF3AAD500DD9194 /* pixels.jpg */; settings = {ASSET_TAGS = (); }; };
-		C08500B31BF3AAD500DD9194 /* spectre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AE1BF3AAD500DD9194 /* spectre.jpg */; settings = {ASSET_TAGS = (); }; };
-		C08500B41BF3AAD500DD9194 /* terminatorgenisys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AF1BF3AAD500DD9194 /* terminatorgenisys.jpg */; settings = {ASSET_TAGS = (); }; };
-		C08500B51BF3AAD500DD9194 /* themartian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500B01BF3AAD500DD9194 /* themartian.jpg */; settings = {ASSET_TAGS = (); }; };
-		C08500B71BF3AB2A00DD9194 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500B61BF3AB2A00DD9194 /* MovieDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C08500B91BF3AD3900DD9194 /* MovieSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08500B81BF3AD3900DD9194 /* MovieSummaryCell.xib */; settings = {ASSET_TAGS = (); }; };
-		C08500BB1BF3AD7500DD9194 /* MovieSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500BA1BF3AD7500DD9194 /* MovieSummaryCell.swift */; settings = {ASSET_TAGS = (); }; };
+		C08500AB1BF3AAC300DD9194 /* MoviesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = C08500AA1BF3AAC300DD9194 /* MoviesData.plist */; };
+		C08500B11BF3AAD500DD9194 /* jurassicworld.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AC1BF3AAD500DD9194 /* jurassicworld.jpg */; };
+		C08500B21BF3AAD500DD9194 /* pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AD1BF3AAD500DD9194 /* pixels.jpg */; };
+		C08500B31BF3AAD500DD9194 /* spectre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AE1BF3AAD500DD9194 /* spectre.jpg */; };
+		C08500B41BF3AAD500DD9194 /* terminatorgenisys.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500AF1BF3AAD500DD9194 /* terminatorgenisys.jpg */; };
+		C08500B51BF3AAD500DD9194 /* themartian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C08500B01BF3AAD500DD9194 /* themartian.jpg */; };
+		C08500B71BF3AB2A00DD9194 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500B61BF3AB2A00DD9194 /* MovieDetailsViewController.swift */; };
+		C08500B91BF3AD3900DD9194 /* MovieSummaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C08500B81BF3AD3900DD9194 /* MovieSummaryCell.xib */; };
+		C08500BB1BF3AD7500DD9194 /* MovieSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08500BA1BF3AD7500DD9194 /* MovieSummaryCell.swift */; };
 		C08500BD1BF3B2F500DD9194 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08500BC1BF3B2F500DD9194 /* MobileCoreServices.framework */; };
 		C08500BF1BF3B2FC00DD9194 /* CoreSpotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C08500BE1BF3B2FC00DD9194 /* CoreSpotlight.framework */; };
 /* End PBXBuildFile section */
@@ -138,6 +138,7 @@
 				TargetAttributes = {
 					C08500931BF3AA9500DD9194 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -302,6 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.SpotIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -313,6 +315,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.SpotIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -335,6 +338,7 @@
 				C08500A81BF3AA9500DD9194 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

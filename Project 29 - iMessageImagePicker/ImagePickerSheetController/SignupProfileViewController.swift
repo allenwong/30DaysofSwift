@@ -27,23 +27,25 @@ class SignupProfileViewController: UIViewController
         userProfileImageView.layer.masksToBounds = true
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return UIStatusBarStyle.lightContent
+        }
     }
     
-    @IBAction func pickProfileImage(tap: UITapGestureRecognizer)
+    @IBAction func pickProfileImage(_ tap: UITapGestureRecognizer)
     {
         let authorization = PHPhotoLibrary.authorizationStatus()
         
-        if authorization == .NotDetermined {
+        if authorization == .notDetermined {
             PHPhotoLibrary.requestAuthorization({ (status) -> Void in
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     self.pickProfileImage(tap)
                 })
             })
         }
         
-        if authorization == .Authorized {
+        if authorization == .authorized {
             let controller = ImagePickerSheetController()
             
             controller.addAction(ImageAction(title: NSLocalizedString("Take Photo or Video", comment: "Action Title"), secondaryTitle: NSLocalizedString("Use this one", comment: "Action Title"), handler: { (_) -> () in
@@ -57,9 +59,9 @@ class SignupProfileViewController: UIViewController
                     })
             }))
             
-            controller.addAction(ImageAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .Cancel, handler: nil, secondaryHandler: nil))
+            controller.addAction(ImageAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .cancel, handler: nil, secondaryHandler: nil))
             
-            presentViewController(controller, animated: true, completion: nil)
+            present(controller, animated: true, completion: nil)
         }
         
         
