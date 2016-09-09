@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var data = ["30 Days Swift", "这些字体特别适合打「奋斗」和「理想」", "谢谢「造字工房」，本案例不涉及商业使用", "使用到造字工房劲黑体，致黑体，童心体", "呵呵，再见🤗 See you next Project", "微博 @Allen朝辉"]
+    var data = ["30 Days Swift", "这些字体特别适合打「奋斗」和「理想」", "谢谢「造字工房」，本案例不涉及商业使用", "使用到造字工房劲黑体，致黑体，童心体", "呵呵，再见🤗 See you next Project", "微博 @Allen朝辉",
+                "测试测试测试测试测试测试",
+                "123",
+                "Alex",
+                "@@@@@@"]
     
-    var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular"]
+    var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular", "edundot", "Gaspar Regular"]
     
     var fontRowIndex = 0
  
@@ -20,7 +24,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var fontTableView: UITableView!
     @IBAction func changeFontDidTouch(sender: AnyObject) {
         
-        fontRowIndex = (fontRowIndex + 1) % 3
+        fontRowIndex = (fontRowIndex + 1) % 5
+        print(fontNames[fontRowIndex])
         fontTableView.reloadData()
         
     }
@@ -46,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return 35
     }
     
     
@@ -60,9 +65,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
         let text = data[indexPath.row]
         
-            cell.textLabel?.text = text
-            cell.textLabel?.textColor = UIColor.whiteColor()
-            cell.textLabel?.font = UIFont(name:self.fontNames[fontRowIndex], size:16)
+        cell.textLabel?.text = text
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.font = UIFont(name:self.fontNames[fontRowIndex], size:16)
         
         return cell
     
