@@ -159,7 +159,7 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 
 ## What's next? ##
 
-Build a camera app.
+Update: I made [Wave(浪潮) VPN](http://usewaveapp.com/) for iOS, now on [App Store](https://itunes.apple.com/cn/app/lang-chao-vpn/id1129666220?mt=8).
 
 ## License ##
 
