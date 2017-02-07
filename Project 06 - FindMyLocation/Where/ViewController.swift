@@ -19,11 +19,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    @IBAction func myLocationButtonDidTouch(sender: AnyObject) {
+    @IBAction func myLocationButtonDidTouch(_ sender: AnyObject) {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -39,13 +39,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
       self.locationLabel.text = "Error while updating location " + error.localizedDescription
         
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
             
             if (error != nil) {
@@ -62,7 +62,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         })
     }
     
-    func displayLocationInfo(placemark: CLPlacemark?) {
+    func displayLocationInfo(_ placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
             //stop updating location to save battery life
             locationManager.stopUpdatingLocation()
@@ -72,7 +72,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
             let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
             
-            self.locationLabel.text = locality! +  postalCode! +  administrativeArea! +  country!
+            self.locationLabel.text = postalCode! + " " + locality!
+            
+            self.locationLabel.text?.append("\n" + administrativeArea! + ", " + country!)
         }
         
     }
