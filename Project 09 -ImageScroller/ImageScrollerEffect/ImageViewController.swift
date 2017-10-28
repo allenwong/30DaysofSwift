@@ -29,8 +29,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +52,11 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     
     // set up scroll view
     
-    private func setUpScrollView() {
+    fileprivate func setUpScrollView() {
         
         scrollView = UIScrollView(frame: view.bounds)
-        scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-        scrollView.backgroundColor = UIColor.clearColor()
+        scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        scrollView.backgroundColor = UIColor.clear
         scrollView.contentSize = imageView.bounds.size
         
         scrollView.addSubview(imageView)
@@ -64,7 +64,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    private func setZoomScaleFor(srollViewSize: CGSize) {
+    fileprivate func setZoomScaleFor(_ srollViewSize: CGSize) {
         
         let imageSize = imageView.bounds.size
         let widthScale = srollViewSize.width / imageSize.width
@@ -76,7 +76,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    private func recenterImage() {
+    fileprivate func recenterImage() {
         
         let scrollViewSize = scrollView.bounds.size
         let imageViewSize = imageView.frame.size
@@ -87,11 +87,11 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return self.imageView
     }
     
-    func scrollViewDidZoom(scrollView: UIScrollView) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         self.recenterImage()
     }
 

@@ -19,7 +19,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarHidden = true
+        UIApplication.shared.isStatusBarHidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -29,19 +29,19 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         previewLayer?.frame = cameraView.bounds
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = AVCaptureSessionPreset1920x1080
         
-        let backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         var error : NSError?
         var input: AVCaptureDeviceInput!
         
@@ -64,7 +64,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                     
                     previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
                     previewLayer?.videoGravity = AVLayerVideoGravityResizeAspect
-                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.Portrait
+                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
                     cameraView.layer.addSublayer(previewLayer!)
                     captureSession?.startRunning()
                 }
@@ -77,22 +77,22 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     func didPressTakePhoto(){
         
-        if let videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo){
-            videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
-            stillImageOutput?.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {
+        if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
+            videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
+            stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
                 (sampleBuffer, error) in
                 
                 if sampleBuffer != nil {
                     
                     
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                    let dataProvider  = CGDataProviderCreateWithCFData(imageData)
-                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
+                    let dataProvider  = CGDataProvider(data: imageData as! CFData)
+                    let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
                     
-                    let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
                     
                     self.tempImageView.image = image
-                    self.tempImageView.hidden = false
+                    self.tempImageView.isHidden = false
                     
                 }
                 
@@ -108,7 +108,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     func didPressTakeAnother(){
         if didTakePhoto == true{
-            tempImageView.hidden = true
+            tempImageView.isHidden = true
             didTakePhoto = false
             
         }
@@ -121,7 +121,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         didPressTakeAnother()
     }
     
