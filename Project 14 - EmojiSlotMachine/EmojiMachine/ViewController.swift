@@ -12,14 +12,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     @IBOutlet weak var emojiPickerView: UIPickerView!
     @IBOutlet weak var goButton: UIButton!
-    @IBAction func goButtoDidTouch(sender: AnyObject) {
+    @IBAction func goButtoDidTouch(_ sender: AnyObject) {
         
         emojiPickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 0, animated: true)
         emojiPickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 1, animated: true)
         emojiPickerView.selectRow(Int(arc4random()) % 90 + 3, inComponent: 2, animated: true)
         
         
-        if(dataArray1[emojiPickerView.selectedRowInComponent(0)] == dataArray2[emojiPickerView.selectedRowInComponent(1)] && dataArray2[emojiPickerView.selectedRowInComponent(1)] == dataArray3[emojiPickerView.selectedRowInComponent(2)]) {
+        if(dataArray1[emojiPickerView.selectedRow(inComponent: 0)] == dataArray2[emojiPickerView.selectedRow(inComponent: 1)] && dataArray2[emojiPickerView.selectedRow(inComponent: 1)] == dataArray3[emojiPickerView.selectedRow(inComponent: 2)]) {
             
             resultLabel.text = "Bingo!"
             
@@ -32,13 +32,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         //animate
         
-        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, options: .CurveLinear, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, options: .curveLinear, animations: {
             
             self.goButton.bounds = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.size.width + 20, height: self.bounds.size.height)
             
             }, completion: { (compelete: Bool) in
                 
-                UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseInOut, animations: {
+                UIView.animate(withDuration: 0.1, delay: 0.0, options: UIViewAnimationOptions(), animations: {
                     
                     self.goButton.bounds = CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: self.bounds.size.width, height: self.bounds.size.height)
                     
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var dataArray1 = [Int]()
     var dataArray2 = [Int]()
     var dataArray3 = [Int]()
-    var bounds: CGRect = CGRectZero
+    var bounds: CGRect = CGRect.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,10 +62,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         bounds = goButton.bounds
         imageArray = ["👻","👸","💩","😘","🍔","🤖","🍟","🐼","🚖","🐷"]
         
-        for(var i = 0; i < 100; i++) {
-            dataArray1.append((Int)(arc4random() % 10 ))
-            dataArray2.append((Int)(arc4random() % 10 ))
-            dataArray3.append((Int)(arc4random() % 10 ))
+        for _ in 0...100 {
+            self.dataArray1.append((Int)(arc4random() % 10 ))
+            self.dataArray2.append((Int)(arc4random() % 10 ))
+            self.dataArray3.append((Int)(arc4random() % 10 ))
         }
         
         resultLabel.text = ""
@@ -78,21 +78,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         goButton.alpha = 0
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.3, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut, animations: {
             
             self.goButton.alpha = 1
             
@@ -106,23 +106,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.didReceiveMemoryWarning()
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 100
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     
-    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         return 100.0
     }
     
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 100.0
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let pickerLabel = UILabel()
         
@@ -135,7 +135,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         pickerLabel.font = UIFont(name: "Apple Color Emoji", size: 80)
-        pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.textAlignment = NSTextAlignment.center
         
         return pickerLabel
         

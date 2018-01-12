@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  
     @IBOutlet weak var changeFontButton: UIButton!
     @IBOutlet weak var fontTableView: UITableView!
-    @IBAction func changeFontDidTouch(sender: AnyObject) {
+    @IBAction func changeFontDidTouch(_ sender: AnyObject) {
         
         fontRowIndex = (fontRowIndex + 1) % 5
         print(fontNames[fontRowIndex])
@@ -30,8 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
   
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func viewDidLoad() {
@@ -40,8 +40,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         fontTableView.dataSource = self
         fontTableView.delegate = self
         
-        for family in UIFont.familyNames() {
-            for font in UIFont.fontNamesForFamilyName(family){
+        for family in UIFont.familyNames {
+            for font in UIFont.fontNames(forFamilyName: family){
                 print(font)
             }
         }
@@ -50,30 +50,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 35
     }
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = fontTableView.dequeueReusableCellWithIdentifier("FontCell", forIndexPath: indexPath)
+        let cell = fontTableView.dequeueReusableCell(withIdentifier: "FontCell", for: indexPath)
     
         let text = data[indexPath.row]
         
         cell.textLabel?.text = text
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont(name:self.fontNames[fontRowIndex], size:16)
         
         return cell
     
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
 

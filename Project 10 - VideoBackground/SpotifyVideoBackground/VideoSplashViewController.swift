@@ -11,30 +11,32 @@ import MediaPlayer
 import AVKit
 
 public enum ScalingMode {
-  case Resize
-  case ResizeAspect
-  case ResizeAspectFill
+  case resize
+  case resizeAspect
+  case resizeAspectFill
 }
 
-public class VideoSplashViewController: UIViewController {
+open class VideoSplashViewController: UIViewController {
 
-  private let moviePlayer = AVPlayerViewController()
-  private var moviePlayerSoundLevel: Float = 1.0
-  public var contentURL: NSURL = NSURL() {
+  fileprivate let moviePlayer = AVPlayerViewController()
+  fileprivate var moviePlayerSoundLevel: Float = 1.0
+  open var contentURL: URL? {
     didSet {
-      setMoviePlayer(contentURL)
+      if let _contentURL = contentURL {
+      setMoviePlayer(_contentURL)
+      }
     }
   }
 
-  public var videoFrame: CGRect = CGRect()
-  public var startTime: CGFloat = 0.0
-  public var duration: CGFloat = 0.0
-  public var backgroundColor: UIColor = UIColor.blackColor() {
+  open var videoFrame: CGRect = CGRect()
+  open var startTime: CGFloat = 0.0
+  open var duration: CGFloat = 0.0
+  open var backgroundColor: UIColor = UIColor.black {
     didSet {
       view.backgroundColor = backgroundColor
     }
   }
-  public var sound: Bool = true {
+  open var sound: Bool = true {
     didSet {
       if sound {
         moviePlayerSoundLevel = 1.0
@@ -43,67 +45,67 @@ public class VideoSplashViewController: UIViewController {
       }
     }
   }
-  public var alpha: CGFloat = CGFloat() {
+  open var alpha: CGFloat = CGFloat() {
     didSet {
       moviePlayer.view.alpha = alpha
     }
   }
-  public var alwaysRepeat: Bool = true {
+  open var alwaysRepeat: Bool = true {
     didSet {
       if alwaysRepeat {
-        NSNotificationCenter.defaultCenter().addObserver(self,
-          selector: "playerItemDidReachEnd",
-          name: AVPlayerItemDidPlayToEndTimeNotification,
+        NotificationCenter.default.addObserver(self,
+          selector: #selector(VideoSplashViewController.playerItemDidReachEnd),
+          name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
           object: moviePlayer.player?.currentItem)
       }
     }
   }
-  public var fillMode: ScalingMode = .ResizeAspectFill {
+  open var fillMode: ScalingMode = .resizeAspectFill {
     didSet {
       switch fillMode {
-      case .Resize:
+      case .resize:
         moviePlayer.videoGravity = AVLayerVideoGravityResize
-      case .ResizeAspect:
+      case .resizeAspect:
         moviePlayer.videoGravity = AVLayerVideoGravityResizeAspect
-      case .ResizeAspectFill:
+      case .resizeAspectFill:
         moviePlayer.videoGravity = AVLayerVideoGravityResizeAspectFill
       }
     }
   }
 
-  override public func viewDidAppear(animated: Bool) {
+  override open func viewDidAppear(_ animated: Bool) {
     moviePlayer.view.frame = videoFrame
     moviePlayer.showsPlaybackControls = false
     view.addSubview(moviePlayer.view)
-    view.sendSubviewToBack(moviePlayer.view)
+    view.sendSubview(toBack: moviePlayer.view)
   }
   
-  override public func viewWillDisappear(animated: Bool) {
+  override open func viewWillDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
-    NSNotificationCenter.defaultCenter().removeObserver(self)
+    NotificationCenter.default.removeObserver(self)
   }
 
-  private func setMoviePlayer(url: NSURL){
+  fileprivate func setMoviePlayer(_ url: URL){
     let videoCutter = VideoCutter()
     videoCutter.cropVideoWithUrl(videoUrl: url, startTime: startTime, duration: duration) { (videoPath, error) -> Void in
-      if let path = videoPath as NSURL? {
-            self.moviePlayer.player = AVPlayer(URL: path)
+      if let path = videoPath as URL? {
+            self.moviePlayer.player = AVPlayer(url: path)
             self.moviePlayer.player?.play()
             self.moviePlayer.player?.volume = self.moviePlayerSoundLevel
           }
     }
   }
 
-  override public func viewDidLoad() {
+  override open func viewDidLoad() {
     super.viewDidLoad()
   }
 
-  override public func didReceiveMemoryWarning() {
+  override open func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
   
   func playerItemDidReachEnd() {
-    moviePlayer.player?.seekToTime(kCMTimeZero)
+    moviePlayer.player?.seek(to: kCMTimeZero)
     moviePlayer.player?.play()
   }
 }
