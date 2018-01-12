@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func loadMoviesInfo() {
         
-        if let path = NSBundle.mainBundle().pathForResource("MoviesData", ofType: "plist") {
+        if let path = Bundle.main.pathForResource("MoviesData", ofType: "plist") {
             moviesInfo = NSMutableArray(contentsOfFile: path)
         }
     }
@@ -49,19 +49,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             searchableItemAttributeSet.title = movie["Title"]!
             
             //set the image
-            let imagePathParts = movie["Image"]!.componentsSeparatedByString(".")
-            searchableItemAttributeSet.thumbnailURL = NSBundle.mainBundle().URLForResource(imagePathParts[0], withExtension: imagePathParts[1])
+            let imagePathParts = movie["Image"]!.components(separatedBy: ".")
+            searchableItemAttributeSet.thumbnailURL = Bundle.main.urlForResource(imagePathParts[0], withExtension: imagePathParts[1])
             
             // Set the description.
             searchableItemAttributeSet.contentDescription = movie["Description"]!
             
             var keywords = [String]()
-            let movieCategories = movie["Category"]!.componentsSeparatedByString(", ")
+            let movieCategories = movie["Category"]!.components(separatedBy: ", ")
             for movieCategory in movieCategories {
                 keywords.append(movieCategory)
             }
             
-            let stars = movie["Stars"]!.componentsSeparatedByString(", ")
+            let stars = movie["Stars"]!.components(separatedBy: ", ")
             for star in stars {
                 keywords.append(star)
             }
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             searchableItems.append(searchableItem)
             
-            CSSearchableIndex.defaultSearchableIndex().indexSearchableItems(searchableItems) { (error) -> Void in
+            CSSearchableIndex.default().indexSearchableItems(searchableItems) { (error) -> Void in
                 if error != nil {
                     print(error?.localizedDescription)
                 }
@@ -81,13 +81,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    override func restoreUserActivityState(activity: NSUserActivity) {
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
         
         if activity.activityType == CSSearchableItemActionType {
             if let userInfo = activity.userInfo {
                 let selectedMovie = userInfo[CSSearchableItemActivityIdentifier] as! String
-                selectedMovieIndex = Int(selectedMovie.componentsSeparatedByString(".").last!)
-                performSegueWithIdentifier("idSegueShowMovieDetails", sender: self)
+                selectedMovieIndex = Int(selectedMovie.components(separatedBy: ".").last!)
+                performSegue(withIdentifier: "idSegueShowMovieDetails", sender: self)
             }
         }
     }
@@ -97,19 +97,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tblMovies.delegate = self
         tblMovies.dataSource = self
-        tblMovies.tableFooterView = UIView(frame: CGRectZero)
-        tblMovies.registerNib(UINib(nibName: "MovieSummaryCell", bundle: nil), forCellReuseIdentifier: "idCellMovieSummary")
+        tblMovies.tableFooterView = UIView(frame: CGRect.zero)
+        tblMovies.register(UINib(nibName: "MovieSummaryCell", bundle: nil), forCellReuseIdentifier: "idCellMovieSummary")
     }
     
     
     // MARK:  UITableView Functions
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if moviesInfo != nil {
             return moviesInfo.count
@@ -119,9 +119,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("idCellMovieSummary", forIndexPath: indexPath) as! MovieSummaryCell
-        let currentMovieInfo = moviesInfo[indexPath.row] as! [String: String]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "idCellMovieSummary", for: indexPath) as! MovieSummaryCell
+        let currentMovieInfo = moviesInfo[(indexPath as NSIndexPath).row] as! [String: String]
         
         cell.lblTitle.text = currentMovieInfo["Title"]!
         cell.lblDescription.text = currentMovieInfo["Description"]!
@@ -132,19 +132,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        selectedMovieIndex = indexPath.row
-        performSegueWithIdentifier("idSegueShowMovieDetails", sender: self)
+        selectedMovieIndex = (indexPath as NSIndexPath).row
+        performSegue(withIdentifier: "idSegueShowMovieDetails", sender: self)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let identifier = segue.identifier {
             
