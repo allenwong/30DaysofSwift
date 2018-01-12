@@ -46,7 +46,7 @@ class MenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UI
         
         if isPresenting {
             toView.transform = moveUp
-            snapshot = fromView.snapshotViewAfterScreenUpdates(true)
+            snapshot = fromView.snapshotViewAfterScreenUpdates(false)
             container!.addSubview(toView)
             container!.addSubview(snapshot!)
         }
