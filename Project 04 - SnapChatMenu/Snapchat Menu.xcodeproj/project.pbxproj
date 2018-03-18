@@ -10,11 +10,8 @@
 		9FC2DE291C425AF100F0CB8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE281C425AF100F0CB8D /* AppDelegate.swift */; };
 		9FC2DE2B1C425AF100F0CB8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE2A1C425AF100F0CB8D /* ViewController.swift */; };
 		9FC2DE2E1C425AF100F0CB8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC2DE2C1C425AF100F0CB8D /* Main.storyboard */; };
-		9FC2DE311C425AF100F0CB8D /* Snapchat_Menu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE2F1C425AF100F0CB8D /* Snapchat_Menu.xcdatamodeld */; };
 		9FC2DE331C425AF100F0CB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC2DE321C425AF100F0CB8D /* Assets.xcassets */; };
 		9FC2DE361C425AF100F0CB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC2DE341C425AF100F0CB8D /* LaunchScreen.storyboard */; };
-		9FC2DE411C425AF100F0CB8D /* Snapchat_MenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE401C425AF100F0CB8D /* Snapchat_MenuTests.swift */; };
-		9FC2DE4C1C425AF100F0CB8D /* Snapchat_MenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE4B1C425AF100F0CB8D /* Snapchat_MenuUITests.swift */; };
 		9FC2DE5B1C42675C00F0CB8D /* LeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE591C42675C00F0CB8D /* LeftView.swift */; };
 		9FC2DE5C1C42675C00F0CB8D /* LeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC2DE5A1C42675C00F0CB8D /* LeftView.xib */; };
 		9FC2DE5F1C42676800F0CB8D /* RightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC2DE5D1C42676800F0CB8D /* RightView.swift */; };
@@ -23,38 +20,14 @@
 		9FC2DE641C426A9500F0CB8D /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC2DE621C426A9500F0CB8D /* CameraView.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9FC2DE3D1C425AF100F0CB8D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9FC2DE1D1C425AF100F0CB8D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9FC2DE241C425AF100F0CB8D;
-			remoteInfo = "Snapchat Menu";
-		};
-		9FC2DE481C425AF100F0CB8D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9FC2DE1D1C425AF100F0CB8D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9FC2DE241C425AF100F0CB8D;
-			remoteInfo = "Snapchat Menu";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		9FC2DE251C425AF100F0CB8D /* Snapchat Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snapchat Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC2DE281C425AF100F0CB8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC2DE2A1C425AF100F0CB8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9FC2DE2D1C425AF100F0CB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9FC2DE301C425AF100F0CB8D /* Snapchat_Menu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Snapchat_Menu.xcdatamodel; sourceTree = "<group>"; };
 		9FC2DE321C425AF100F0CB8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FC2DE351C425AF100F0CB8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FC2DE371C425AF100F0CB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FC2DE3C1C425AF100F0CB8D /* Snapchat MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapchat MenuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC2DE401C425AF100F0CB8D /* Snapchat_MenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapchat_MenuTests.swift; sourceTree = "<group>"; };
-		9FC2DE421C425AF100F0CB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FC2DE471C425AF100F0CB8D /* Snapchat MenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snapchat MenuUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC2DE4B1C425AF100F0CB8D /* Snapchat_MenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapchat_MenuUITests.swift; sourceTree = "<group>"; };
-		9FC2DE4D1C425AF100F0CB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FC2DE591C42675C00F0CB8D /* LeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
 		9FC2DE5A1C42675C00F0CB8D /* LeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftView.xib; sourceTree = "<group>"; };
 		9FC2DE5D1C42676800F0CB8D /* RightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
@@ -71,20 +44,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FC2DE391C425AF100F0CB8D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC2DE441C425AF100F0CB8D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				9FC2DE271C425AF100F0CB8D /* Snapchat Menu */,
-				9FC2DE3F1C425AF100F0CB8D /* Snapchat MenuTests */,
-				9FC2DE4A1C425AF100F0CB8D /* Snapchat MenuUITests */,
 				9FC2DE261C425AF100F0CB8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				9FC2DE251C425AF100F0CB8D /* Snapchat Menu.app */,
-				9FC2DE3C1C425AF100F0CB8D /* Snapchat MenuTests.xctest */,
-				9FC2DE471C425AF100F0CB8D /* Snapchat MenuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,27 +78,8 @@
 				9FC2DE321C425AF100F0CB8D /* Assets.xcassets */,
 				9FC2DE341C425AF100F0CB8D /* LaunchScreen.storyboard */,
 				9FC2DE371C425AF100F0CB8D /* Info.plist */,
-				9FC2DE2F1C425AF100F0CB8D /* Snapchat_Menu.xcdatamodeld */,
 			);
 			path = "Snapchat Menu";
-			sourceTree = "<group>";
-		};
-		9FC2DE3F1C425AF100F0CB8D /* Snapchat MenuTests */ = {
-			isa = PBXGroup;
-			children = (
-				9FC2DE401C425AF100F0CB8D /* Snapchat_MenuTests.swift */,
-				9FC2DE421C425AF100F0CB8D /* Info.plist */,
-			);
-			path = "Snapchat MenuTests";
-			sourceTree = "<group>";
-		};
-		9FC2DE4A1C425AF100F0CB8D /* Snapchat MenuUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9FC2DE4B1C425AF100F0CB8D /* Snapchat_MenuUITests.swift */,
-				9FC2DE4D1C425AF100F0CB8D /* Info.plist */,
-			);
-			path = "Snapchat MenuUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,42 +102,6 @@
 			productReference = 9FC2DE251C425AF100F0CB8D /* Snapchat Menu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9FC2DE3B1C425AF100F0CB8D /* Snapchat MenuTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9FC2DE531C425AF100F0CB8D /* Build configuration list for PBXNativeTarget "Snapchat MenuTests" */;
-			buildPhases = (
-				9FC2DE381C425AF100F0CB8D /* Sources */,
-				9FC2DE391C425AF100F0CB8D /* Frameworks */,
-				9FC2DE3A1C425AF100F0CB8D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9FC2DE3E1C425AF100F0CB8D /* PBXTargetDependency */,
-			);
-			name = "Snapchat MenuTests";
-			productName = "Snapchat MenuTests";
-			productReference = 9FC2DE3C1C425AF100F0CB8D /* Snapchat MenuTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9FC2DE461C425AF100F0CB8D /* Snapchat MenuUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9FC2DE561C425AF100F0CB8D /* Build configuration list for PBXNativeTarget "Snapchat MenuUITests" */;
-			buildPhases = (
-				9FC2DE431C425AF100F0CB8D /* Sources */,
-				9FC2DE441C425AF100F0CB8D /* Frameworks */,
-				9FC2DE451C425AF100F0CB8D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9FC2DE491C425AF100F0CB8D /* PBXTargetDependency */,
-			);
-			name = "Snapchat MenuUITests";
-			productName = "Snapchat MenuUITests";
-			productReference = 9FC2DE471C425AF100F0CB8D /* Snapchat MenuUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,16 +115,6 @@
 					9FC2DE241C425AF100F0CB8D = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0830;
-					};
-					9FC2DE3B1C425AF100F0CB8D = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0830;
-						TestTargetID = 9FC2DE241C425AF100F0CB8D;
-					};
-					9FC2DE461C425AF100F0CB8D = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0830;
-						TestTargetID = 9FC2DE241C425AF100F0CB8D;
 					};
 				};
 			};
@@ -242,8 +132,6 @@
 			projectRoot = "";
 			targets = (
 				9FC2DE241C425AF100F0CB8D /* Snapchat Menu */,
-				9FC2DE3B1C425AF100F0CB8D /* Snapchat MenuTests */,
-				9FC2DE461C425AF100F0CB8D /* Snapchat MenuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,20 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FC2DE3A1C425AF100F0CB8D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC2DE451C425AF100F0CB8D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,41 +161,11 @@
 				9FC2DE291C425AF100F0CB8D /* AppDelegate.swift in Sources */,
 				9FC2DE5F1C42676800F0CB8D /* RightView.swift in Sources */,
 				9FC2DE631C426A9500F0CB8D /* CameraView.swift in Sources */,
-				9FC2DE311C425AF100F0CB8D /* Snapchat_Menu.xcdatamodeld in Sources */,
 				9FC2DE5B1C42675C00F0CB8D /* LeftView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9FC2DE381C425AF100F0CB8D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FC2DE411C425AF100F0CB8D /* Snapchat_MenuTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9FC2DE431C425AF100F0CB8D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FC2DE4C1C425AF100F0CB8D /* Snapchat_MenuUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9FC2DE3E1C425AF100F0CB8D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9FC2DE241C425AF100F0CB8D /* Snapchat Menu */;
-			targetProxy = 9FC2DE3D1C425AF100F0CB8D /* PBXContainerItemProxy */;
-		};
-		9FC2DE491C425AF100F0CB8D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9FC2DE241C425AF100F0CB8D /* Snapchat Menu */;
-			targetProxy = 9FC2DE481C425AF100F0CB8D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9FC2DE2C1C425AF100F0CB8D /* Main.storyboard */ = {
@@ -364,7 +208,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -409,6 +253,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -428,7 +273,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "Snapchat Menu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-Menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,63 +287,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "Snapchat Menu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-Menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		9FC2DE541C425AF100F0CB8D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Snapchat MenuTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-MenuTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapchat Menu.app/Snapchat Menu";
-			};
-			name = Debug;
-		};
-		9FC2DE551C425AF100F0CB8D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "Snapchat MenuTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-MenuTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapchat Menu.app/Snapchat Menu";
-			};
-			name = Release;
-		};
-		9FC2DE571C425AF100F0CB8D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Snapchat MenuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-MenuUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Snapchat Menu";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		9FC2DE581C425AF100F0CB8D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "Snapchat MenuUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.Snapchat-MenuUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Snapchat Menu";
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -521,38 +318,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FC2DE531C425AF100F0CB8D /* Build configuration list for PBXNativeTarget "Snapchat MenuTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9FC2DE541C425AF100F0CB8D /* Debug */,
-				9FC2DE551C425AF100F0CB8D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9FC2DE561C425AF100F0CB8D /* Build configuration list for PBXNativeTarget "Snapchat MenuUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9FC2DE571C425AF100F0CB8D /* Debug */,
-				9FC2DE581C425AF100F0CB8D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9FC2DE2F1C425AF100F0CB8D /* Snapchat_Menu.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9FC2DE301C425AF100F0CB8D /* Snapchat_Menu.xcdatamodel */,
-			);
-			currentVersion = 9FC2DE301C425AF100F0CB8D /* Snapchat_Menu.xcdatamodel */;
-			path = Snapchat_Menu.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9FC2DE1D1C425AF100F0CB8D /* Project object */;
 }
