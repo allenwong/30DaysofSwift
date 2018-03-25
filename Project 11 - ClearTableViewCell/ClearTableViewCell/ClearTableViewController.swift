@@ -15,36 +15,36 @@ class ClearTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.sharedApplication().statusBarHidden = true
         
-        self.view.backgroundColor = UIColor.blackColor()
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
-        self.tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "tableCell")
+        
+        self.view.backgroundColor = UIColor.black
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.tableView.register(TableViewCell.self, forCellReuseIdentifier: "tableCell")
         
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TableViewCell
         
         cell.textLabel?.text = tableData[indexPath.row]
-        cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.textLabel?.backgroundColor = UIColor.clearColor()
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.backgroundColor = UIColor.clear
         cell.textLabel?.font = UIFont(name: "Avenir Next", size: 18)
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
         
     }
@@ -57,10 +57,8 @@ class ClearTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        cell.backgroundColor =  colorforIndex(indexPath.row)
-        
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = colorforIndex(index: indexPath.row)
     }
-    
+
 }
