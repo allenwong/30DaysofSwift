@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         
     }
     
-    func randomColor() {
+    @objc func randomColor() {
         
         let redValue = CGFloat(drand48())
         let blueValue =  CGFloat(drand48())

@@ -8,56 +8,60 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
     
-    var Counter = 0.0
-    var Timer = NSTimer()
-    var IsPlaying = false
+    var counter = 0.0
+    var timer = Timer()
+    var isPlaying = false
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+     func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     override func viewDidLoad() {
-        timeLabel.text = String(Counter)
+        
         super.viewDidLoad()
+        
+        timeLabel.text = String(counter)
     }
     
     @IBOutlet weak var timeLabel: UILabel!
-    @IBAction func resetButtonDidTouch(sender: AnyObject) {
-        Timer.invalidate()
-        IsPlaying = false
-        Counter = 0
-        timeLabel.text = String(Counter)
-        playBtn.enabled = true
-        pauseBtn.enabled = true
+    @IBAction func resetButtonDidTouch(_ sender: UIButton) {
+        timer.invalidate()
+        isPlaying = false
+        counter = 0
+        timeLabel.text = String(counter)
+        playBtn.isEnabled = true
+        pauseBtn.isEnabled = true
     }
     
-    @IBAction func playButtonDidTouch(sender: AnyObject) {
-        if(IsPlaying) {
+    @IBAction func playButtonDidTouch(_ sender: UIButton) {
+        if(isPlaying) {
             return
         }
-        playBtn.enabled = false
-        pauseBtn.enabled = true
-        Timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: #selector(ViewController.UpdateTimer), userInfo: nil, repeats: true)
-        IsPlaying = true
+        playBtn.isEnabled = false
+        pauseBtn.isEnabled = true
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.UpdateTimer), userInfo: nil, repeats: true)
+        isPlaying = true
     }
     
-    @IBAction func pauseButtonDidTouch(sender: AnyObject) {
+    @IBAction func pauseButtonDidTouch(_ sender: UIButton) {
         
-        playBtn.enabled = true
-        pauseBtn.enabled = false
-        Timer.invalidate()
-        IsPlaying = false
+        playBtn.isEnabled = true
+        pauseBtn.isEnabled = false
+        timer.invalidate()
+        isPlaying = false
         
     }
     
-    func UpdateTimer() {
-        Counter = Counter + 0.1
-        timeLabel.text = String(format: "%.1f", Counter)
+   @objc func UpdateTimer() {
+        counter = counter + 0.1
+        timeLabel.text = String(format: "%.1f", counter)
+    
     }
     
     

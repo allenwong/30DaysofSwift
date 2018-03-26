@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 "Alex",
                 "@@@@@@"]
     
-    var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular", "edundot", "Gaspar Regular"]
+    var fontNames = ["MFTongXin_Noncommercial-Regular", "MFJinHei_Noncommercial-Regular", "MFZhiHei_Noncommercial-Regular", "Zapfino", "Gaspar Regular"]
     
     var fontRowIndex = 0
  
@@ -40,13 +40,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         fontTableView.dataSource = self
         fontTableView.delegate = self
         
-        for family in UIFont.familyNames {
-            for font in UIFont.fontNames(forFamilyName: family){
-                print(font)
-            }
-        }
+//        for family in UIFont.familyNames {
+//            for font in UIFont.fontNames(forFamilyName: family){
+//                print(font)
+//            }
+//        }
         
-        changeFontButton.layer.cornerRadius = 55
+        changeFontButton.layer.cornerRadius = 50
         
     }
     

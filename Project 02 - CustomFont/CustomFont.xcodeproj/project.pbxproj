@@ -13,8 +13,6 @@
 		9F5C12041C3E58C60047AC8A /* CustomFont.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C12021C3E58C60047AC8A /* CustomFont.xcdatamodeld */; };
 		9F5C12061C3E58C60047AC8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C12051C3E58C60047AC8A /* Assets.xcassets */; };
 		9F5C12091C3E58C60047AC8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C12071C3E58C60047AC8A /* LaunchScreen.storyboard */; };
-		9F5C12141C3E58C60047AC8A /* CustomFontTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C12131C3E58C60047AC8A /* CustomFontTests.swift */; };
-		9F5C121F1C3E58C60047AC8A /* CustomFontUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C121E1C3E58C60047AC8A /* CustomFontUITests.swift */; };
 		9FBD36791C71AA2800291252 /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36751C71A98900291252 /* Gaspar Regular.otf */; };
 		9FBD367A1C71AA2800291252 /* MFJinHei_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36761C71A98900291252 /* MFJinHei_Noncommercial-Regular.ttf */; };
 		9FBD367B1C71AA2800291252 /* MFTongXin_Noncommercial-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36771C71A98900291252 /* MFTongXin_Noncommercial-Regular.ttf */; };
@@ -48,11 +46,7 @@
 		9F5C12081C3E58C60047AC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F5C120A1C3E58C60047AC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5C120F1C3E58C60047AC8A /* CustomFontTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomFontTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F5C12131C3E58C60047AC8A /* CustomFontTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontTests.swift; sourceTree = "<group>"; };
-		9F5C12151C3E58C60047AC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5C121A1C3E58C60047AC8A /* CustomFontUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomFontUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F5C121E1C3E58C60047AC8A /* CustomFontUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontUITests.swift; sourceTree = "<group>"; };
-		9F5C12201C3E58C60047AC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FBD36751C71A98900291252 /* Gaspar Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gaspar Regular.otf"; sourceTree = "<group>"; };
 		9FBD36761C71A98900291252 /* MFJinHei_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFJinHei_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
 		9FBD36771C71A98900291252 /* MFTongXin_Noncommercial-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MFTongXin_Noncommercial-Regular.ttf"; sourceTree = "<group>"; };
@@ -99,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				9F5C11FA1C3E58C60047AC8A /* CustomFont */,
-				9F5C12121C3E58C60047AC8A /* CustomFontTests */,
-				9F5C121D1C3E58C60047AC8A /* CustomFontUITests */,
 				9F5C11F91C3E58C50047AC8A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,24 +120,6 @@
 				9F5C12021C3E58C60047AC8A /* CustomFont.xcdatamodeld */,
 			);
 			path = CustomFont;
-			sourceTree = "<group>";
-		};
-		9F5C12121C3E58C60047AC8A /* CustomFontTests */ = {
-			isa = PBXGroup;
-			children = (
-				9F5C12131C3E58C60047AC8A /* CustomFontTests.swift */,
-				9F5C12151C3E58C60047AC8A /* Info.plist */,
-			);
-			path = CustomFontTests;
-			sourceTree = "<group>";
-		};
-		9F5C121D1C3E58C60047AC8A /* CustomFontUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9F5C121E1C3E58C60047AC8A /* CustomFontUITests.swift */,
-				9F5C12201C3E58C60047AC8A /* Info.plist */,
-			);
-			path = CustomFontUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F5C12141C3E58C60047AC8A /* CustomFontTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F5C121F1C3E58C60047AC8A /* CustomFontUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
