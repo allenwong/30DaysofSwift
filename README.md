@@ -5,14 +5,14 @@
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/allenwong/30DaysofSwift)
 [![Twitter Follow](https://img.shields.io/twitter/follow/creativewang.svg?style=social)](https://twitter.com/creativewang)
 
-## 严重推荐 ##
-现在通过[Price Tag 正版数字商店](https://j.youzan.com/NYpjGY)购买 [Design + Code 2.0](https://designcode.io/) 一年订阅仅需 256 元人民币（原价 320 元），2018 年 7 月份将首次更新中文版本，届时可以免费更新。
-
 ## Hi Community ##
 
 I am Allen Wang, a [product designer](https://dribbble.com/openallen) and currently learning Swift.
 
 This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100 Days of Swift](http://samvlu.com/index.html) project, after read his [Medium post](https://medium.com/@samvlu/100-days-of-swift-736d45a19b63#.ayz5vx6mc) I made a decision to put my every single day to write Swift, this's the final code of 30 tiny Swift projects.
+
+## 真心推荐 ##
+现在通过[Price Tag 正版数字商店](https://j.youzan.com/NYpjGY)购买 [Design + Code 2.0](https://designcode.io/) 一年订阅仅需 256 元人民币（原价 320 元），2018 年 7 月份将首次更新中文版本，届时可以免费更新。
 
 ## Project Index & GIF Showcase ##
 
