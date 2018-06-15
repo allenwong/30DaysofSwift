@@ -5,6 +5,9 @@
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=https://github.com/allenwong/30DaysofSwift)
 [![Twitter Follow](https://img.shields.io/twitter/follow/creativewang.svg?style=social)](https://twitter.com/creativewang)
 
+## 严重推荐 ##
+现在通过[Price Tag 正版数字商店](https://j.youzan.com/NYpjGY)购买 [Design + Code 2.0](https://designcode.io/) 一年订阅仅需 256 元人民币（原价 320 元），2018 年 7 月份将首次更新中文版本，届时可以免费更新。
+
 ## Hi Community ##
 
 I am Allen Wang, a [product designer](https://dribbble.com/openallen) and currently learning Swift.
@@ -136,6 +139,7 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 ## Where I learn from? ##
 
 [Design + Code](https://designcode.io/)
+现在可以通过[Price Tag 正版数字商店](https://j.youzan.com/NYpjGY)购买 Design Code 2.0 一年订阅仅需 256 元，2018 年 7 月份将首次更新中文版本。
 
 [AppCoda](http://www.appcoda.com/)
 
@@ -160,6 +164,7 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 ## What's next? ##
 
 Update: I made [Wave(浪潮) VPN](http://usewaveapp.com/) for iOS, now on [App Store](https://itunes.apple.com/cn/app/lang-chao-vpn/id1129666220?mt=8).
+Update: Wave was been shut down.
 
 ## License ##
 
