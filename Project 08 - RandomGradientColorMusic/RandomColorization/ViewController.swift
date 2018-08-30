@@ -19,27 +19,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         UIApplication.shared.isStatusBarHidden =  true
-    
     }
     
     @IBAction func playMusicButtonDidTouch(_ sender: AnyObject) {
         
         //play bg music
-        let bgMusic = URL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy", ofType: "mp3")!)
-        
+        let omMusicUrl = Bundle.main.url(forResource: "Om Dhawni", withExtension: "mp3")
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            try audioPlayer = AVAudioPlayer(contentsOf: bgMusic)
-            
+            audioPlayer = try AVAudioPlayer(contentsOf: omMusicUrl!)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-            
-        }
-        catch let audioError as NSError {
-            print(audioError)
+        }  catch {
+            print(error.localizedDescription)
         }
         
         if (timer == nil) {

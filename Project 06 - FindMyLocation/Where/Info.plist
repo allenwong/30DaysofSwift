@@ -24,6 +24,9 @@
 	<string>Where are you?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow to use location and can send it to me</string>
+    
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Allow to use location and can send it to me</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
