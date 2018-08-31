@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     var audioPlayer = AVAudioPlayer()
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: omMusicUrl!)
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            audioPlayer.delegate = self
         }  catch {
             print(error.localizedDescription)
         }
@@ -61,6 +62,22 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func stopBarButtonTapped(_ sender: UIBarButtonItem) {
+        audioPlayer.stop()
+        timer?.invalidate()
+        timer = nil
+        view.backgroundColor = UIColor(red: 33/255, green: 0, blue: 114/255, alpha: 1.0)
+        gradientLayer.removeFromSuperlayer()
+        
+    }
+    
+    @IBAction func replyBarButtonTapped(_ sender: UIBarButtonItem) {
+        if audioPlayer.isPlaying {
+            audioPlayer.stop()
+        }
+        playMusicButtonDidTouch(UIButton())
+    }
+    
     func randomColor() {
         
         let redValue = CGFloat(drand48())
@@ -70,6 +87,10 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
         
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        playMusicButtonDidTouch(UIButton())
     }
 
 }
