@@ -28,9 +28,7 @@ class ViewController: VideoSplashViewController {
     }
     
     func setupVideoBackground() {
-        
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "moments", ofType: "mp4")!)
-        
         videoFrame = view.frame
         fillMode = .resizeAspectFill
         alwaysRepeat = true
@@ -42,8 +40,5 @@ class ViewController: VideoSplashViewController {
         view.isUserInteractionEnabled = false
         
     }
-
-
-
 }
 

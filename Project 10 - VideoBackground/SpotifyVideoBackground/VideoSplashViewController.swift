@@ -23,7 +23,7 @@ open class VideoSplashViewController: UIViewController {
   open var contentURL: URL? {
     didSet {
       if let _contentURL = contentURL {
-      setMoviePlayer(_contentURL)
+       setMoviePlayer(_contentURL)
       }
     }
   }
