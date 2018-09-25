@@ -382,6 +382,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.AnimatedSplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -393,6 +394,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.AnimatedSplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -463,6 +465,7 @@
 				9F5E2F4D1C4FCE68003B68A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F5E2F4E1C4FCE68003B68A0 /* Build configuration list for PBXNativeTarget "AnimatedSplashTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +474,7 @@
 				9F5E2F501C4FCE68003B68A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F5E2F511C4FCE68003B68A0 /* Build configuration list for PBXNativeTarget "AnimatedSplashUITests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +483,7 @@
 				9F5E2F531C4FCE68003B68A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
