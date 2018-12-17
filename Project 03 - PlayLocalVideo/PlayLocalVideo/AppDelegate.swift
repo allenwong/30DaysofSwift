@@ -49,12 +49,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var applicationDocumentsDirectory: URL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "me.appkitchen.PlayLocalVideo" in the application's documents Application Support directory.
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        let path1 = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let path2 = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        guard path1.absoluteString == path2 else {
+            print("为啥不一样")
+            return path1
+        }
         return urls[urls.count-1]
     }()
 
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main.url(forResource: "PlayLocalVideo", withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: "emoji zone", withExtension: "mp4")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
 
