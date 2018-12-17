@@ -12,7 +12,7 @@ class RightView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.isStatusBarHidden = true
+        // UIApplication.shared.isStatusBarHidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -32,5 +32,4 @@ class RightView: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

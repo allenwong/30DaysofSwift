@@ -19,8 +19,6 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.shared.isStatusBarHidden = true
-
         // Do any additional setup after loading the view.
     }
 
@@ -39,9 +37,12 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.viewWillAppear(animated)
         
         captureSession = AVCaptureSession()
-        captureSession?.sessionPreset = AVCaptureSessionPreset1920x1080
-        
-        let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        // 已经不能再使用了
+        // captureSession?.sessionPreset = AVCaptureSessionPreset1920x1080
+        captureSession?.sessionPreset = AVCaptureSession.Preset.hd1920x1080
+        let backCamera = AVCaptureDevice.devices(for: .video).first!
+        // 已经不能再使用了
+        // let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         var error : NSError?
         var input: AVCaptureDeviceInput!
         
@@ -59,16 +60,20 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                 stillImageOutput = AVCaptureStillImageOutput()
                 stillImageOutput?.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
                 
-                if (captureSession?.canAddOutput(stillImageOutput) != nil) {
-                    captureSession?.addOutput(stillImageOutput)
-                    
-                    previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-                    previewLayer?.videoGravity = AVLayerVideoGravityResizeAspect
-                    previewLayer?.connection.videoOrientation = AVCaptureVideoOrientation.portrait
-                    cameraView.layer.addSublayer(previewLayer!)
-                    captureSession?.startRunning()
+            if let stillImageOutputTemp = stillImageOutput {
+                if captureSession?.canAddOutput(stillImageOutputTemp) != nil {
+                    captureSession?.addOutput(stillImageOutputTemp)
+                    if let captureSessionTemp = captureSession {
+                        previewLayer = AVCaptureVideoPreviewLayer(session: captureSessionTemp)
+                        previewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
+                        // 已经废弃不用了
+                        // previewLayer?.videoGravity = AVLayerVideoGravityResizeAspect
+                        previewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+                        cameraView.layer.addSublayer(previewLayer!)
+                        captureSession?.startRunning()
+                    }
                 }
-            
+            }
         }
         
     }
@@ -77,7 +82,7 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     func didPressTakePhoto(){
         
-        if let videoConnection = stillImageOutput?.connection(withMediaType: AVMediaTypeVideo){
+        if let videoConnection = stillImageOutput?.connection(with: .video){
             videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
             stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {
                 (sampleBuffer, error) in
@@ -85,11 +90,11 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                 if sampleBuffer != nil {
                     
                     
-                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                    let dataProvider  = CGDataProvider(data: imageData as! CFData)
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer!)
+                    let dataProvider  = CGDataProvider(data: imageData! as CFData)
                     let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
                     
-                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.right)
+                    let image = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: .right)
                     
                     self.tempImageView.image = image
                     self.tempImageView.isHidden = false
@@ -125,7 +130,9 @@ class CameraView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         didPressTakeAnother()
     }
     
-
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 }
 
 
