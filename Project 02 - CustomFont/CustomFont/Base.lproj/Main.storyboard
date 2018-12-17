@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PZT-s3-fYf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PZT-s3-fYf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Hv9-tu-j8Y">
@@ -60,42 +55,35 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
-                            </tableView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKJ-vx-y91">
-                                <rect key="frame" x="137" y="518" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.9244391918182373" green="0.94930678606033325" blue="0.038394749164581299" alpha="0.95786741214057503" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="2Ph-2S-ieE"/>
-                                    <constraint firstAttribute="height" constant="100" id="9K8-ga-cTt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="13"/>
-                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="Change Font">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                                 <connections>
-                                    <action selector="changeFontDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxO-pn-8xd"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wy5-ey-A0B"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uxj-Ax-9Ht"/>
                                 </connections>
-                            </button>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Font" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZM-ID-Nic">
+                                <rect key="frame" x="137.5" y="514" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.94901960780000005" blue="0.039215686270000001" alpha="0.95786741210000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LT2-Fx-ola"/>
+                                    <constraint firstAttribute="height" constant="100" id="pYK-QT-Mg5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.038268096745014191" green="0.03494509682059288" blue="0.067281901836395264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YKJ-vx-y91" firstAttribute="centerX" secondItem="KGv-Km-M05" secondAttribute="centerX" id="0Sh-uN-eEj"/>
                             <constraint firstItem="KGv-Km-M05" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="B1y-rp-a3p"/>
+                            <constraint firstItem="ZZM-ID-Nic" firstAttribute="centerX" secondItem="KGv-Km-M05" secondAttribute="centerX" id="FaV-7d-94o"/>
+                            <constraint firstItem="ZZM-ID-Nic" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="15" id="XZR-2D-97V"/>
                             <constraint firstItem="KGv-Km-M05" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bye-Vp-gej"/>
-                            <constraint firstItem="YKJ-vx-y91" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="71" id="egM-fL-Hhh"/>
                             <constraint firstAttribute="trailing" secondItem="KGv-Km-M05" secondAttribute="trailing" id="hkI-LV-s02"/>
-                            <constraint firstItem="YKJ-vx-y91" firstAttribute="top" secondItem="KGv-Km-M05" secondAttribute="bottom" constant="19" id="sM0-oV-mvs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="egM-fL-Hhh"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Custom Font" id="l2e-4N-mwI"/>
                     <connections>
-                        <outlet property="changeFontButton" destination="YKJ-vx-y91" id="34w-Yo-v5v"/>
+                        <outlet property="changeFontLabel" destination="ZZM-ID-Nic" id="MpL-qA-9nB"/>
                         <outlet property="fontTableView" destination="KGv-Km-M05" id="bcU-xW-mfg"/>
                     </connections>
                 </viewController>

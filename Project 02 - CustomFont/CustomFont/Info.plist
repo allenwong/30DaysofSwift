@@ -26,17 +26,16 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gaspar Regular.otf</string>
-		<string>MFZhiHei_Noncommercial-Regular.ttf</string>
-		<string>Zapfino.ttf</string>
-		<string>MFTongXin_Noncommercial-Regular.ttf</string>
-		<string>MFJinHei_Noncommercial-Regular.ttf</string>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gaspar Regular.otf</string>
+		<string>MFJinHei_Noncommercial-Regular.ttf</string>
+		<string>MFTongXin_Noncommercial-Regular.ttf</string>
+		<string>MFZhiHei_Noncommercial-Regular.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
