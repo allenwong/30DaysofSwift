@@ -17,11 +17,32 @@ class ViewController: UIViewController {
 
     var timer : Timer?
     
+    var backgroundColor: (red: CGFloat, green: CGFloat,blue: CGFloat,alpha: CGFloat)! {
+        didSet {
+            let color1 = UIColor(red: backgroundColor.blue,
+                                 green: backgroundColor.green,
+                                 blue: 0,
+                                 alpha: backgroundColor.alpha).cgColor
+            let color2 = UIColor(red: backgroundColor.red,
+                                 green: backgroundColor.green,
+                                 blue: backgroundColor.blue,
+                                 alpha: backgroundColor.alpha).cgColor
+            gradientLayer.colors = [color1, color2]
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.isStatusBarHidden =  true
+        // 废弃
+        // UIApplication.shared.isStatusBarHidden =  true
     
+    }
+    
+    // info.plist中设置View controller-based status bar appearance 为YES才会触发
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     @IBAction func playMusicButtonDidTouch(_ sender: AnyObject) {
@@ -54,14 +75,6 @@ class ViewController: UIViewController {
         
         //graditent color
         gradientLayer.frame = view.bounds
-        let color1 = UIColor(white: 0.5, alpha: 0.2).cgColor as CGColor
-        let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).cgColor as CGColor
-        let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).cgColor as CGColor
-        let color4 = UIColor(red: 0, green: 0, blue: 1, alpha: 0.3).cgColor as CGColor
-        let color5 = UIColor(white: 0.4, alpha: 0.2).cgColor as CGColor
-        
-        gradientLayer.colors = [color1, color2, color3, color4, color5]
-        gradientLayer.locations = [0.10, 0.30, 0.50, 0.70, 0.90]
         gradientLayer.startPoint = CGPoint(x: 0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
       
@@ -76,7 +89,7 @@ class ViewController: UIViewController {
         let greenValue = CGFloat(drand48())
         
         
-        self.view.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
+        backgroundColor = (redValue, blueValue, greenValue, 1)
         
     }
 
