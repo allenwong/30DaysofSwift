@@ -17,24 +17,21 @@ class ViewController: UIViewController {
         
         // 已经废弃了，使用prefersStatusBarHidden属性返回设置的值
         // UIApplication.shared.isStatusBarHidden = true
-        let leftView: LeftView = LeftView(nibName: "LeftView", bundle: nil)
+        
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        let leftView: UIViewController = UINib(nibName: "LeftView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIViewController
         let centerView: CameraView = CameraView(nibName: "CameraView", bundle: nil)
         let rightView: RightView = RightView(nibName: "RightView", bundle: nil)
-
+        
+        leftView.view.frame = CGRect(x: 0, y: 0, width: screenWidth-200, height: screenHeight)
+        centerView.view.frame = CGRect(x: screenWidth, y: 0, width: screenWidth, height: screenHeight)
+        rightView.view.frame = CGRect(x: 2*screenWidth, y: 0, width: screenWidth, height: screenHeight)
+ 
         self.scrollView.addSubview(leftView.view)
         self.scrollView.addSubview(rightView.view)
         self.scrollView.addSubview(centerView.view)
-        
-        var centerViewFrame: CGRect = centerView.view.frame
-        centerViewFrame.origin.x = self.view.frame.width
-        centerView.view.frame = centerViewFrame
-        
-        var rightViewFrame: CGRect = rightView.view.frame
-        rightViewFrame.origin.x = 2 * self.view.frame.width
-        rightView.view.frame = rightViewFrame
- 
-        self.scrollView.contentSize = CGSize(width: self.view.frame.width * 3, height: self.view.frame.size.height)
-        
+        self.scrollView.contentSize = CGSize(width: screenWidth * 3, height: screenHeight)
     }
 
     override func didReceiveMemoryWarning() {
