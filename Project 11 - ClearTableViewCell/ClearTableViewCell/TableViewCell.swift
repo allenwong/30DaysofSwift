@@ -32,7 +32,7 @@ class TableViewCell: UITableViewCell {
         
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.04, 0.95, 1.0]
-        layer.insertSublayer(gradientLayer, at: 0)
+//        layer.insertSublayer(gradientLayer, at: 0)
         
     }
     
