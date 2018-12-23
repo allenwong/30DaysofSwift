@@ -39,7 +39,7 @@ class ViewController: VideoSplashViewController {
         alpha = 0.8
         
         contentURL = url
-        view.isUserInteractionEnabled = false
+        // view.isUserInteractionEnabled = false
         
     }
 
