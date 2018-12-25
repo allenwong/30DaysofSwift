@@ -8,30 +8,19 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.navigationBarHidden = true
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-
-        return UIStatusBarStyle.LightContent
-        
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func unwindToMainViewController (sender: UIStoryboardSegue){
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func unwindToMainViewController (_ sender: UIStoryboardSegue){
+        self.dismiss(animated: true, completion: nil)
     }
-
-    
-
-
 }
 
