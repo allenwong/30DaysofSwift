@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14FFEF0321D229BF00B63D77 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFEF0221D229BF00B63D77 /* BaseTableViewController.swift */; };
 		9F2598041C51EA6F007B64C4 /* MenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2598031C51EA6F007B64C4 /* MenuTransitionManager.swift */; };
 		9F2598061C521FFE007B64C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */; };
 		F456196C1A8871DA00836A98 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456196B1A8871DA00836A98 /* MenuTableViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14FFEF0221D229BF00B63D77 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		9F2598031C51EA6F007B64C4 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 		9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F456196B1A8871DA00836A98 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F4C1CF291A85B99500728CAD /* NewsTableViewCell.swift */,
 				F456196B1A8871DA00836A98 /* MenuTableViewController.swift */,
 				F456196D1A8872A800836A98 /* MenuTableViewCell.swift */,
+				14FFEF0221D229BF00B63D77 /* BaseTableViewController.swift */,
 				F4C1CF0B1A84F64E00728CAD /* Main.storyboard */,
 				F4C1CF0E1A84F64E00728CAD /* Images.xcassets */,
 				9F2598051C521FFE007B64C4 /* LaunchScreen.storyboard */,
@@ -166,6 +169,7 @@
 				TargetAttributes = {
 					F4C1CF011A84F64E00728CAD = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = F3YT8BWBYJ;
 					};
 					F4C1CF161A84F64E00728CAD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -220,6 +224,7 @@
 				F4C1CF281A85B3C600728CAD /* NewsTableViewController.swift in Sources */,
 				9F2598041C51EA6F007B64C4 /* MenuTransitionManager.swift in Sources */,
 				F456196E1A8872A800836A98 /* MenuTableViewCell.swift in Sources */,
+				14FFEF0321D229BF00B63D77 /* BaseTableViewController.swift in Sources */,
 				F456196C1A8871DA00836A98 /* MenuTableViewController.swift in Sources */,
 				F4C1CF081A84F64E00728CAD /* AppDelegate.swift in Sources */,
 				F4C1CF2A1A85B99500728CAD /* NewsTableViewCell.swift in Sources */,
@@ -338,10 +343,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = SlideMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -349,10 +357,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = SlideMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
