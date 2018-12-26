@@ -197,18 +197,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Allen;
 				TargetAttributes = {
 					9F3052081C5A700E008C3D51 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
+						LastSwiftMigration = 1010;
 					};
 					9F30521C1C5A700E008C3D51 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
+						LastSwiftMigration = 1010;
 						TestTargetID = 9F3052081C5A700E008C3D51;
 					};
 					9F3052271C5A700E008C3D51 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
+						LastSwiftMigration = 1010;
 						TestTargetID = 9F3052081C5A700E008C3D51;
 					};
 				};
@@ -332,13 +338,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -376,13 +392,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -401,6 +427,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -409,10 +436,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickAction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickAction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -420,10 +449,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickAction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickAction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -431,10 +462,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickActionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickActionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3DTouchQuickAction.app/3DTouchQuickAction";
 			};
 			name = Debug;
@@ -443,10 +476,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickActionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickActionTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3DTouchQuickAction.app/3DTouchQuickAction";
 			};
 			name = Release;
@@ -454,10 +489,12 @@
 		9F3052381C5A700E008C3D51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickActionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickActionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = 3DTouchQuickAction;
 				USES_XCTRUNNER = YES;
 			};
@@ -466,10 +503,12 @@
 		9F3052391C5A700E008C3D51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = 3DTouchQuickActionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.appkitchen.-DTouchQuickActionUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = 3DTouchQuickAction;
 				USES_XCTRUNNER = YES;
 			};
@@ -494,6 +533,7 @@
 				9F3052331C5A700E008C3D51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F3052341C5A700E008C3D51 /* Build configuration list for PBXNativeTarget "3DTouchQuickActionTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +542,7 @@
 				9F3052361C5A700E008C3D51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F3052371C5A700E008C3D51 /* Build configuration list for PBXNativeTarget "3DTouchQuickActionUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +551,7 @@
 				9F3052391C5A700E008C3D51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

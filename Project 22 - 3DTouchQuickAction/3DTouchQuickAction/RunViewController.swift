@@ -12,7 +12,6 @@ class RunViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.sharedApplication().statusBarHidden =  true
     }
 
     override func didReceiveMemoryWarning() {
