@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnimationCollectionViewCell" customModule="CollectionViewAnimation" customModuleProvider="target"/>
@@ -12,6 +17,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="340" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6cE-Wy-HUe">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="140"/>
@@ -42,7 +48,7 @@
                     </button>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjp-jb-ahy">
                         <rect key="frame" x="0.0" y="140" width="340" height="67"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="340" id="4IF-Uf-KnE"/>
                             <constraint firstAttribute="height" constant="100" id="HSF-ir-0ez"/>
@@ -59,7 +65,6 @@
                         </variation>
                     </textView>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
                 <constraint firstItem="Kjp-jb-ahy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="94J-LE-LjR"/>
@@ -67,11 +72,12 @@
                 <constraint firstAttribute="trailing" secondItem="6cE-Wy-HUe" secondAttribute="trailing" id="EQV-V6-7t0"/>
                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Kjp-jb-ahy" secondAttribute="bottom" id="KxF-vT-SEy"/>
                 <constraint firstItem="6cE-Wy-HUe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OCx-F6-YoT"/>
+                <constraint firstItem="JK7-j7-btw" firstAttribute="top" secondItem="pvT-YP-jhE" secondAttribute="top" constant="12" id="Oeq-Dy-9R9"/>
                 <constraint firstItem="6cE-Wy-HUe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YFK-PO-W28"/>
                 <constraint firstItem="Kjp-jb-ahy" firstAttribute="top" secondItem="6cE-Wy-HUe" secondAttribute="bottom" id="em2-Vb-mq7"/>
-                <constraint firstItem="JK7-j7-btw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="oqF-xc-YXu"/>
                 <constraint firstItem="JK7-j7-btw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="xA9-Q1-axf"/>
             </constraints>
+            <viewLayoutGuide key="safeArea" id="pvT-YP-jhE"/>
             <size key="customSize" width="334" height="172"/>
             <connections>
                 <outlet property="animationImageView" destination="6cE-Wy-HUe" id="yaD-Jf-B2r"/>

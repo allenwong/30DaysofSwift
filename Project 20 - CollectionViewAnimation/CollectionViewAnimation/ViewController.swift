@@ -9,7 +9,7 @@
 import UIKit
 
 extension Array {
-    func safeIndex(i: Int) -> Element? {
+    func safeIndex(_ i: Int) -> Element? {
         return i < self.count && i >= 0 ? self[i] : nil
     }
 }
@@ -17,8 +17,8 @@ extension Array {
 class ViewController: UICollectionViewController {
 
     private struct Storyboard {
-        static let CellIdentifier = String(AnimationCollectionViewCell)
-        static let NibName = String(AnimationCollectionViewCell)
+        static let CellIdentifier = "AnimationCollectionViewCell"
+        static let NibName = "AnimationCollectionViewCell"
     }
     
     private struct Constants {
@@ -30,62 +30,68 @@ class ViewController: UICollectionViewController {
 
     @IBOutlet var testCollectionView: UICollectionView!
     
-    var imageCollection: AnimationImageCollection?
+    var imageCollection: AnimationImageCollection!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         imageCollection = AnimationImageCollection()
-        
-        collectionView?.registerNib(UINib(nibName: Storyboard.NibName, bundle: nil), forCellWithReuseIdentifier: Storyboard.CellIdentifier)
+        testCollectionView.register(UINib(nibName: Storyboard.NibName, bundle: nil), forCellWithReuseIdentifier: Storyboard.CellIdentifier)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         collectionView?.reloadData()
     }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as? AnimationCollectionViewCell, viewModel = imageCollection?.images.safeIndex(indexPath.row) else {
+    
+    // MARK: UICollectionViewDataSource
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.CellIdentifier, for: indexPath) as? AnimationCollectionViewCell,
+            let viewModel = imageCollection.images.safeIndex(indexPath.item) else {
             return UICollectionViewCell()
         }
         cell.prepareCell(viewModel)
         return cell
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageCollection?.images.count ?? 0
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageCollection.images.count
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        guard let cell = collectionView.cellForItemAtIndexPath(indexPath) as? AnimationCollectionViewCell else {
+    // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? AnimationCollectionViewCell else {
             return
         }
         
         self.handleAnimationCellSelected(collectionView, cell: cell)
     }
     
-    private func handleAnimationCellSelected(collectionView: UICollectionView, cell: AnimationCollectionViewCell) {
+    // MARK: 私有方法
+    private func handleAnimationCellSelected(_ collectionView: UICollectionView, cell: AnimationCollectionViewCell) {
         
         cell.handleCellSelected()
         cell.backButtonTapped = self.backButtonDidTouch
         
-        let animations: () -> () = {
-            cell.frame = collectionView.bounds
+        let animations = {
+            cell.frame = self.view.bounds
         }
 
-        let completion: (finished: Bool) -> () = { _ in
-            collectionView.scrollEnabled = false
+        let completion: (_ finished: Bool) -> () = { _ in
+            collectionView.isScrollEnabled = false
         }
 
-        UIView.animateWithDuration(Constants.AnimationDuration, delay: Constants.AnimationDelay, usingSpringWithDamping: Constants.AnimationSpringDamping, initialSpringVelocity: Constants.AnimationInitialSpringVelocity, options: [], animations: animations, completion: completion)
+        UIView.animate(withDuration: Constants.AnimationDuration, delay: Constants.AnimationDelay, usingSpringWithDamping: Constants.AnimationSpringDamping, initialSpringVelocity: Constants.AnimationInitialSpringVelocity, options: [], animations: animations, completion: completion)
     }
     
+    // MARK: 按钮事件
     func backButtonDidTouch() {
-        guard let indexPaths = self.collectionView?.indexPathsForSelectedItems() else {
+        guard let indexPaths = self.collectionView!.indexPathsForSelectedItems else {
             return
         }
 
-        collectionView?.scrollEnabled = true
-        collectionView?.reloadItemsAtIndexPaths(indexPaths)
+        collectionView!.isScrollEnabled = true
+        collectionView!.reloadItems(at: indexPaths)
     }
 }
