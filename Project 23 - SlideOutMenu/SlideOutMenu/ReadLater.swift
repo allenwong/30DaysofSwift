@@ -11,11 +11,8 @@ import Foundation
 class ReadLater : UIViewController {
     
     override func viewDidLoad() {
-        UIApplication.sharedApplication().statusBarHidden = true
-        self.navigationController?.navigationBarHidden = true
-        
+        self.navigationController?.isNavigationBarHidden = true
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
     }
     
 }

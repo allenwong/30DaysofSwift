@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         openButton.target = self.revealViewController()
-        openButton.action = Selector("revealToggle:")
-        
+        openButton.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         if (varView == 0) {
@@ -29,15 +28,6 @@ class ViewController: UIViewController {
         } else {
             aLabel.text = "👻"
         }
-        
-        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
