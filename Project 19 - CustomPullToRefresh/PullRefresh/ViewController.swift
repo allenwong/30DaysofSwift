@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tblDemo: UITableView!
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var isAnimating = false
     var currentColorIndex = 0
     var currentLabelIndex = 0
-    var timer: NSTimer!
+    var timer: Timer!
     var dataArray: Array<String> = ["😂", "🤗", "😳", "😌", "😊"]
     
     override func viewDidLoad() {
@@ -27,8 +27,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tblDemo.delegate = self
         tblDemo.dataSource = self
         refreshController = UIRefreshControl()
-        refreshController.backgroundColor = UIColor.clearColor()
-        refreshController.tintColor = UIColor.clearColor()
+        refreshController.backgroundColor = UIColor.clear
+        refreshController.tintColor = UIColor.clear
         tblDemo.addSubview(refreshController)
         
         loadCustomRefreshContents()
@@ -37,34 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count
-    }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
-        
-        cell.textLabel!.text = dataArray[indexPath.row]
-        cell.textLabel?.font = UIFont(name: "Apple Color Emoji", size: 40)
-        cell.textLabel?.textAlignment = NSTextAlignment.Center
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 80
-    }
     
     func loadCustomRefreshContents() {
         
-        let refreshContents = NSBundle.mainBundle().loadNibNamed("RefreshContents", owner: self, options: nil)
+        let refreshContents = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
         
-        customView = refreshContents[0] as! UIView
+        customView = refreshContents![0] as? UIView
         customView.frame = refreshController.bounds
         
         for i in 0..<customView.subviews.count {
@@ -77,27 +56,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func animateRefreshStep1() {
-        
         isAnimating = true
         
-        UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-            
-            self.labelsArray[self.currentLabelIndex].transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .curveLinear, animations: {
+            self.labelsArray[self.currentLabelIndex].transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/4))
             self.labelsArray[self.currentLabelIndex].textColor = self.getNextColor()
-            
-            }, completion: { (finished) -> Void in
-                
-                UIView.animateWithDuration(0.05, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-                    self.labelsArray[self.currentLabelIndex].transform = CGAffineTransformIdentity
-                    self.labelsArray[self.currentLabelIndex].textColor = UIColor.blackColor()
-                    
-                    }, completion: { (finished) -> Void in
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.05, delay: 0.0, options: .curveLinear, animations: {
+                    self.labelsArray[self.currentLabelIndex].transform = .identity
+                    self.labelsArray[self.currentLabelIndex].textColor = UIColor.black
+                    }, completion: { _ in
                         self.currentLabelIndex += 1
-                        
                         if self.currentLabelIndex < self.labelsArray.count {
                             self.animateRefreshStep1()
-                        }
-                        else {
+                        }else {
                             self.animateRefreshStep2()
                         }
                 })
@@ -106,48 +78,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func animateRefreshStep2() {
-        UIView.animateWithDuration(0.40, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+        UIView.animate(withDuration: 0.40, delay: 0.0, options: .curveLinear, animations: {
+            let scale = CGAffineTransform(scaleX: 1.5, y: 1.5)
+            self.labelsArray[1].transform = scale
+            self.labelsArray[2].transform = scale
+            self.labelsArray[3].transform = scale
+            self.labelsArray[4].transform = scale
+            self.labelsArray[5].transform = scale
+            self.labelsArray[6].transform = scale
+            self.labelsArray[7].transform = scale
+            self.labelsArray[8].transform = scale
+            self.labelsArray[9].transform = scale
+            self.labelsArray[10].transform = scale
+            self.labelsArray[11].transform = scale
             
-            self.labelsArray[0].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[1].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[2].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[3].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[4].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[5].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[6].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[7].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[8].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[9].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[10].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            self.labelsArray[11].transform = CGAffineTransformMakeScale(1.5, 1.5)
-            
-            }, completion: { (finished) -> Void in
-            
-                UIView.animateWithDuration(0.25, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
-                    self.labelsArray[0].transform = CGAffineTransformIdentity
-                    self.labelsArray[1].transform = CGAffineTransformIdentity
-                    self.labelsArray[2].transform = CGAffineTransformIdentity
-                    self.labelsArray[3].transform = CGAffineTransformIdentity
-                    self.labelsArray[4].transform = CGAffineTransformIdentity
-                    self.labelsArray[5].transform = CGAffineTransformIdentity
-                    self.labelsArray[6].transform = CGAffineTransformIdentity
-                    self.labelsArray[7].transform = CGAffineTransformIdentity
-                    self.labelsArray[8].transform = CGAffineTransformIdentity
-                    self.labelsArray[9].transform = CGAffineTransformIdentity
-                    self.labelsArray[10].transform = CGAffineTransformIdentity
-                    self.labelsArray[11].transform = CGAffineTransformIdentity
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveLinear, animations: {
+                    self.labelsArray[0].transform = .identity
+                    self.labelsArray[1].transform = .identity
+                    self.labelsArray[2].transform = .identity
+                    self.labelsArray[3].transform = .identity
+                    self.labelsArray[4].transform = .identity
+                    self.labelsArray[5].transform = .identity
+                    self.labelsArray[6].transform = .identity
+                    self.labelsArray[7].transform = .identity
+                    self.labelsArray[8].transform = .identity
+                    self.labelsArray[9].transform = .identity
+                    self.labelsArray[10].transform = .identity
+                    self.labelsArray[11].transform = .identity
                     
-                    }, completion: { (finished) -> Void in
-                        if self.refreshController.refreshing {
+                    }, completion: { _ in
+                        if self.refreshController.isRefreshing {
                             self.currentLabelIndex = 0
                             self.animateRefreshStep1()
-                        }
-                        else {
+                        } else {
                             self.isAnimating = false
                             self.currentLabelIndex = 0
                             for i in 0 ..< self.labelsArray.count {
-                                self.labelsArray[i].textColor = UIColor.blackColor()
-                                self.labelsArray[i].transform = CGAffineTransformIdentity
+                                self.labelsArray[i].textColor = UIColor.black
+                                self.labelsArray[i].transform = .identity
                             }
                         }
                 })
@@ -155,42 +124,66 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getNextColor() -> UIColor {
-        var colorsArray: Array<UIColor> = [UIColor.magentaColor(), UIColor.brownColor(), UIColor.yellowColor(), UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.orangeColor()]
-        
+        var colorsArray: Array<UIColor> = [.magenta, .brown, .yellow,
+                                           .red, .green, .blue, .orange]
         if currentColorIndex == colorsArray.count {
             currentColorIndex = 0
         }
-        
         let returnColor = colorsArray[currentColorIndex]
         currentColorIndex += 1
-        
         return returnColor
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        if refreshController.refreshing {
-            if !isAnimating {
-                
-                doSomething()
-                animateRefreshStep1()
-                
-            }
-        }
-    }
-    
     func doSomething() {
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(ViewController.endedOfWork), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(ViewController.endedOfWork), userInfo: nil, repeats: true)
     }
     
-    func endedOfWork() {
-        
+    @objc func endedOfWork() {
         refreshController.endRefreshing()
         timer.invalidate()
         timer = nil
     }
+}
 
+extension ViewController : UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshController.isRefreshing {
+            if !isAnimating {
+                doSomething()
+                animateRefreshStep1()
+            }
+        }
+    }
+}
+
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+}
 
+extension ViewController : UITableViewDataSource {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "idCell", for: indexPath)
+        
+        cell.textLabel!.text = dataArray[indexPath.row]
+        cell.textLabel!.font = UIFont(name: "Apple Color Emoji", size: 40)
+        cell.textLabel!.textAlignment = .center
+        
+        return cell
+    }
 }
 
