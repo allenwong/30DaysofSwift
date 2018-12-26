@@ -23,72 +23,68 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("PatternCell", forIndexPath: indexPath) as! PatternCell
-        
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PatternCell", for: indexPath) as! PatternCell
         let pattern = data[indexPath.row]
         
         cell.patternImageView.image = UIImage(named: pattern.image)
         cell.patternNameLabel.text = pattern.name
         return cell
-        
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        
-        let delete = UITableViewRowAction(style: .Normal, title: "🗑\nDelete") { action, index in
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: "🗑\nDelete") { action, index in
             print("Delete button tapped")
         }
+        delete.backgroundColor = UIColor.gray
         
-//      let bgImage = UIImageView(image: UIImage(named: "love"))
-        delete.backgroundColor = UIColor.grayColor()
-//      more.addSubview(bgImage)
-
-        let share = UITableViewRowAction(style: .Normal, title: "🤗\nShare") { (action: UITableViewRowAction!, indexPath: NSIndexPath) -> Void in
-            
+        let share = UITableViewRowAction(style: .normal, title: "🤗\nShare") { (action, indexPath) in
             let firstActivityItem = self.data[indexPath.row]
-            
             let activityViewController = UIActivityViewController(activityItems: [firstActivityItem.image as NSString], applicationActivities: nil)
             
-            self.presentViewController(activityViewController, animated: true, completion: nil)
+            self.present(activityViewController, animated: true, completion: nil)
         }
-    
-        share.backgroundColor = UIColor.redColor()
-    
-        let download = UITableViewRowAction(style: .Normal, title: "⬇️\nDownload") { action, index in
+        share.backgroundColor = UIColor.red
+        
+        let download = UITableViewRowAction(style: .normal, title: "⬇️\nDownload") { action, index in
             print("Download button tapped")
         }
-        download.backgroundColor = UIColor.blueColor()
+        download.backgroundColor = UIColor.blue
         
         return [download, share, delete]
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            print("Delete")
+        case .insert:
+            print("Insert")
+        case .none:
+            print("None")
+        }
     }
-    
 }
 
