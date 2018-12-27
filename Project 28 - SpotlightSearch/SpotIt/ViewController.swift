@@ -31,8 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func loadMoviesInfo() {
-        
-        if let path = Bundle.main.pathForResource("MoviesData", ofType: "plist") {
+        if let path = Bundle.main.path(forResource: "MoviesData", ofType: "plist") {
             moviesInfo = NSMutableArray(contentsOfFile: path)
         }
     }
@@ -50,7 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             //set the image
             let imagePathParts = movie["Image"]!.components(separatedBy: ".")
-            searchableItemAttributeSet.thumbnailURL = Bundle.main.urlForResource(imagePathParts[0], withExtension: imagePathParts[1])
+            searchableItemAttributeSet.thumbnailURL = Bundle.main.url(forResource: imagePathParts[0], withExtension: imagePathParts[1])
             
             // Set the description.
             searchableItemAttributeSet.contentDescription = movie["Description"]!
@@ -72,17 +71,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             searchableItems.append(searchableItem)
             
-            CSSearchableIndex.default().indexSearchableItems(searchableItems) { (error) -> Void in
-                if error != nil {
-                    print(error?.localizedDescription)
+            CSSearchableIndex.default().indexSearchableItems(searchableItems) {
+                if $0 != nil {
+                    print($0!.localizedDescription)
                 }
             }
         }
-        
     }
     
     override func restoreUserActivityState(_ activity: NSUserActivity) {
-        
         if activity.activityType == CSSearchableItemActionType {
             if let userInfo = activity.userInfo {
                 let selectedMovie = userInfo[CSSearchableItemActivityIdentifier] as! String
@@ -92,9 +89,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 
-    
     func configureTableView() {
-        
         tblMovies.delegate = self
         tblMovies.dataSource = self
         tblMovies.tableFooterView = UIView(frame: CGRect.zero)
@@ -108,16 +103,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 1
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if moviesInfo != nil {
             return moviesInfo.count
         }
-        
         return 0
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idCellMovieSummary", for: indexPath) as! MovieSummaryCell
@@ -131,30 +122,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         selectedMovieIndex = (indexPath as NSIndexPath).row
         performSegue(withIdentifier: "idSegueShowMovieDetails", sender: self)
-        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if let identifier = segue.identifier {
-            
-            if identifier == "idSegueShowMovieDetails" {
-                let movieDetailsViewController = segue.destinationViewController as! MovieDetailsViewController
-                movieDetailsViewController.movieInfo = moviesInfo[selectedMovieIndex] as! [String: String]
-            }
-            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier, identifier == "idSegueShowMovieDetails" {
+            let movieDetailsViewController = segue.destination as! MovieDetailsViewController
+            movieDetailsViewController.movieInfo = moviesInfo[selectedMovieIndex] as? [String: String]
         }
     }
-    
 }
 
