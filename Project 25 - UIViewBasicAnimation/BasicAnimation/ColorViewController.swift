@@ -22,18 +22,16 @@ class ColorViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         
-        UIView.animateWithDuration(0.5, delay: 0.2, options: .CurveEaseIn, animations: { () -> Void in
-            
-            self.bgColorView.backgroundColor = UIColor.blackColor()
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseIn, animations: {
+            self.bgColorView.backgroundColor = .black
             
             }, completion: nil )
         
-        UIView.animateWithDuration(0.5, delay: 0.8, options: .CurveEaseOut, animations: { () -> Void in
-            
+        UIView.animate(withDuration: 0.5, delay: 0.8, options: .curveEaseOut, animations: {
             self.numberLabel.textColor = UIColor(red:0.959, green:0.937, blue:0.109, alpha:1)
             
             }, completion: nil)

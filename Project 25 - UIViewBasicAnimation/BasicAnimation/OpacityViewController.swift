@@ -20,14 +20,12 @@ class OpacityViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(2, animations: {
-        
+        UIView.animate(withDuration: 2) {
             self.exampleImageView.alpha = 0
-            
-        })
+        }
     }
     
 
