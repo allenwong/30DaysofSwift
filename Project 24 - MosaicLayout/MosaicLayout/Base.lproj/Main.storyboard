@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NZh-Gw-YF3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NZh-Gw-YF3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,16 +34,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.98319345712661743" green="0.37615275382995605" blue="0.52669250965118408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96658921241760254" green="0.27144032716751099" blue="0.45319151878356934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="AH2-kH-cgO" secondAttribute="trailing" constant="-8" id="0t5-VW-z4H"/>
-                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="top" secondItem="36c-Tg-Xu4" secondAttribute="topMargin" constant="-8" id="3U4-sn-lpH"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="AH2-kH-cgO" secondAttribute="bottom" constant="-8" id="7q2-Eb-FIT"/>
-                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="centerX" secondItem="36c-Tg-Xu4" secondAttribute="centerX" id="UqS-Bb-TG7"/>
-                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="leading" secondItem="36c-Tg-Xu4" secondAttribute="leadingMargin" constant="-8" id="YlD-DB-GhI"/>
-                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="centerY" secondItem="36c-Tg-Xu4" secondAttribute="centerY" id="l0a-e0-9Fx"/>
+                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="leading" secondItem="36c-Tg-Xu4" secondAttribute="leading" id="Otc-he-qro"/>
+                                    <constraint firstAttribute="trailing" secondItem="AH2-kH-cgO" secondAttribute="trailing" id="bEf-QT-MeX"/>
+                                    <constraint firstAttribute="bottom" secondItem="AH2-kH-cgO" secondAttribute="bottom" id="l51-zN-VLf"/>
+                                    <constraint firstItem="AH2-kH-cgO" firstAttribute="top" secondItem="36c-Tg-Xu4" secondAttribute="top" id="r8c-Qa-yjS"/>
                                 </constraints>
                             </collectionViewCell>
                         </cells>
@@ -49,7 +49,6 @@
                             <outlet property="delegate" destination="NZh-Gw-YF3" id="xq6-0F-u2R"/>
                         </connections>
                     </collectionView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et9-Ng-cqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
