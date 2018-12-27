@@ -13,14 +13,12 @@ class ThirdViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBarHidden = true
-        self.profileImageView.alpha = 0
-        self.profileImageView.transform = CGAffineTransformMakeScale(0.5, 0.5)
+        navigationController?.isNavigationBarHidden = true
+        resetViewTransform()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,26 +26,24 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animateWithDuration(0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseIn, animations: { () -> Void in
-            
-            self.profileImageView.transform = CGAffineTransformMakeScale(1, 1)
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.profileImageView.transform = CGAffineTransform(scaleX: 1, y: 1)
             self.profileImageView.alpha = 1
             
             }, completion: nil )
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        resetViewTransform()
     }
-    */
-
+    
+    // MARK:
+    func resetViewTransform() {
+        self.profileImageView.alpha = 0
+        self.profileImageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+    }
 }
