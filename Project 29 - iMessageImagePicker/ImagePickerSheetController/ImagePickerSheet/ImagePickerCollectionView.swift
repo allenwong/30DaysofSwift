@@ -21,7 +21,7 @@ class ImagePickerCollectionView: UICollectionView {
     // MARK: - Initialization
 
     init() {
-        super.init(frame: CGRectZero, collectionViewLayout: ImagePreviewFlowLayout())
+        super.init(frame: .zero, collectionViewLayout: ImagePreviewFlowLayout())
         
         initialize()
     }
@@ -33,20 +33,20 @@ class ImagePickerCollectionView: UICollectionView {
     }
     
     private func initialize() {
-        panGestureRecognizer.addTarget(self, action: "handlePanGesture:")
+        panGestureRecognizer.addTarget(self, action: #selector(handlePanGesture(_:)))
     }
     
     // MARK: - Panning
 
-    @objc private func handlePanGesture(gestureRecognizer: UIPanGestureRecognizer) {
-        if gestureRecognizer.state == .Ended {
-            let translation = gestureRecognizer.translationInView(self)
-            if translation == CGPointZero {
+    @objc private func handlePanGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            let translation = gestureRecognizer.translation(in: self)
+            if translation == CGPoint.zero {
                 if !bouncing {
-                    let possibleIndexPath = indexPathForItemAtPoint(gestureRecognizer.locationInView(self))
+                    let possibleIndexPath = indexPathForItem(at: gestureRecognizer.location(in: self))
                     if let indexPath = possibleIndexPath {
-                        selectItemAtIndexPath(indexPath, animated: false, scrollPosition: .None)
-                        delegate?.collectionView?(self, didSelectItemAtIndexPath: indexPath)
+                        selectItem(at: indexPath, animated: false, scrollPosition: .top)
+                        delegate?.collectionView?(self, didSelectItemAt: indexPath)
                     }
                 }
             }

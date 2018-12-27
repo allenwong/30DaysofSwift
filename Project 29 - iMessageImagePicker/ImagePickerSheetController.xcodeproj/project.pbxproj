@@ -11,17 +11,16 @@
 		F519342D1B9E1A4000C5708B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F519342B1B9E1A4000C5708B /* Main.storyboard */; };
 		F519342F1B9E1A4000C5708B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F519342E1B9E1A4000C5708B /* Assets.xcassets */; };
 		F51934321B9E1A4000C5708B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51934301B9E1A4000C5708B /* LaunchScreen.storyboard */; };
-		F519343A1B9E1A7D00C5708B /* SignupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934391B9E1A7D00C5708B /* SignupProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934471B9E1A9800C5708B /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343C1B9E1A9800C5708B /* AnimationController.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934481B9E1A9800C5708B /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343D1B9E1A9800C5708B /* ImageAction.swift */; settings = {ASSET_TAGS = (); }; };
-		F51934491B9E1A9800C5708B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343E1B9E1A9800C5708B /* ImageCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344A1B9E1A9800C5708B /* ImagePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343F1B9E1A9800C5708B /* ImagePickerCollectionView.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344B1B9E1A9800C5708B /* ImagePickerSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934411B9E1A9800C5708B /* ImagePickerSheetController.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344C1B9E1A9800C5708B /* ImagePreviewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344D1B9E1A9800C5708B /* ImagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		F519344E1B9E1A9800C5708B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51934441B9E1A9800C5708B /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		F519344F1B9E1A9800C5708B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F51934451B9E1A9800C5708B /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		F51934501B9E1A9800C5708B /* PreviewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */; settings = {ASSET_TAGS = (); }; };
+		F519343A1B9E1A7D00C5708B /* SignupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934391B9E1A7D00C5708B /* SignupProfileViewController.swift */; };
+		F51934471B9E1A9800C5708B /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343C1B9E1A9800C5708B /* AnimationController.swift */; };
+		F51934481B9E1A9800C5708B /* ImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343D1B9E1A9800C5708B /* ImageAction.swift */; };
+		F51934491B9E1A9800C5708B /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343E1B9E1A9800C5708B /* ImageCollectionViewCell.swift */; };
+		F519344A1B9E1A9800C5708B /* ImagePickerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519343F1B9E1A9800C5708B /* ImagePickerCollectionView.swift */; };
+		F519344B1B9E1A9800C5708B /* ImagePickerSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934411B9E1A9800C5708B /* ImagePickerSheetController.swift */; };
+		F519344C1B9E1A9800C5708B /* ImagePreviewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */; };
+		F519344D1B9E1A9800C5708B /* ImagePreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */; };
+		F519344E1B9E1A9800C5708B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51934441B9E1A9800C5708B /* Images.xcassets */; };
+		F51934501B9E1A9800C5708B /* PreviewSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +40,6 @@
 		F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewFlowLayout.swift; sourceTree = "<group>"; };
 		F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreviewTableViewCell.swift; sourceTree = "<group>"; };
 		F51934441B9E1A9800C5708B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F51934451B9E1A9800C5708B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewSupplementaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 				F51934421B9E1A9800C5708B /* ImagePreviewFlowLayout.swift */,
 				F51934431B9E1A9800C5708B /* ImagePreviewTableViewCell.swift */,
 				F51934441B9E1A9800C5708B /* Images.xcassets */,
-				F51934451B9E1A9800C5708B /* Info.plist */,
 				F51934461B9E1A9800C5708B /* PreviewSupplementaryView.swift */,
 			);
 			path = ImagePickerSheet;
@@ -130,11 +127,13 @@
 		F519341C1B9E1A4000C5708B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Developers Academy";
 				TargetAttributes = {
 					F51934231B9E1A4000C5708B = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = F3YT8BWBYJ;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -164,7 +163,6 @@
 				F51934321B9E1A4000C5708B /* LaunchScreen.storyboard in Resources */,
 				F519344E1B9E1A9800C5708B /* Images.xcassets in Resources */,
 				F519342F1B9E1A4000C5708B /* Assets.xcassets in Resources */,
-				F519344F1B9E1A9800C5708B /* Info.plist in Resources */,
 				F519342D1B9E1A4000C5708B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,13 +217,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -264,13 +272,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -289,6 +307,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -298,10 +317,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = ImagePickerSheetController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.ImagePickerSheetController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -309,10 +330,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = ImagePickerSheetController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.developersacademy.ImagePickerSheetController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -335,6 +358,7 @@
 				F51934381B9E1A4000C5708B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
