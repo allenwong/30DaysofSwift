@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,12 +34,18 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIKIFACE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmZ-fI-zmW">
                                 <rect key="frame" x="112" y="50" width="156" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="H8m-Yn-Jry"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Byx-mT-OcA">
                                 <rect key="frame" x="20" y="121" width="335" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="mq3-S0-8ZD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -45,6 +54,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="jsC-oR-bLQ"/>
+                                    <constraint firstAttribute="height" constant="1" id="o9u-eI-GRW"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -54,38 +64,24 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The image data from ®Wikipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQ1-tf-iTZ">
                                 <rect key="frame" x="112" y="170" width="151" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="6MM-uY-ad4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.28485984078590787" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="par-fV-9Xb">
-                                <rect key="frame" x="37" y="229" width="300" height="400"/>
+                                <rect key="frame" x="37.5" y="229" width="300" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="0NI-Xf-9fJ"/>
-                                    <constraint firstAttribute="height" constant="400" id="HZi-2K-DVW"/>
-                                    <constraint firstAttribute="height" constant="400" id="NWv-PS-SQ2"/>
-                                    <constraint firstAttribute="width" constant="300" id="WOI-F2-VpR"/>
-                                    <constraint firstAttribute="height" constant="320" id="qcR-HZ-NHb"/>
-                                    <constraint firstAttribute="height" constant="454" id="rBi-dN-nCz"/>
-                                    <constraint firstAttribute="width" constant="240" id="w6B-y0-TA7"/>
+                                    <constraint firstAttribute="width" constant="300" id="zIp-5t-H7h"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="HZi-2K-DVW"/>
-                                        <exclude reference="NWv-PS-SQ2"/>
-                                        <exclude reference="WOI-F2-VpR"/>
-                                        <exclude reference="qcR-HZ-NHb"/>
-                                        <exclude reference="rBi-dN-nCz"/>
-                                        <exclude reference="w6B-y0-TA7"/>
-                                    </mask>
-                                </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rhn-3A-MoU" secondAttribute="trailing" id="19f-94-BQR"/>
                             <constraint firstItem="rhn-3A-MoU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="43v-8j-vIN"/>
-                            <constraint firstItem="par-fV-9Xb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="37" id="5e2-o7-9OK"/>
                             <constraint firstItem="vQ1-tf-iTZ" firstAttribute="centerX" secondItem="par-fV-9Xb" secondAttribute="centerX" id="61d-77-oFu"/>
                             <constraint firstItem="DlO-eQ-M1Y" firstAttribute="top" secondItem="Byx-mT-OcA" secondAttribute="bottom" constant="15" id="7hj-90-STO"/>
                             <constraint firstAttribute="trailing" secondItem="par-fV-9Xb" secondAttribute="trailing" constant="38" id="7xz-DK-NmZ"/>
@@ -102,7 +98,6 @@
                             <constraint firstItem="DlO-eQ-M1Y" firstAttribute="leading" secondItem="Byx-mT-OcA" secondAttribute="leading" id="dRx-SW-OjE"/>
                             <constraint firstItem="vQ1-tf-iTZ" firstAttribute="centerX" secondItem="par-fV-9Xb" secondAttribute="centerX" id="e9F-fC-bLq"/>
                             <constraint firstItem="Byx-mT-OcA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="eFM-sG-hi8"/>
-                            <constraint firstAttribute="trailing" secondItem="par-fV-9Xb" secondAttribute="trailing" constant="38" id="es1-mF-xKt"/>
                             <constraint firstItem="vQ1-tf-iTZ" firstAttribute="centerX" secondItem="DlO-eQ-M1Y" secondAttribute="centerX" id="fH6-9i-7Ll"/>
                             <constraint firstItem="rhn-3A-MoU" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="iSp-2Y-hz1"/>
                             <constraint firstItem="par-fV-9Xb" firstAttribute="top" secondItem="Byx-mT-OcA" secondAttribute="bottom" constant="30" id="kUx-aS-nhj"/>
@@ -131,7 +126,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="faceImageView" destination="par-fV-9Xb" id="NTM-UF-WYp"/>
                         <outlet property="nameTextField" destination="Byx-mT-OcA" id="KLT-tX-ezP"/>
