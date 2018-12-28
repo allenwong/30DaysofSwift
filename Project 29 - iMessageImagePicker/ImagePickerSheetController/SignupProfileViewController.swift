@@ -44,21 +44,18 @@ class SignupProfileViewController: UIViewController
         
         if authorization == .authorized {
             let controller = ImagePickerSheetController()
-            
-            controller.addAction(action: ImageAction(title: NSLocalizedString("Take Photo or Video", comment: "Action Title"), secondaryTitle: NSLocalizedString("Use this one", comment: "Action Title"), handler: { (_) -> () in
-                
+            controller.addAction(action: ImageAction(title: NSLocalizedString("Take Photo or Video", comment: "Action Title"), secondaryTitle: NSLocalizedString("Use this one", comment: "Action Title"), handler: { _ in
                 self.presentCamera()
-                
-                }, secondaryHandler: { (action, numberOfPhotos) -> () in
-                    controller.getSelectedImagesWithCompletion(completion: { (images) -> Void in
-                        self.profileImage = images[0]
-                        self.userProfileImageView.image = self.profileImage
-                    })
+            }, secondaryHandler: { (action, numberOfPhotos) in
+                controller.getSelectedImagesWithCompletion(completion: { images in
+                    self.profileImage = images[0]
+                    self.userProfileImageView.image = self.profileImage
+                })
             }))
-            
+                        
             controller.addAction(action: ImageAction(title: NSLocalizedString("Cancel", comment: "Action Title"), style: .Cancel, handler: nil, secondaryHandler: nil))
             
-            present(controller, animated: true, completion: nil)
+            self.present(controller, animated: true, completion: nil)
         }
         
         
@@ -66,7 +63,7 @@ class SignupProfileViewController: UIViewController
     
     func presentCamera()
     {
-        
+        print("拍照")
     }
 
 

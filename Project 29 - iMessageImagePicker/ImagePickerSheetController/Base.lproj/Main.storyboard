@@ -36,23 +36,20 @@
                                 <rect key="frame" x="20" y="200" width="335" height="62"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1n9-Mp-Vvb">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="V8H-OC-aMf"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="28"/>
                                         <color key="textColor" red="0.99987119436264038" green="0.99998223781585693" blue="0.99984109401702881" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43E-a5-TGe">
-                                        <rect key="frame" x="0.0" y="38" width="335" height="1"/>
+                                        <rect key="frame" x="0.0" y="36" width="335" height="1"/>
                                         <color key="backgroundColor" red="0.99987119436264038" green="0.99998223781585693" blue="0.99984109401702881" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="jVW-iy-bxY"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We respect your privacy. Your information is safe with us." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-49-VTj">
-                                        <rect key="frame" x="12" y="47" width="311" height="15"/>
+                                        <rect key="frame" x="12" y="45" width="311" height="17"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.30268554687499999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -65,9 +62,8 @@
                                     <constraint firstAttribute="height" constant="62" id="GbQ-7H-mVq"/>
                                     <constraint firstItem="43E-a5-TGe" firstAttribute="leading" secondItem="79X-Iz-PPa" secondAttribute="leading" id="IWG-Me-1Hx"/>
                                     <constraint firstItem="U6G-49-VTj" firstAttribute="top" secondItem="43E-a5-TGe" secondAttribute="bottom" constant="8" id="Ikr-JF-Zn6"/>
-                                    <constraint firstItem="1n9-Mp-Vvb" firstAttribute="leading" secondItem="79X-Iz-PPa" secondAttribute="leading" id="XuN-HM-3RE"/>
+                                    <constraint firstItem="1n9-Mp-Vvb" firstAttribute="leading" secondItem="43E-a5-TGe" secondAttribute="leading" id="MyF-ui-Gvk"/>
                                     <constraint firstAttribute="bottom" secondItem="U6G-49-VTj" secondAttribute="bottom" id="ZFZ-Sz-gUx"/>
-                                    <constraint firstAttribute="trailing" secondItem="1n9-Mp-Vvb" secondAttribute="trailing" id="jex-1e-cRu"/>
                                     <constraint firstAttribute="trailing" secondItem="43E-a5-TGe" secondAttribute="trailing" id="w3E-5L-VPi"/>
                                 </constraints>
                             </view>
@@ -98,7 +94,9 @@
                             <constraint firstAttribute="trailing" secondItem="79X-Iz-PPa" secondAttribute="trailing" constant="20" id="CUc-6G-n8e"/>
                             <constraint firstItem="Eid-zq-ry3" firstAttribute="centerX" secondItem="1n9-Mp-Vvb" secondAttribute="centerX" id="Mku-kI-6dx"/>
                             <constraint firstItem="HSd-uX-27N" firstAttribute="top" secondItem="zK7-4Y-CHR" secondAttribute="bottom" id="Nev-Z0-kd7"/>
+                            <constraint firstItem="Eid-zq-ry3" firstAttribute="centerX" secondItem="79X-Iz-PPa" secondAttribute="centerX" id="OKZ-N9-ROS"/>
                             <constraint firstItem="SEV-0x-qeq" firstAttribute="top" secondItem="oPw-P1-QLV" secondAttribute="bottom" constant="8" id="Rhm-Ky-XKS"/>
+                            <constraint firstItem="lOG-dA-Hzr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SEV-0x-qeq" secondAttribute="trailing" constant="8" symbolic="YES" id="TnE-z1-9tj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lOG-dA-Hzr" secondAttribute="trailing" constant="2" id="Ttk-dR-5aQ"/>
                             <constraint firstItem="79X-Iz-PPa" firstAttribute="leading" secondItem="Pjp-Sg-GyJ" secondAttribute="leading" constant="20" id="ZoJ-W0-61k"/>
                             <constraint firstItem="79X-Iz-PPa" firstAttribute="centerX" secondItem="Pjp-Sg-GyJ" secondAttribute="centerX" id="be1-Jk-uRK"/>

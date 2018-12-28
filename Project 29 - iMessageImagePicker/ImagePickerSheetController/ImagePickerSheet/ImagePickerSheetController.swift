@@ -32,7 +32,7 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
     
     private lazy var collectionView: ImagePickerCollectionView = {
         let collectionView = ImagePickerCollectionView()
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
         collectionView.imagePreviewLayout.sectionInset = UIEdgeInsets(top: collectionViewInset, left: collectionViewInset, bottom: collectionViewInset, right: collectionViewInset)
         collectionView.imagePreviewLayout.showsSupplementaryViews = false
         collectionView.dataSource = self
@@ -47,8 +47,8 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
     
     lazy var backgroundView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(white: 0.0, alpha: 0.3961)
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(ImagePickerSheetController.cancel)))
+        view.backgroundColor = UIColor(white: 0, alpha: 0.3961)
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.cancel)))
         
         return view
     }()
@@ -95,16 +95,14 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
     }
     
     // MARK: - UITableViewDataSource
-    
-    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         }
-        
         return actions.count
     }
     
@@ -113,10 +111,8 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
             if assets.count > 0 {
                 return enlargedPreviews ? tableViewEnlargedPreviewRowHeight : tableViewPreviewRowHeight
             }
-            
             return 0
         }
-        
         return tableViewRowHeight
     }
     
@@ -360,7 +356,7 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
     // MARK: - Buttons
     
     private func reloadButtonTitles() {
-        tableView.reloadSections(IndexSet(integer: 1) as IndexSet, with: .none)
+        tableView.reloadSections(IndexSet(integer: 0) as IndexSet, with: .none)
     }
     
     @objc private func cancel() {
@@ -376,11 +372,15 @@ public class ImagePickerSheetController: UIViewController, UITableViewDataSource
     
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         backgroundView.frame = view.bounds
         
-        let tableViewHeight = Array(0..<tableView.numberOfRows(inSection: 1)).reduce(tableView(tableView, heightForRowAt: IndexPath(row: 0, section: 0))) { total, row in
-            total + tableView(tableView, heightForRowAt: IndexPath(row: row, section: 1))
+        let tableViewHeight = Array(0 ..< self.numberOfSections(in: tableView)).map { section in
+            Array(0 ..< self.tableView(tableView, numberOfRowsInSection: section)).reduce(0) {
+                (subTotal, row) in
+                subTotal + tableView(tableView, heightForRowAt: IndexPath(row: row, section: section))
+            }
+        }.reduce(0) {
+            (total, subTotal) in total + subTotal
         }
 
         tableView.frame = CGRect(x: view.bounds.minX, y: view.bounds.maxY-tableViewHeight, width: view.bounds.width, height: tableViewHeight)
