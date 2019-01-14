@@ -13,7 +13,7 @@ public enum ImageActionStyle {
     case Cancel
 }
 
-public typealias Title = Int -> String
+public typealias Title = (Int) -> String
 
 public class ImageAction {
     
@@ -32,9 +32,10 @@ public class ImageAction {
         self.init(title: title, secondaryTitle: secondaryTitle.map { string in { _ in string }}, style: style, handler: handler, secondaryHandler: secondaryHandler)
     }
     
-    public init(title: String, secondaryTitle: Title?, style: ImageActionStyle = .Default, handler: Handler? = nil, var secondaryHandler: SecondaryHandler? = nil) {
-        if let handler = handler where secondaryTitle == nil && secondaryHandler == nil {
-            secondaryHandler = { action, _ in
+    public init(title: String, secondaryTitle: Title?, style: ImageActionStyle = .Default, handler: Handler? = nil, secondaryHandler: SecondaryHandler? = nil) {
+        var secondaryHandlerTemp = secondaryHandler
+        if let handler = handler, secondaryTitle == nil && secondaryHandlerTemp == nil {
+            secondaryHandlerTemp = { action, _ in
                 handler(action)
             }
         }
@@ -43,10 +44,10 @@ public class ImageAction {
         self.secondaryTitle = secondaryTitle ?? { _ in title }
         self.style = style
         self.handler = handler
-        self.secondaryHandler = secondaryHandler
+        self.secondaryHandler = secondaryHandlerTemp
     }
     
-    func handle(numberOfPhotos: Int = 0) {
+    func handle(_ numberOfPhotos: Int = 0) {
         if numberOfPhotos > 0 {
             secondaryHandler?(self, numberOfPhotos)
         }
@@ -57,7 +58,7 @@ public class ImageAction {
     
 }
 
-func ?? (left: Title?, right: Title) -> Title {
+func ?? (left: Title?, right: @escaping Title) -> Title {
     if let left = left {
         return left
     }

@@ -35,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BD13530C42B0829626D32F9 /* Pods-MosaicLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosaicLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MosaicLayout/Pods-MosaicLayout.release.xcconfig"; sourceTree = "<group>"; };
+		638048473C6D879DC272832B /* Pods-MosaicLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MosaicLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MosaicLayout/Pods-MosaicLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		9FC96C8C1C5E74330064708F /* MosaicLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosaicLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC96C8F1C5E74330064708F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC96C911C5E74330064708F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4266BBE54D8B5621B9809FF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				638048473C6D879DC272832B /* Pods-MosaicLayout.debug.xcconfig */,
+				0BD13530C42B0829626D32F9 /* Pods-MosaicLayout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9FC96C831C5E74330064708F = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +105,7 @@
 				9FC96CAE1C5E74330064708F /* MosaicLayoutUITests */,
 				9FC96C8D1C5E74330064708F /* Products */,
 				3E0BBA01FD6A2B5F79B8AD2A /* Frameworks */,
+				4266BBE54D8B5621B9809FF3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,12 +158,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9FC96CB41C5E74330064708F /* Build configuration list for PBXNativeTarget "MosaicLayout" */;
 			buildPhases = (
+				C7C5E161573236E2F218C5E0 /* [CP] Check Pods Manifest.lock */,
 				2EC5A36C5B556AE3B343AA43 /* Check Pods Manifest.lock */,
 				9FC96C881C5E74330064708F /* Sources */,
 				9FC96C891C5E74330064708F /* Frameworks */,
 				9FC96C8A1C5E74330064708F /* Resources */,
 				EA7F7A0A973C5D096835035C /* Embed Pods Frameworks */,
-				D5977757A1A56F9C581E7971 /* Copy Pods Resources */,
+				076C05C4F64FEDEAF395EFD6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +223,7 @@
 				TargetAttributes = {
 					9FC96C8B1C5E74330064708F = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
 					};
 					9FC96C9F1C5E74330064708F = {
 						CreatedOnToolsVersion = 7.2;
@@ -269,6 +283,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		076C05C4F64FEDEAF395EFD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MosaicLayout/Pods-MosaicLayout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FLKAutoLayout/FLKAutoLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/FMMosaicLayout/FMMosaicLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ORStackView/ORStackView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLKAutoLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMMosaicLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ORStackView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MosaicLayout/Pods-MosaicLayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2EC5A36C5B556AE3B343AA43 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -284,19 +324,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D5977757A1A56F9C581E7971 /* Copy Pods Resources */ = {
+		C7C5E161573236E2F218C5E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MosaicLayout-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MosaicLayout/Pods-MosaicLayout-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EA7F7A0A973C5D096835035C /* Embed Pods Frameworks */ = {
@@ -460,28 +503,34 @@
 		};
 		9FC96CB51C5E74330064708F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 638048473C6D879DC272832B /* Pods-MosaicLayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = MosaicLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.MosaicLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MosaicLayout/MosaicLayout-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		9FC96CB61C5E74330064708F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BD13530C42B0829626D32F9 /* Pods-MosaicLayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = MosaicLayout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.MosaicLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MosaicLayout/MosaicLayout-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

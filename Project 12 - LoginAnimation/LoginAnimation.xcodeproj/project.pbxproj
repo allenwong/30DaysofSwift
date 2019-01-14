@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					9F3F2CBE1C4BFE7200193399 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
 					};
 					9F3F2CD21C4BFE7300193399 = {
 						CreatedOnToolsVersion = 7.2;
@@ -401,10 +402,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = LoginAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.LoginAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -412,10 +416,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = LoginAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.LoginAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

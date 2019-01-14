@@ -10,7 +10,6 @@
 		9F5C11FC1C3E58C60047AC8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C11FB1C3E58C60047AC8A /* AppDelegate.swift */; };
 		9F5C11FE1C3E58C60047AC8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C11FD1C3E58C60047AC8A /* ViewController.swift */; };
 		9F5C12011C3E58C60047AC8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C11FF1C3E58C60047AC8A /* Main.storyboard */; };
-		9F5C12041C3E58C60047AC8A /* CustomFont.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C12021C3E58C60047AC8A /* CustomFont.xcdatamodeld */; };
 		9F5C12061C3E58C60047AC8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C12051C3E58C60047AC8A /* Assets.xcassets */; };
 		9F5C12091C3E58C60047AC8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5C12071C3E58C60047AC8A /* LaunchScreen.storyboard */; };
 		9FBD36791C71AA2800291252 /* Gaspar Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD36751C71A98900291252 /* Gaspar Regular.otf */; };
@@ -41,7 +40,6 @@
 		9F5C11FB1C3E58C60047AC8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5C11FD1C3E58C60047AC8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F5C12001C3E58C60047AC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F5C12031C3E58C60047AC8A /* CustomFont.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CustomFont.xcdatamodel; sourceTree = "<group>"; };
 		9F5C12051C3E58C60047AC8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F5C12081C3E58C60047AC8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F5C120A1C3E58C60047AC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				9F5C12071C3E58C60047AC8A /* LaunchScreen.storyboard */,
 				9F549C4D1C3EBD4500EF8134 /* Fonts */,
 				9F5C120A1C3E58C60047AC8A /* Info.plist */,
-				9F5C12021C3E58C60047AC8A /* CustomFont.xcdatamodeld */,
 			);
 			path = CustomFont;
 			sourceTree = "<group>";
@@ -190,6 +187,7 @@
 				TargetAttributes = {
 					9F5C11F71C3E58C50047AC8A = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
 						LastSwiftMigration = 0830;
 					};
 					9F5C120E1C3E58C60047AC8A = {
@@ -261,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5C11FE1C3E58C60047AC8A /* ViewController.swift in Sources */,
-				9F5C12041C3E58C60047AC8A /* CustomFont.xcdatamodeld in Sources */,
 				9F5C11FC1C3E58C60047AC8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = CustomFont/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.CustomFont;
@@ -412,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = CustomFont/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.CustomFont;
@@ -512,19 +511,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9F5C12021C3E58C60047AC8A /* CustomFont.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9F5C12031C3E58C60047AC8A /* CustomFont.xcdatamodel */,
-			);
-			currentVersion = 9F5C12031C3E58C60047AC8A /* CustomFont.xcdatamodel */;
-			path = CustomFont.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9F5C11F01C3E58C50047AC8A /* Project object */;
 }

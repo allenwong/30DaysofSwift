@@ -20,14 +20,16 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Where are you?</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Allow to use location and can send it to me</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>让我定个位吧</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Where are you?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow to use location and can send it to me</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

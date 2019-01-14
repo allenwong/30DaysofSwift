@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.tableView.tableFooterView = UIView(frame: .zero)
 
     }
 

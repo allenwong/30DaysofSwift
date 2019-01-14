@@ -37,7 +37,7 @@ class ImagePreviewTableViewCell : UITableViewCell {
         
         if let collectionView = collectionView {
             collectionView.frame = CGRect(x: -bounds.width, y: bounds.minY, width: bounds.width*3, height: bounds.height)
-            collectionView.contentInset = UIEdgeInsetsMake(0.0, bounds.width, 0.0, bounds.width)
+            collectionView.contentInset = UIEdgeInsets(top: 0.0, left: bounds.width, bottom: 0.0, right: bounds.width)
         }
     }
     

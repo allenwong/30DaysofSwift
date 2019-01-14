@@ -15,13 +15,15 @@ class AnimateTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIApplication.shared.isStatusBarHidden = true
-        
         self.view.backgroundColor = UIColor.black
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.register(SecondTableCell.self, forCellReuseIdentifier: "SecondTableCell")
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {

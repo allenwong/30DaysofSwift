@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141553AC21CE9168003A3632 /* CLLocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141553AB21CE9168003A3632 /* CLLocationDelegate.swift */; };
 		9F0553631C44CD3D00204668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0553621C44CD3D00204668 /* AppDelegate.swift */; };
 		9F0553651C44CD3D00204668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0553641C44CD3D00204668 /* ViewController.swift */; };
 		9F0553681C44CD3D00204668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0553661C44CD3D00204668 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141553AB21CE9168003A3632 /* CLLocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationDelegate.swift; sourceTree = "<group>"; };
 		9F05535F1C44CD3D00204668 /* Where.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Where.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0553621C44CD3D00204668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F0553641C44CD3D00204668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9F0553621C44CD3D00204668 /* AppDelegate.swift */,
+				141553AB21CE9168003A3632 /* CLLocationDelegate.swift */,
 				9F0553641C44CD3D00204668 /* ViewController.swift */,
 				9F0553661C44CD3D00204668 /* Main.storyboard */,
 				9F05536C1C44CD3D00204668 /* Assets.xcassets */,
@@ -100,6 +103,7 @@
 				TargetAttributes = {
 					9F05535E1C44CD3D00204668 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
 						LastSwiftMigration = 0920;
 					};
 				};
@@ -141,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0553651C44CD3D00204668 /* ViewController.swift in Sources */,
+				141553AC21CE9168003A3632 /* CLLocationDelegate.swift in Sources */,
 				9F0553631C44CD3D00204668 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = Where/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.Where;
@@ -282,6 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = Where/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.Where;

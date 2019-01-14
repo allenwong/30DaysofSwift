@@ -1,6 +1,16 @@
 {
   "images" : [
     {
+      "idiom" : "iphone",
+      "size" : "20x20",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "20x20",
+      "scale" : "3x"
+    },
+    {
       "size" : "29x29",
       "idiom" : "iphone",
       "filename" : "Icon-Small.png",
@@ -39,10 +49,30 @@
       "scale" : "3x"
     },
     {
+      "idiom" : "ipad",
+      "size" : "20x20",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "20x20",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "29x29",
+      "scale" : "1x"
+    },
+    {
       "size" : "29x29",
       "idiom" : "ipad",
       "filename" : "Icon-Small@2x.png",
       "scale" : "2x"
+    },
+    {
+      "idiom" : "ipad",
+      "size" : "40x40",
+      "scale" : "1x"
     },
     {
       "size" : "40x40",
@@ -69,9 +99,39 @@
       "scale" : "2x"
     },
     {
+      "idiom" : "ios-marketing",
+      "size" : "1024x1024",
+      "scale" : "1x"
+    },
+    {
       "size" : "60x60",
       "idiom" : "car",
       "filename" : "Icon-60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "car",
+      "size" : "60x60",
+      "scale" : "3x"
+    },
+    {
+      "size" : "24x24",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "notificationCenter",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "27.5x27.5",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "notificationCenter",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "watch",
+      "role" : "companionSettings",
       "scale" : "2x"
     },
     {
@@ -80,6 +140,53 @@
       "filename" : "Icon-Small@3x.png",
       "role" : "companionSettings",
       "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "44x44",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "40mm"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "appLauncher",
+      "subtype" : "44mm"
+    },
+    {
+      "size" : "86x86",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "38mm"
+    },
+    {
+      "size" : "98x98",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "42mm"
+    },
+    {
+      "size" : "108x108",
+      "idiom" : "watch",
+      "scale" : "2x",
+      "role" : "quickLook",
+      "subtype" : "44mm"
+    },
+    {
+      "idiom" : "watch-marketing",
+      "size" : "1024x1024",
+      "scale" : "1x"
     },
     {
       "size" : "512x512",

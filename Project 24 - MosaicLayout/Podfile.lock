@@ -1,0 +1,46 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - FLKAutoLayout (0.2.1)
+  - FMMosaicLayout (0.1.4)
+  - ORStackView (3.0.1):
+    - FLKAutoLayout (~> 0.2)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
+  - FMMosaicLayout
+  - ORStackView (~> 3.0)
+  - SwiftyJSON (~> 4.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FLKAutoLayout
+    - FMMosaicLayout
+    - ORStackView
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  FLKAutoLayout: 9db6b30c2008d230da608e62c607b11c23b942e6
+  FMMosaicLayout: c0febf6876c987c425d7e2176d034fa7a2c98cb5
+  ORStackView: a1bb52748cd0ae29891c140baf22ff8972fb363c
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: 090b315994b243af609e0d153a6595dd2fff739e
+
+COCOAPODS: 1.5.3

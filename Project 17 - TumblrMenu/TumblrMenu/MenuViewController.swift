@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: BaseViewController {
     
     let transitionManager = MenuTransitionManager()
     
@@ -30,23 +30,12 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var audioButton: UIButton!
     @IBOutlet weak var audioLabel: UILabel!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.transitioningDelegate = self.transitionManager
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        
-        return UIStatusBarStyle.LightContent
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-
 }

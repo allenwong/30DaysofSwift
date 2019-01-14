@@ -10,18 +10,19 @@ import UIKit
 
 class FirstTableViewController: UITableViewController {
 
-    var tableData = ["Personal Life", "Buddy Company", "#30 days Swift Project", "Body movement training", "AppKitchen Studio", "Project Read", "Others" ]
+    var tableData = ["Personal Life", "Buddy Company", "#30 days Swift Project", "Body movement training", "AppKitchen Studio", "Project Read", "Others", "Personal Life", "Buddy Company", "#30 days Swift Project", "Body movement training", "AppKitchen Studio", "Project Read", "Others"]
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UIApplication.shared.isStatusBarHidden = true
-        
+        super.viewDidLoad()    
         self.view.backgroundColor = UIColor.black
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.register(FirstTableCell.self, forCellReuseIdentifier: "tableCell")
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +53,7 @@ class FirstTableViewController: UITableViewController {
                 
                 cell.transform = CGAffineTransform(translationX: 0, y: 0);
                 
-                }, completion: nil)
+            }, completion: nil)
             
             index += 1
         }

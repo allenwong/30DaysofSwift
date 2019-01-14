@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,17 +28,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="AbB-5M-8G0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MXn-Vd-phO"/>
                             <constraint firstItem="AbB-5M-8G0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="omB-Gj-o2V"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="215.5" y="339.5"/>
+            <point key="canvasLocation" x="-95" y="331"/>
         </scene>
         <!--Run View Controller-->
         <scene sceneID="ujT-8E-VIU">
@@ -52,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94906145334243774" green="0.93641859292984009" blue="0.14370894432067871" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.9368206262588501" green="0.93713349103927612" blue="0.11683492362499237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uyR-K9-pmK" firstAttribute="top" secondItem="P9p-6E-EhQ" secondAttribute="top" id="HIt-cd-d49"/>
                             <constraint firstItem="TZ7-4q-SIa" firstAttribute="top" secondItem="uyR-K9-pmK" secondAttribute="bottom" id="ZJh-ET-RIx"/>
@@ -68,11 +71,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MpU-Mh-GuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622.5" y="339.5"/>
+            <point key="canvasLocation" x="519" y="331"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="L45-UZ-tRA">
@@ -90,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.95815271139144897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.94574928283691406" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uoD-Dw-2e6" firstAttribute="top" secondItem="hdI-8s-WiL" secondAttribute="top" id="40e-ae-XVo"/>
                             <constraint firstAttribute="trailing" secondItem="uoD-Dw-2e6" secondAttribute="trailing" id="AJ2-XH-gM1"/>
@@ -106,11 +108,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggj-iv-MOo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.5" y="339.5"/>
+            <point key="canvasLocation" x="1130" y="331"/>
         </scene>
         <!--Switch Wi Fi View Controller-->
         <scene sceneID="boe-fy-6X5">
@@ -128,7 +129,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92562800645828247" green="0.14238324761390686" blue="0.11029776185750961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.89466416835784912" green="0.02687389962375164" blue="0.089954406023025513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pRG-Bw-ilP" firstAttribute="top" secondItem="mfK-qq-Y9n" secondAttribute="top" id="HWC-aa-65U"/>
                             <constraint firstItem="pRG-Bw-ilP" firstAttribute="leading" secondItem="mfK-qq-Y9n" secondAttribute="leading" id="QtM-GJ-Vds"/>
@@ -136,16 +137,15 @@
                             <constraint firstAttribute="trailing" secondItem="pRG-Bw-ilP" secondAttribute="trailing" id="xbD-u5-PME"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvx-lb-vOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452.5" y="339.5"/>
+            <point key="canvasLocation" x="1802" y="331"/>
         </scene>
     </scenes>
     <resources>
-        <image name="nikeplus" width="375" height="667"/>
-        <image name="setting" width="375" height="667"/>
-        <image name="wechat" width="375" height="667"/>
+        <image name="nikeplus" width="750" height="1334"/>
+        <image name="setting" width="750" height="1334"/>
+        <image name="wechat" width="750" height="1334"/>
     </resources>
 </document>

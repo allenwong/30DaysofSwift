@@ -10,27 +10,29 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var index = 0
     let cellIdentifer = "NewCellIdentifier"
     
     let favoriteEmoji = ["🤗🤗🤗🤗🤗", "😅😅😅😅😅", "😆😆😆😆😆"]
     let newFavoriteEmoji = ["🏃🏃🏃🏃🏃", "💩💩💩💩💩", "👸👸👸👸👸", "🤗🤗🤗🤗🤗", "😅😅😅😅😅", "😆😆😆😆😆" ]
     var emojiData = [String]()
-    var tableViewController = UITableViewController(style: .plain)
+    var tableView: UITableView!
     
     var refreshControl = UIRefreshControl()
     var navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 375, height: 64))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView = UITableView(frame: self.view.bounds, style: .plain)
         
         emojiData = favoriteEmoji
-        let emojiTableView = tableViewController.tableView
+        let emojiTableView = tableView
         
         emojiTableView?.backgroundColor = UIColor(red:0.092, green:0.096, blue:0.116, alpha:1)
         emojiTableView?.dataSource = self
         emojiTableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifer)
         
-        tableViewController.refreshControl = self.refreshControl
+        tableView.refreshControl = self.refreshControl
         self.refreshControl.addTarget(self, action: #selector(ViewController.didRoadEmoji), for: .valueChanged)
         
         self.refreshControl.backgroundColor = UIColor(red:0.113, green:0.113, blue:0.145, alpha:1)
@@ -64,7 +66,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifer)! as UITableViewCell
-        
         cell.textLabel!.text = self.emojiData[indexPath.row]
         cell.textLabel!.textAlignment = NSTextAlignment.center
         cell.textLabel!.font = UIFont.systemFont(ofSize: 50)
@@ -78,9 +79,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //RoadEmoji
     
     func didRoadEmoji() {
-        self.emojiData = newFavoriteEmoji
-        self.tableViewController.tableView.reloadData()
-        self.refreshControl.endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline:DispatchTime.now() + 3 ) {
+            self.emojiData = [self.newFavoriteEmoji,self.favoriteEmoji][self.index]
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+            self.index = (self.index + 1) % 2
+        }
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {

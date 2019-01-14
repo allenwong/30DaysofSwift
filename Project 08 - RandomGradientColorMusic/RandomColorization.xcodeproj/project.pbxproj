@@ -13,26 +13,7 @@
 		9F65F2671C478760002A93AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F2651C478760002A93AA /* Main.storyboard */; };
 		9F65F2691C478760002A93AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F2681C478760002A93AA /* Assets.xcassets */; };
 		9F65F26C1C478760002A93AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F65F26A1C478760002A93AA /* LaunchScreen.storyboard */; };
-		9F65F2771C478760002A93AA /* RandomColorizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2761C478760002A93AA /* RandomColorizationTests.swift */; };
-		9F65F2821C478760002A93AA /* RandomColorizationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65F2811C478760002A93AA /* RandomColorizationUITests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9F65F2731C478760002A93AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9F65F2561C478760002A93AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9F65F25D1C478760002A93AA;
-			remoteInfo = RandomColorization;
-		};
-		9F65F27E1C478760002A93AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9F65F2561C478760002A93AA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9F65F25D1C478760002A93AA;
-			remoteInfo = RandomColorization;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9F09ADC71C7A04BE0030E611 /* Ecstasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ecstasy.mp3; sourceTree = SOURCE_ROOT; };
@@ -43,30 +24,14 @@
 		9F65F2681C478760002A93AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F65F26B1C478760002A93AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F65F26D1C478760002A93AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F65F2721C478760002A93AA /* RandomColorizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomColorizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F65F2761C478760002A93AA /* RandomColorizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorizationTests.swift; sourceTree = "<group>"; };
 		9F65F2781C478760002A93AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F65F27D1C478760002A93AA /* RandomColorizationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomColorizationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F65F2811C478760002A93AA /* RandomColorizationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColorizationUITests.swift; sourceTree = "<group>"; };
 		9F65F2831C478760002A93AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9F65F25B1C478760002A93AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F65F26F1C478760002A93AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F65F27A1C478760002A93AA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,8 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				9F65F25E1C478760002A93AA /* RandomColorization.app */,
-				9F65F2721C478760002A93AA /* RandomColorizationTests.xctest */,
-				9F65F27D1C478760002A93AA /* RandomColorizationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,42 +111,6 @@
 			productReference = 9F65F25E1C478760002A93AA /* RandomColorization.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F65F2711C478760002A93AA /* RandomColorizationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9F65F2891C478760002A93AA /* Build configuration list for PBXNativeTarget "RandomColorizationTests" */;
-			buildPhases = (
-				9F65F26E1C478760002A93AA /* Sources */,
-				9F65F26F1C478760002A93AA /* Frameworks */,
-				9F65F2701C478760002A93AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9F65F2741C478760002A93AA /* PBXTargetDependency */,
-			);
-			name = RandomColorizationTests;
-			productName = RandomColorizationTests;
-			productReference = 9F65F2721C478760002A93AA /* RandomColorizationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9F65F27C1C478760002A93AA /* RandomColorizationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9F65F28C1C478760002A93AA /* Build configuration list for PBXNativeTarget "RandomColorizationUITests" */;
-			buildPhases = (
-				9F65F2791C478760002A93AA /* Sources */,
-				9F65F27A1C478760002A93AA /* Frameworks */,
-				9F65F27B1C478760002A93AA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9F65F27F1C478760002A93AA /* PBXTargetDependency */,
-			);
-			name = RandomColorizationUITests;
-			productName = RandomColorizationUITests;
-			productReference = 9F65F27D1C478760002A93AA /* RandomColorizationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,17 +123,8 @@
 				TargetAttributes = {
 					9F65F25D1C478760002A93AA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F3YT8BWBYJ;
 						LastSwiftMigration = 0920;
-					};
-					9F65F2711C478760002A93AA = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0920;
-						TestTargetID = 9F65F25D1C478760002A93AA;
-					};
-					9F65F27C1C478760002A93AA = {
-						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0920;
-						TestTargetID = 9F65F25D1C478760002A93AA;
 					};
 				};
 			};
@@ -224,8 +142,6 @@
 			projectRoot = "";
 			targets = (
 				9F65F25D1C478760002A93AA /* RandomColorization */,
-				9F65F2711C478760002A93AA /* RandomColorizationTests */,
-				9F65F27C1C478760002A93AA /* RandomColorizationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,20 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F65F2701C478760002A93AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F65F27B1C478760002A93AA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -268,36 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F65F26E1C478760002A93AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9F65F2771C478760002A93AA /* RandomColorizationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9F65F2791C478760002A93AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9F65F2821C478760002A93AA /* RandomColorizationUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9F65F2741C478760002A93AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9F65F25D1C478760002A93AA /* RandomColorization */;
-			targetProxy = 9F65F2731C478760002A93AA /* PBXContainerItemProxy */;
-		};
-		9F65F27F1C478760002A93AA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9F65F25D1C478760002A93AA /* RandomColorization */;
-			targetProxy = 9F65F27E1C478760002A93AA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9F65F2651C478760002A93AA /* Main.storyboard */ = {
@@ -421,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = RandomColorization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorization;
@@ -434,68 +308,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F3YT8BWBYJ;
 				INFOPLIST_FILE = RandomColorization/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorization;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		9F65F28A1C478760002A93AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RandomColorizationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorizationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomColorization.app/RandomColorization";
-			};
-			name = Debug;
-		};
-		9F65F28B1C478760002A93AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = RandomColorizationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorizationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandomColorization.app/RandomColorization";
-			};
-			name = Release;
-		};
-		9F65F28D1C478760002A93AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RandomColorizationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorizationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = RandomColorization;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		9F65F28E1C478760002A93AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = RandomColorizationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.appkitchen.RandomColorizationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = RandomColorization;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -516,24 +335,6 @@
 			buildConfigurations = (
 				9F65F2871C478760002A93AA /* Debug */,
 				9F65F2881C478760002A93AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9F65F2891C478760002A93AA /* Build configuration list for PBXNativeTarget "RandomColorizationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9F65F28A1C478760002A93AA /* Debug */,
-				9F65F28B1C478760002A93AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9F65F28C1C478760002A93AA /* Build configuration list for PBXNativeTarget "RandomColorizationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9F65F28D1C478760002A93AA /* Debug */,
-				9F65F28E1C478760002A93AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

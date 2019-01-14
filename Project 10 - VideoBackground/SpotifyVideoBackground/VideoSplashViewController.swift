@@ -16,11 +16,11 @@ public enum ScalingMode {
   case resizeAspectFill
 }
 
-open class VideoSplashViewController: UIViewController {
+ class VideoSplashViewController: UIViewController {
 
   fileprivate let moviePlayer = AVPlayerViewController()
   fileprivate var moviePlayerSoundLevel: Float = 1.0
-  open var contentURL: URL? {
+   var contentURL: URL? {
     didSet {
       if let _contentURL = contentURL {
       setMoviePlayer(_contentURL)
@@ -28,15 +28,15 @@ open class VideoSplashViewController: UIViewController {
     }
   }
 
-  open var videoFrame: CGRect = CGRect()
-  open var startTime: CGFloat = 0.0
-  open var duration: CGFloat = 0.0
-  open var backgroundColor: UIColor = UIColor.black {
+   var videoFrame: CGRect = CGRect()
+   var startTime: CGFloat = 0.0
+   var duration: CGFloat = 0.0
+   var backgroundColor: UIColor = UIColor.black {
     didSet {
       view.backgroundColor = backgroundColor
     }
   }
-  open var sound: Bool = true {
+   var sound: Bool = true {
     didSet {
       if sound {
         moviePlayerSoundLevel = 1.0
@@ -45,12 +45,12 @@ open class VideoSplashViewController: UIViewController {
       }
     }
   }
-  open var alpha: CGFloat = CGFloat() {
+   var alpha: CGFloat = CGFloat() {
     didSet {
       moviePlayer.view.alpha = alpha
     }
   }
-  open var alwaysRepeat: Bool = true {
+   var alwaysRepeat: Bool = true {
     didSet {
       if alwaysRepeat {
         NotificationCenter.default.addObserver(self,
@@ -60,7 +60,7 @@ open class VideoSplashViewController: UIViewController {
       }
     }
   }
-  open var fillMode: ScalingMode = .resizeAspectFill {
+   var fillMode: ScalingMode = .resizeAspectFill {
     didSet {
       switch fillMode {
       case .resize:
@@ -73,14 +73,14 @@ open class VideoSplashViewController: UIViewController {
     }
   }
 
-  override open func viewDidAppear(_ animated: Bool) {
+  override  func viewDidAppear(_ animated: Bool) {
     moviePlayer.view.frame = videoFrame
     moviePlayer.showsPlaybackControls = false
     view.addSubview(moviePlayer.view)
     view.sendSubview(toBack: moviePlayer.view)
   }
   
-  override open func viewWillDisappear(_ animated: Bool) {
+  override  func viewWillDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     NotificationCenter.default.removeObserver(self)
   }
@@ -89,18 +89,20 @@ open class VideoSplashViewController: UIViewController {
     let videoCutter = VideoCutter()
     videoCutter.cropVideoWithUrl(videoUrl: url, startTime: startTime, duration: duration) { (videoPath, error) -> Void in
       if let path = videoPath as URL? {
+        DispatchQueue.main.async {
             self.moviePlayer.player = AVPlayer(url: path)
             self.moviePlayer.player?.play()
             self.moviePlayer.player?.volume = self.moviePlayerSoundLevel
-          }
+        }
+      }
     }
   }
 
-  override open func viewDidLoad() {
+  override  func viewDidLoad() {
     super.viewDidLoad()
   }
 
-  override open func didReceiveMemoryWarning() {
+  override  func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
   

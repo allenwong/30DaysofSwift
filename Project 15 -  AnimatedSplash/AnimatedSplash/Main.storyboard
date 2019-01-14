@@ -1,27 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0pO-6z-HlI">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0pO-6z-HlI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="xLH-lH-Xz4">
             <objects>
-                <viewController id="0pO-6z-HlI" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="0pO-6z-HlI" customClass="ViewController" customModule="AnimatedSplash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O1c-Hc-pRg"/>
                         <viewControllerLayoutGuide type="bottom" id="Yf6-fZ-f6k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HJO-SG-hlk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99990576505661011" green="1" blue="0.99987310171127319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="NaD-wG-BNY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.56862745098039214" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NaD-wG-BNY" secondAttribute="trailing" id="gaK-sb-T68"/>
+                            <constraint firstItem="NaD-wG-BNY" firstAttribute="top" secondItem="O1c-Hc-pRg" secondAttribute="bottom" id="iRt-o6-i3a"/>
+                            <constraint firstItem="NaD-wG-BNY" firstAttribute="leading" secondItem="HJO-SG-hlk" secondAttribute="leading" id="ivA-8o-CQm"/>
+                            <constraint firstItem="Yf6-fZ-f6k" firstAttribute="top" secondItem="NaD-wG-BNY" secondAttribute="bottom" id="wjD-ha-xXN"/>
+                        </constraints>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="NaD-wG-BNY" id="0vI-HI-oEU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7y-ow-oYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="381" y="399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="screen" width="750" height="1334"/>
+    </resources>
 </document>
