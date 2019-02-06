@@ -161,11 +161,6 @@ Project 30 - [WikiFace](https://github.com/allenwong/30DaysofSwift/tree/master/P
 
 [Youtube - CodeWithChris](https://www.youtube.com/user/CodeWithChris)
 
-## What's next? ##
-
-Update: I made [Wave(浪潮) VPN](http://usewaveapp.com/) for iOS, now on [App Store](https://itunes.apple.com/cn/app/lang-chao-vpn/id1129666220?mt=8).
-Update: Wave was been shut down.
-
 ## License ##
 
 [30 Days of Swift](https://github.com/allenwong/30DaysofSwift) is under the MIT license.
