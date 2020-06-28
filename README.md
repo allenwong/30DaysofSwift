@@ -13,7 +13,7 @@ This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100
 
 ## Thank You to My Sponsor ##
 
-[![Gotads](https://images.gitads.io/30DaysofSwift)](https://tracking.gitads.io/?repo=30DaysofSwift)
+[![Gitads](https://images.gitads.io/30DaysofSwift)](https://tracking.gitads.io/?repo=30DaysofSwift)
 
 ## Project Index & GIF Showcase ##
 
