@@ -12,8 +12,10 @@ I am Allen Wang, a [product designer](https://dribbble.com/openallen) and curren
 This project was totally inspired by [Sam Lu](https://twitter.com/samvlu)'s [100 Days of Swift](http://samvlu.com/index.html) project, after read his [Medium post](https://medium.com/@samvlu/100-days-of-swift-736d45a19b63#.ayz5vx6mc) I made a decision to put my every single day to write Swift, this's the final code of 30 tiny Swift projects.
 
 ## Thank You to My Sponsor ##
+30 Dasy of Swift is being sponsored by the following tool, please help to support me by taking a look and signing up to a free trial.
 
 [![Gitads](https://images.gitads.io/30DaysofSwift)](https://tracking.gitads.io/?repo=30DaysofSwift)
+
 
 ## Project Index & GIF Showcase ##
 
